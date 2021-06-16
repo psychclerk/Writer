@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.2.3" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Dr. Jagdish Varma" />
+  <title>Neurocircuit taxonomy</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote {
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013";
+      position: absolute;
+      margin-left: -1em;
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko span.math-rendering {
+    display:inline-block;
+    width:8em;
+    overflow-x:auto;
+    font-size:70%;
+  }
+  .madoko span.math-rendering::-webkit-scrollbar {
+    width:4px;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 {
+    margin-top: 1.22em;
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  {
+    margin-top: 1ex;
+  }
+  .madoko h5, .madoko h6 {
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 {
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 {
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt,
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="6" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="6" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="6" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="6"></span>Neurocircuit taxonomy</div></div>
+<div class="authors align-center" data-line="11" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="11" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="11" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="11" style="font-size:large;line-adjust:0"><span data-line="11"></span>Dr. Jagdish Varma</div>
+<div class="authoraddress" data-line="14" style="line-adjust:0"><span data-line="14"></span>Professor of Psychiatry, Bhaikaka University, Karamsad</div></td></tr></tbody></table></div></div><span data-line="8"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-why-understand-neurocircuits" data-toc-depth="1" data-toc-line="[1]{.heading-label}.&#8194;Why understand neurocircuits?" style="toctarget:sec-why-understand-neurocircuits"><a href="#sec-why-understand-neurocircuits" class="localref"><span class="heading-label">1</span>.&#8194;Why understand neurocircuits?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry" data-toc-depth="1" data-toc-line="[2]{.heading-label}.&#8194;Why there is a gap in neuroscience advances and their application in psychiatry?" style="toctarget:sec-why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry"><a href="#sec-why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry" class="localref"><span class="heading-label">2</span>.&#8194;Why there is a gap in neuroscience advances and their application in psychiatry?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-current-diagnostic-systems-and-neurocircuits-taxonomy" data-toc-depth="1" data-toc-line="[3]{.heading-label}.&#8194;Current diagnostic systems and neurocircuits taxonomy?" style="toctarget:sec-current-diagnostic-systems-and-neurocircuits-taxonomy"><a href="#sec-current-diagnostic-systems-and-neurocircuits-taxonomy" class="localref"><span class="heading-label">3</span>.&#8194;Current diagnostic systems and neurocircuits taxonomy?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-which-large-scale-circuits" data-toc-depth="1" data-toc-line="[4]{.heading-label}.&#8194;Which large-scale circuits?" style="toctarget:sec-which-large-scale-circuits"><a href="#sec-which-large-scale-circuits" class="localref"><span class="heading-label">4</span>.&#8194;Which large-scale circuits?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-how-circuts-can-get-marred" data-toc-depth="1" data-toc-line="[5]{.heading-label}.&#8194;How circuts can get marred?" style="toctarget:sec-how-circuts-can-get-marred"><a href="#sec-how-circuts-can-get-marred" class="localref"><span class="heading-label">5</span>.&#8194;How circuts can get marred?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-limitations-of-current-research" data-toc-depth="1" data-toc-line="[6]{.heading-label}.&#8194;Limitations of current research?" style="toctarget:sec-limitations-of-current-research"><a href="#sec-limitations-of-current-research" class="localref"><span class="heading-label">6</span>.&#8194;Limitations of current research?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature" data-toc-depth="1" data-toc-line="[7]{.heading-label}.&#8194;Putative biotypes of neural circuit dysfunction in depression and anxiety based on pulished literature" style="toctarget:sec-putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature"><a href="#sec-putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature" class="localref"><span class="heading-label">7</span>.&#8194;Putative biotypes of neural circuit dysfunction in depression and anxiety based on pulished literature</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-dmn" data-toc-depth="2" data-toc-line="[7.1]{.heading-label}.&#8194;DMN" style="toctarget:sec-dmn"><a href="#sec-dmn" class="localref"><span class="heading-label">7.1</span>.&#8194;DMN</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-sn" data-toc-depth="2" data-toc-line="[7.2]{.heading-label}.&#8194;SN" style="toctarget:sec-sn"><a href="#sec-sn" class="localref"><span class="heading-label">7.2</span>.&#8194;SN</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-negative-affect-circuit" data-toc-depth="2" data-toc-line="[7.3]{.heading-label}.&#8194;Negative affect circuit" style="toctarget:sec-negative-affect-circuit"><a href="#sec-negative-affect-circuit" class="localref"><span class="heading-label">7.3</span>.&#8194;Negative affect circuit</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-positive-affect-circuit-reward" data-toc-depth="2" data-toc-line="[7.4]{.heading-label}.&#8194;Positive affect circuit (Reward)" style="toctarget:sec-positive-affect-circuit-reward"><a href="#sec-positive-affect-circuit-reward" class="localref"><span class="heading-label">7.4</span>.&#8194;Positive affect circuit (Reward)</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-attention-circuit" data-toc-depth="2" data-toc-line="[7.5]{.heading-label}.&#8194;Attention circuit" style="toctarget:sec-attention-circuit"><a href="#sec-attention-circuit" class="localref"><span class="heading-label">7.5</span>.&#8194;Attention circuit</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-cognitive-control-circuit" data-toc-depth="2" data-toc-line="[7.6]{.heading-label}.&#8194;Cognitive control circuit" style="toctarget:sec-cognitive-control-circuit"><a href="#sec-cognitive-control-circuit" class="localref"><span class="heading-label">7.6</span>.&#8194;Cognitive control circuit</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-use-of-neural-circuts-to-guide-treatment" data-toc-depth="1" data-toc-line="[8]{.heading-label}.&#8194;Use of neural circuts to guide treatment?" style="toctarget:sec-use-of-neural-circuts-to-guide-treatment"><a href="#sec-use-of-neural-circuts-to-guide-treatment" class="localref"><span class="heading-label">8</span>.&#8194;Use of neural circuts to guide treatment?</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-reference" data-toc-depth="1" data-toc-line="[9]{.heading-label}.&#8194;Reference" style="toctarget:sec-reference"><a href="#sec-reference" class="localref"><span class="heading-label">9</span>.&#8194;Reference</a></div></div></nav><h2 id="sec-why-understand-neurocircuits" class="h1" data-line="10" data-heading-depth="1" style="display:block"><span data-line="10"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="10"></span>Why understand neurocircuits?</h2>
+<ul class="ul list-dash compact" data-line="11">
+<li class="li ul-li list-dash-li compact-li" data-line="11"><span data-line="11"></span>Dysfunctions within and between these circuits give rise to the symptoms that characterize mental disease.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="12"><span data-line="12"></span>Understanding these dysfunctions offers the opportunity to specify symptoms at the level of the organ that generates them—the brain.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="13"><span data-line="13"></span>By doing so, the notion of mental disease could be revolutionized and treatments could be tailored according to individual experiences and underlying neural disconnections.
+</li></ul>
+<h2 id="sec-why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry" class="h1" data-line="15" data-heading-depth="1" style="display:block"><span data-line="15"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="15"></span>Why there is a gap in neuroscience advances and their application in psychiatry?</h2>
+<ul class="ul list-dash compact" data-line="16">
+<li class="li ul-li list-dash-li compact-li" data-line="16"><span data-line="16"></span>Language of brain circuit not incorporated into clinically meaningful taxanomy.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="17"><span data-line="17"></span>Training programs do not provide training in neural circuit taxonomy.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="18"><span data-line="18"></span>Practitioners do not have neuroiscience based decision making tools.
+</li></ul>
+<h2 id="sec-current-diagnostic-systems-and-neurocircuits-taxonomy" class="h1" data-line="20" data-heading-depth="1" style="display:block"><span data-line="20"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="20"></span>Current diagnostic systems and neurocircuits taxonomy?</h2>
+<ul class="ul list-dash compact" data-line="21">
+<li class="li ul-li list-dash-li compact-li" data-line="21"><span data-line="21"></span>Current systems like DSM-5 are syndromic and arguably conflate several types of individuals in who diverse brain dysfunctions drive symptoms.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="22"><span data-line="22"></span>It is proposed that specific dysfunctions in the functional and structural connectivity of large-scale circuits that govern emotional, cognitive, and self-reflective functions define unique biotypes of depression and anxiety.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="23"><span data-line="23"></span>These biotypes will probably differ from traditional diagnostic categories and are likely to overlap, interact, or co-occur in individual patients. A single mechanism is unlikely to underlie a broad descriptive diagnosis such as depression.
+If a taxonomy based on brain dysfunctions is articulated, then it can be mapped onto the profiles of symptoms to which these dysfunctions give rise.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="25"><span data-line="25"></span>Also help is reducing stigma<span data-line="25"></span> <span data-line="25"></span>- reformulate mental disorders as brain disorders.
+</li></ul>
+<h2 id="sec-which-large-scale-circuits" class="h1" data-line="27" data-heading-depth="1" style="display:block"><span data-line="27"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="27"></span>Which large-scale circuits?</h2>
+<figure id="fig-whichcircuits" class="figure floating align-center float" data-line="29" style="text-align:center;float-env:figure;float-name:Figure">
+<p class="p noindent" data-line="30"><span data-line="30"></span><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f1.jpg" alt="whichcircuits" data-path="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f1.jpg" data-linkid="whichcircuits" style="width:100%"><span data-line="30"></span>
+</p>
+<hr  class="figureline madoko" data-line="31" style="display:block">
+
+<div class="p noindent" data-line="32"><span data-line="32"></span><fig-caption class="figure-caption"><span class="caption-before"><strong class="strong-star2">Figure&#160;<span class="figure-label">1</span>.</strong>&#160;</span><span class="caption-text">Large scale brain circuits of interest.</span></fig-caption></div></figure>
+<ul class="ul list-dash loose" data-line="35">
+<li class="li ul-li list-dash-li loose-li" data-line="35">
+<p data-line="35"><span data-line="35"></span>Legend
+</p>
+<ul class="ul list-dash compact" data-line="36">
+<li class="li ul-li list-dash-li compact-li" data-line="36"><span data-line="36"></span>aMPFC = anterior medial prefrontal cortex
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="37"><span data-line="37"></span>AG = Angular gyrus
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="38"><span data-line="38"></span>PCC = posterior cingulate cortex
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="39"><span data-line="39"></span>dACC = dorsal anterior cingulate cortex
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="40"><span data-line="40"></span>aI = anterior Insula
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="41"><span data-line="41"></span>TP = Temporal pole
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="42"><span data-line="42"></span>EA = Extended amgygdala (BNST)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="43"><span data-line="43"></span>sgACC = subgenual ACC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="44"><span data-line="44"></span>pACC = pregenual ACC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="45"><span data-line="45"></span>MPFC = medial PFC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="46"><span data-line="46"></span>I = Insula
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="47"><span data-line="47"></span>A<span data-line="47"></span> <span data-line="47"></span>- Amygdala
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="48"><span data-line="48"></span>OFC = orbital frontal cortex
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="49"><span data-line="49"></span>msPFC = medial superior PFC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="50"><span data-line="50"></span>LPFC = lateral PFC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="51"><span data-line="51"></span>aIPL = anterior Inferior parietal lobule
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="52"><span data-line="52"></span>DLPFC = Dorsolateral PFC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="53"><span data-line="53"></span>PCG = precentral gyrus
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="54"><span data-line="54"></span>DPC = dorsal parietal cortex
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="55"><span data-line="55"></span>Nacc = nucleus accumbens
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="56"><span data-line="56"></span>VTA = Ventral tegmental area
+</li></ul>
+</li>
+<li class="li ul-li list-dash-li loose-li" data-line="58">
+<p data-line="58"><span data-line="58"></span>6 important ones
+</p>
+<ul class="ul list-dash compact" data-line="59">
+<li class="li ul-li list-dash-li compact-li" data-line="59"><span data-line="59"></span>Self-reflection (DMN) = aMPFC, AG, PCC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="60"><span data-line="60"></span>Salience perception (SN) = dACC, aI, TP, EA
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="61"><span data-line="61"></span>Negative affect = ACC(sgACC, dACC, pACC), MPFC, I, A
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>Positive affect (Reward) = dACC/MPFC, OFC, Striatum (Nacc<span data-line="62"></span> <span data-line="62"></span>+ VTA)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="63"><span data-line="63"></span>Attention = msPFC, LPFC, aI, aIPL, Precuneus
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="64"><span data-line="64"></span>Cognitive control (CEN, fronto-parietal) = DLPFC, PCG, DPC
+</li></ul></li>
+<li class="li ul-li list-dash-li loose-li" data-line="65">
+<p data-line="65"><span data-line="65"></span>Other
+</p>
+<ul class="ul list-dash compact" data-line="66">
+<li class="li ul-li list-dash-li compact-li" data-line="66"><span data-line="66"></span>Sensorimotor
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="67"><span data-line="67"></span>Visual
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="68"><span data-line="68"></span>Auditory
+</li></ul></li>
+<li class="li ul-li list-dash-li loose-li" data-line="69">
+<p data-line="69"><span data-line="69"></span>DMN is task-negative (activity of the brain when doing nothing)
+</p></li>
+<li class="li ul-li list-dash-li loose-li" data-line="70">
+<p data-line="70"><span data-line="70"></span>CEN is task-postive
+</p></li>
+<li class="li ul-li list-dash-li loose-li" data-line="71">
+<p data-line="71"><span data-line="71"></span>DMN and CEN function in anti-correaltional manner
+</p></li></ul>
+<h2 id="sec-how-circuts-can-get-marred" class="h1" data-line="73" data-heading-depth="1" style="display:block"><span data-line="73"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="73"></span>How circuts can get marred?</h2>
+<ul class="ul list-dash compact" data-line="74">
+<li class="li ul-li list-dash-li compact-li" data-line="74"><span data-line="74"></span>hypoactivation of node
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="75"><span data-line="75"></span>hyperactivation of node
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="76"><span data-line="76"></span>increased connectivity b/w nodes
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="77"><span data-line="77"></span>decreased connectivity b/w nodes
+</li></ul>
+<h2 id="sec-limitations-of-current-research" class="h1" data-line="79" data-heading-depth="1" style="display:block"><span data-line="79"></span><span class="heading-before"><span class="heading-label">6</span>.&#8194;</span><span data-line="79"></span>Limitations of current research?</h2>
+<ul class="ul list-dash compact" data-line="80">
+<li class="li ul-li list-dash-li compact-li" data-line="80"><span data-line="80"></span>Existing finding tend to be inconsistent
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="81"><span data-line="81"></span>probably because sample is heterogenous<span data-line="81"></span> <span data-line="81"></span>- meaning similar symptoms due to different circuit dysfunctions
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="82"><span data-line="82"></span>Hence future studies will first identify neural biotypes based on underlying circuit dysfunctions
+</li></ul>
+<h2 id="sec-putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature" class="h1" data-line="84" data-heading-depth="1" style="display:block"><span data-line="84"></span><span class="heading-before"><span class="heading-label">7</span>.&#8194;</span><span data-line="84"></span>Putative biotypes of neural circuit dysfunction in depression and anxiety based on pulished literature</h2>
+<figure id="fig-biotypes" class="figure floating align-center float" data-line="86" style="text-align:center;float-env:figure;float-name:Figure">
+<p class="p noindent" data-line="87"><span data-line="87"></span><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f2.jpg" alt="biotypes" data-path="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f2.jpg" data-linkid="biotypes" style="width:100%"><span data-line="87"></span>
+</p>
+<hr  class="figureline madoko" data-line="88" style="display:block">
+
+<div class="p noindent" data-line="89"><span data-line="89"></span><fig-caption class="figure-caption"><span class="caption-before"><strong class="strong-star2">Figure&#160;<span class="figure-label">2</span>.</strong>&#160;</span><span class="caption-text">Large scale brain circuits of interest.</span></fig-caption></div></figure><h3 id="sec-dmn" class="h2" data-line="92" data-heading-depth="2" style="display:block"><span data-line="92"></span><span class="heading-before"><span class="heading-label">7.1</span>.&#8194;</span><span data-line="92"></span>DMN</h3>
+<ul class="ul list-dash compact" data-line="93">
+<li class="li ul-li list-dash-li compact-li" data-line="93"><span data-line="93"></span>Task-free or task negative condition (e.g. subject asked to reflect on their thoughts)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="94"><span data-line="94"></span>Functional overactivation and hyperconnection of DMN in depression<span data-line="94"></span> <span data-line="94"></span>-<span data-line="94"></span>&gt;<span data-line="94"></span> RUMINATIONS
+</li></ul>
+<h3 id="sec-sn" class="h2" data-line="96" data-heading-depth="2" style="display:block"><span data-line="96"></span><span class="heading-before"><span class="heading-label">7.2</span>.&#8194;</span><span data-line="96"></span>SN</h3>
+<ul class="ul list-dash compact" data-line="97">
+<li class="li ul-li list-dash-li compact-li" data-line="97"><span data-line="97"></span>detects salient change in the environment<span data-line="97"></span> <span data-line="97"></span>- interoceptive and external
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="98"><span data-line="98"></span>after detection relay signal for further processing to CEN, which guides switching of function from DMN to CEN
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="99"><span data-line="99"></span>Insular-amygdala hypoconnection<span data-line="99"></span> <span data-line="99"></span>-<span data-line="99"></span>&gt;<span data-line="99"></span> ANXIOUS AVOIDANCE
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="100"><span data-line="100"></span>Difficulty in differentiating relevant salient cues and an avoidance of situations that could generate stimulus overload
+</li></ul>
+<h3 id="sec-negative-affect-circuit" class="h2" data-line="102" data-heading-depth="2" style="display:block"><span data-line="102"></span><span class="heading-before"><span class="heading-label">7.3</span>.&#8194;</span><span data-line="102"></span>Negative affect circuit</h3>
+<ul class="ul list-dash compact" data-line="103">
+<li class="li ul-li list-dash-li compact-li" data-line="103"><span data-line="103"></span>Appraisal of negatively valenced stimuli
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="104"><span data-line="104"></span>Expression of emotions
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="105"><span data-line="105"></span>May be engaged in absence of concious sensory awareness
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="106"><span data-line="106"></span>commonly co-activated with the SN in response to negative stimuli
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="107"><span data-line="107"></span>NEGATIVE-BIASES
+
+<ul class="ul list-dash compact" data-line="108">
+<li class="li ul-li list-dash-li compact-li" data-line="108"><span data-line="108"></span>MDD pt<span data-line="108"></span> <span data-line="108"></span>-<span data-line="108"></span>&gt;<span data-line="108"></span> shown sad face<span data-line="108"></span> <span data-line="108"></span>-<span data-line="108"></span>&gt;<span data-line="108"></span> increased activation of insula<span data-line="108"></span> <span data-line="108"></span>+ increased activation of amygdala
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="109"><span data-line="109"></span>GAD pt<span data-line="109"></span> <span data-line="109"></span>-<span data-line="109"></span>&gt;<span data-line="109"></span> shown emotional faces<span data-line="109"></span> <span data-line="109"></span>-<span data-line="109"></span>&gt;<span data-line="109"></span> increased insular activation<span data-line="109"></span> <span data-line="109"></span>+ Insular-amygdala hypoconnection
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="110"><span data-line="110"></span>MDD pt<span data-line="110"></span> <span data-line="110"></span>-<span data-line="110"></span>&gt;<span data-line="110"></span> at rest<span data-line="110"></span> <span data-line="110"></span>-<span data-line="110"></span>&gt;<span data-line="110"></span> hyperconnectivity of anterior notes of the negative affect circuit and SN<span data-line="110"></span> <span data-line="110"></span>-<span data-line="110"></span>&gt;<span data-line="110"></span> drives ruminations and negative attributions
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="111"><span data-line="111"></span>THREAT DYSREGULATION
+
+<ul class="ul list-dash compact" data-line="112">
+<li class="li ul-li list-dash-li compact-li" data-line="112"><span data-line="112"></span>Amygdala hyperactivation<span data-line="112"></span> <span data-line="112"></span>+ ACC hypoactivation
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="113"><span data-line="113"></span>Amygdala-ACC hypoconnection
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="114"><span data-line="114"></span>leading to poor emotional regulation
+</li></ul></li></ul>
+<h3 id="sec-positive-affect-circuit-reward" class="h2" data-line="116" data-heading-depth="2" style="display:block"><span data-line="116"></span><span class="heading-before"><span class="heading-label">7.4</span>.&#8194;</span><span data-line="116"></span>Positive affect circuit (Reward)</h3>
+<ul class="ul list-dash compact" data-line="117">
+<li class="li ul-li list-dash-li compact-li" data-line="117"><span data-line="117"></span>ANHEDONIA
+
+<ul class="ul list-dash compact" data-line="118">
+<li class="li ul-li list-dash-li compact-li" data-line="118"><span data-line="118"></span>MDD pt<span data-line="118"></span> <span data-line="118"></span>-<span data-line="118"></span>&gt;<span data-line="118"></span> happy faces<span data-line="118"></span> <span data-line="118"></span>-<span data-line="118"></span>&gt;<span data-line="118"></span> hypoactivation of striatum<span data-line="118"></span> <span data-line="118"></span>-<span data-line="118"></span>&gt;<span data-line="118"></span> loss of sensitivity to socially rewarding stimuli
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="119"><span data-line="119"></span>also hyperactivation of OFC when shown happy faces
+
+<ul class="ul list-dash compact" data-line="120">
+<li class="li ul-li list-dash-li compact-li" data-line="120"><span data-line="120"></span>CONTEXT INSENSITIVITY
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="121"><span data-line="121"></span>In remitted depression<span data-line="121"></span> <span data-line="121"></span>-<span data-line="121"></span>&gt;<span data-line="121"></span> pt shown reward stimuli<span data-line="121"></span> <span data-line="121"></span>-<span data-line="121"></span>&gt;<span data-line="121"></span> overactivation of     ACC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="122"><span data-line="122"></span>heightened anticipation of reward without sensitivity to surrounding context
+</li></ul></li></ul>
+<h3 id="sec-attention-circuit" class="h2" data-line="124" data-heading-depth="2" style="display:block"><span data-line="124"></span><span class="heading-before"><span class="heading-label">7.5</span>.&#8194;</span><span data-line="124"></span>Attention circuit</h3>
+<ul class="ul list-dash compact" data-line="125">
+<li class="li ul-li list-dash-li compact-li" data-line="125"><span data-line="125"></span>Alertness, sustained attention
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="126"><span data-line="126"></span>Switching b/w resting and task positive network
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="127"><span data-line="127"></span>hypoconnection of fronto-parietal network<span data-line="127"></span> <span data-line="127"></span>-<span data-line="127"></span>&gt;<span data-line="127"></span> INATTENTION
+</li></ul>
+<h3 id="sec-cognitive-control-circuit" class="h2" data-line="129" data-heading-depth="2" style="display:block"><span data-line="129"></span><span class="heading-before"><span class="heading-label">7.6</span>.&#8194;</span><span data-line="129"></span>Cognitive control circuit</h3>
+<ul class="ul list-dash compact" data-line="130">
+<li class="li ul-li list-dash-li compact-li" data-line="130"><span data-line="130"></span>Working memory and selective attention
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="131"><span data-line="131"></span>While effortful selective processing<span data-line="131"></span> <span data-line="131"></span>-<span data-line="131"></span>&gt;<span data-line="131"></span> inability to inhibit irrelevant stimuli<span data-line="131"></span> <span data-line="131"></span>-<span data-line="131"></span>&gt;<span data-line="131"></span> COGNITVE DYSCONTROL
+</li></ul>
+<h2 id="sec-use-of-neural-circuts-to-guide-treatment" class="h1" data-line="133" data-heading-depth="1" style="display:block"><span data-line="133"></span><span class="heading-before"><span class="heading-label">8</span>.&#8194;</span><span data-line="133"></span>Use of neural circuts to guide treatment?</h2>
+<figure id="fig-rx" class="figure floating align-center float" data-line="135" style="text-align:center;float-env:figure;float-name:Figure">
+<p class="p noindent" data-line="136"><span data-line="136"></span><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f3.jpg" alt="rx" data-path="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f3.jpg" data-linkid="rx" style="width:100%"><span data-line="136"></span>
+</p>
+<hr  class="figureline madoko" data-line="137" style="display:block">
+
+<div class="p noindent" data-line="138"><span data-line="138"></span><fig-caption class="figure-caption"><span class="caption-before"><strong class="strong-star2">Figure&#160;<span class="figure-label">3</span>.</strong>&#160;</span><span class="caption-text">Large scale brain circuits of interest.</span></fig-caption></div></figure><h2 id="sec-reference" class="h1" data-line="141" data-heading-depth="1" style="display:block"><span data-line="141"></span><span class="heading-before"><span class="heading-label">9</span>.&#8194;</span><span data-line="141"></span>Reference</h2>
+<ol class="ol compact" data-line="142">
+<li class="li ol-li compact-li" data-line="142"><span data-line="142"></span>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/<span data-line="142"></span>#<span data-line="142"></span>R1
+</li></ol>
+<span data-line=""></span></div>
+</body>
+
+</html>

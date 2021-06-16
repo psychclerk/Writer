@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.2.3" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Dr. Jagdish Varma" />
+  <title>Bradycardia</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote {
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013";
+      position: absolute;
+      margin-left: -1em;
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko span.math-rendering {
+    display:inline-block;
+    width:8em;
+    overflow-x:auto;
+    font-size:70%;
+  }
+  .madoko span.math-rendering::-webkit-scrollbar {
+    width:4px;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 {
+    margin-top: 1.22em;
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  {
+    margin-top: 1ex;
+  }
+  .madoko h5, .madoko h6 {
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 {
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 {
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt,
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="6" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="6" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="6" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="6"></span>Bradycardia</div></div>
+<div class="authors align-center" data-line="11" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="11" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="11" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="11" style="font-size:large;line-adjust:0"><span data-line="11"></span>Dr. Jagdish Varma</div>
+<div class="authoraddress" data-line="14" style="line-adjust:0"><span data-line="14"></span>Professor of Psychiatry, Bhaikaka University, Karamsad</div></td></tr></tbody></table></div></div><span data-line="8"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-definition" data-toc-depth="1" data-toc-line="[1]{.heading-label}.&#8194;Definition" style="toctarget:sec-definition"><a href="#sec-definition" class="localref"><span class="heading-label">1</span>.&#8194;Definition</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-causes" data-toc-depth="1" data-toc-line="[2]{.heading-label}.&#8194;Causes" style="toctarget:sec-causes"><a href="#sec-causes" class="localref"><span class="heading-label">2</span>.&#8194;Causes</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-disease-of-the-heart" data-toc-depth="2" data-toc-line="[2.1]{.heading-label}.&#8194;Disease  of the heart" style="toctarget:sec-disease-of-the-heart"><a href="#sec-disease-of-the-heart" class="localref"><span class="heading-label">2.1</span>.&#8194;Disease  of the heart</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-systemic" data-toc-depth="2" data-toc-line="[2.2]{.heading-label}.&#8194;Systemic" style="toctarget:sec-systemic"><a href="#sec-systemic" class="localref"><span class="heading-label">2.2</span>.&#8194;Systemic</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-medications-psychiatric" data-toc-depth="2" data-toc-line="[2.3]{.heading-label}.&#8194;Medications (Psychiatric)" style="toctarget:sec-medications-psychiatric"><a href="#sec-medications-psychiatric" class="localref"><span class="heading-label">2.3</span>.&#8194;Medications (Psychiatric)</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-medications-other" data-toc-depth="2" data-toc-line="[2.4]{.heading-label}.&#8194;Medications (Other)" style="toctarget:sec-medications-other"><a href="#sec-medications-other" class="localref"><span class="heading-label">2.4</span>.&#8194;Medications (Other)</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-evaluation" data-toc-depth="1" data-toc-line="[3]{.heading-label}.&#8194;Evaluation" style="toctarget:sec-evaluation"><a href="#sec-evaluation" class="localref"><span class="heading-label">3</span>.&#8194;Evaluation</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-history" data-toc-depth="2" data-toc-line="[3.1]{.heading-label}.&#8194;History" style="toctarget:sec-history"><a href="#sec-history" class="localref"><span class="heading-label">3.1</span>.&#8194;History</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-examination" data-toc-depth="2" data-toc-line="[3.2]{.heading-label}.&#8194;Examination" style="toctarget:sec-examination"><a href="#sec-examination" class="localref"><span class="heading-label">3.2</span>.&#8194;Examination</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-investigations" data-toc-depth="2" data-toc-line="[3.3]{.heading-label}.&#8194;Investigations" style="toctarget:sec-investigations"><a href="#sec-investigations" class="localref"><span class="heading-label">3.3</span>.&#8194;Investigations</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-management" data-toc-depth="1" data-toc-line="[4]{.heading-label}.&#8194;Management" style="toctarget:sec-management"><a href="#sec-management" class="localref"><span class="heading-label">4</span>.&#8194;Management</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-reference" data-toc-depth="1" data-toc-line="[5]{.heading-label}.&#8194;Reference" style="toctarget:sec-reference"><a href="#sec-reference" class="localref"><span class="heading-label">5</span>.&#8194;Reference</a></div></div></nav><h2 id="sec-definition" class="h1" data-line="11" data-heading-depth="1" style="display:block"><span data-line="11"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="11"></span>Definition</h2>
+<ul class="ul list-dash compact" data-line="13">
+<li class="li ul-li list-dash-li compact-li" data-line="13"><span data-line="13"></span>Sinus bradycardia is defined as sinus rhythm at a rate of less than 60 beats per minute
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="14"><span data-line="14"></span>Normal for
+
+<ul class="ul list-dash compact" data-line="15">
+<li class="li ul-li list-dash-li compact-li" data-line="15"><span data-line="15"></span>young people esp. exercisers
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="16"><span data-line="16"></span>elderly
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="17"><span data-line="17"></span>during sleep
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="18"><span data-line="18"></span>Therefore to guide further assessment practical to categorize the patient into
+
+<ul class="ul list-dash compact" data-line="19">
+<li class="li ul-li list-dash-li compact-li" data-line="19"><span data-line="19"></span>symptomatic or asymptomatic
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="20"><span data-line="20"></span>appropriate or inappropropriate
+</li></ul></li></ul>
+<h2 id="sec-causes" class="h1" data-line="22" data-heading-depth="1" style="display:block"><span data-line="22"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="22"></span>Causes</h2>
+<ul class="ul list-dash compact" data-line="23">
+<li class="li ul-li list-dash-li compact-li" data-line="23"><span data-line="23"></span>Basically divided into 3 categories
+
+<ul class="ul list-dash compact" data-line="24">
+<li class="li ul-li list-dash-li compact-li" data-line="24"><span data-line="24"></span>Disease of the heart
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="25"><span data-line="25"></span>Systemic disorders
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="26"><span data-line="26"></span>Medications
+</li></ul></li></ul>
+<h3 id="sec-disease-of-the-heart" class="h2" data-line="28" data-heading-depth="2" style="display:block"><span data-line="28"></span><span class="heading-before"><span class="heading-label">2.1</span>.&#8194;</span><span data-line="28"></span>Disease  of the heart</h3>
+<ul class="ul list-dash compact" data-line="29">
+<li class="li ul-li list-dash-li compact-li" data-line="29"><span data-line="29"></span>Sick sinus
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="30"><span data-line="30"></span>AMI
+</li></ul>
+<h3 id="sec-systemic" class="h2" data-line="32" data-heading-depth="2" style="display:block"><span data-line="32"></span><span class="heading-before"><span class="heading-label">2.2</span>.&#8194;</span><span data-line="32"></span>Systemic</h3>
+<ul class="ul list-dash compact" data-line="33">
+<li class="li ul-li list-dash-li compact-li" data-line="33"><span data-line="33"></span>Low BMI (esp. those with eating disorders or AUD)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="34"><span data-line="34"></span>Electrolyte distrubances (seen in eating disorders, AUD, Kidney disease)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="35"><span data-line="35"></span>Hypothyroidism
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="36"><span data-line="36"></span>Hypothermia
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="37"><span data-line="37"></span>OSA
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="38"><span data-line="38"></span>Increased vagal tone after coughing, micturition or vomiting
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="39"><span data-line="39"></span>Raised ICT (Head injury)
+</li></ul>
+<h3 id="sec-medications-psychiatric" class="h2" data-line="41" data-heading-depth="2" style="display:block"><span data-line="41"></span><span class="heading-before"><span class="heading-label">2.3</span>.&#8194;</span><span data-line="41"></span>Medications (Psychiatric)</h3>
+<ul class="ul list-dash compact" data-line="42">
+<li class="li ul-li list-dash-li compact-li" data-line="42"><span data-line="42"></span>Antidepressants<span data-line="42"></span> <span data-line="42"></span>- SSRIs (FXN, Citalopram)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="43"><span data-line="43"></span>Antipsychotics<span data-line="43"></span> <span data-line="43"></span>- Olanzapine
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="44"><span data-line="44"></span>Mood stabilizers<span data-line="44"></span> <span data-line="44"></span>- Lithium
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="45"><span data-line="45"></span>Anxiolytic<span data-line="45"></span> <span data-line="45"></span>- Benzo
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="46"><span data-line="46"></span>Antidementia<span data-line="46"></span> <span data-line="46"></span>- AChEI
+</li></ul>
+<h3 id="sec-medications-other" class="h2" data-line="48" data-heading-depth="2" style="display:block"><span data-line="48"></span><span class="heading-before"><span class="heading-label">2.4</span>.&#8194;</span><span data-line="48"></span>Medications (Other)</h3>
+<ul class="ul list-dash compact" data-line="49">
+<li class="li ul-li list-dash-li compact-li" data-line="49"><span data-line="49"></span>Beta-blockers
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="50"><span data-line="50"></span>Methyldopa
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="51"><span data-line="51"></span>Opioids
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="52"><span data-line="52"></span>CCB (diltiazem)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="53"><span data-line="53"></span>Digoxin
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="54"><span data-line="54"></span>Amiodarane
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="55"><span data-line="55"></span>Ivabradine
+</li></ul>
+<h2 id="sec-evaluation" class="h1" data-line="57" data-heading-depth="1" style="display:block"><span data-line="57"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="57"></span>Evaluation</h2><h3 id="sec-history" class="h2" data-line="59" data-heading-depth="2" style="display:block"><span data-line="59"></span><span class="heading-before"><span class="heading-label">3.1</span>.&#8194;</span><span data-line="59"></span>History</h3>
+<ul class="ul list-dash compact" data-line="60">
+<li class="li ul-li list-dash-li compact-li" data-line="60"><span data-line="60"></span>Symptoms of bradycardia and of IHD
+
+<ul class="ul list-dash compact" data-line="61">
+<li class="li ul-li list-dash-li compact-li" data-line="61"><span data-line="61"></span>mild <span data-line="61"></span>&lt;<span data-line="61"></span>&#8212;<span data-line="61"></span>&gt;<span data-line="61"></span> moderate <span data-line="61"></span>&lt;<span data-line="61"></span>&#8212;<span data-line="61"></span>&gt;<span data-line="61"></span> severe <span data-line="61"></span>&lt;<span data-line="61"></span>&#8212;<span data-line="61"></span>&gt;<span data-line="61"></span> life threat (IHD)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>fatigue <span data-line="62"></span>&lt;<span data-line="62"></span>&#8212;<span data-line="62"></span>&gt;<span data-line="62"></span> light-headed <span data-line="62"></span>&lt;<span data-line="62"></span>&#8212;<span data-line="62"></span>&gt;<span data-line="62"></span> collapse <span data-line="62"></span>&lt;<span data-line="62"></span>&#8212;<span data-line="62"></span>&gt;<span data-line="62"></span> low BP, SOB, chest pain
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="63"><span data-line="63"></span>Etiological h/o
+
+<ul class="ul list-dash compact" data-line="64">
+<li class="li ul-li list-dash-li compact-li" data-line="64"><span data-line="64"></span>age
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="65"><span data-line="65"></span>cardiac rfs (smoking, HTN, DM, dyslipidemia, obesity, h/o IHD)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="66"><span data-line="66"></span>Thyroid
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="67"><span data-line="67"></span>any renal disorder
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="68"><span data-line="68"></span>OSA
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="69"><span data-line="69"></span>fall
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="70"><span data-line="70"></span>eating disorder
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="71"><span data-line="71"></span>alcohol use
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="72"><span data-line="72"></span>family h/o sudden cardiac death, AF
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="73"><span data-line="73"></span>medications
+</li></ul></li></ul>
+<h3 id="sec-examination" class="h2" data-line="75" data-heading-depth="2" style="display:block"><span data-line="75"></span><span class="heading-before"><span class="heading-label">3.2</span>.&#8194;</span><span data-line="75"></span>Examination</h3>
+<ul class="ul list-dash compact" data-line="76">
+<li class="li ul-li list-dash-li compact-li" data-line="76"><span data-line="76"></span>Vitals, BMI
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="77"><span data-line="77"></span>cardiac, respiratory, thyroid
+</li></ul>
+<h3 id="sec-investigations" class="h2" data-line="79" data-heading-depth="2" style="display:block"><span data-line="79"></span><span class="heading-before"><span class="heading-label">3.3</span>.&#8194;</span><span data-line="79"></span>Investigations</h3>
+<ul class="ul list-dash compact" data-line="80">
+<li class="li ul-li list-dash-li compact-li" data-line="80"><span data-line="80"></span>First line
+
+<ul class="ul list-dash compact" data-line="81">
+<li class="li ul-li list-dash-li compact-li" data-line="81"><span data-line="81"></span>ECG
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="82"><span data-line="82"></span>Electrolytes
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="83"><span data-line="83"></span>TSH
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="84"><span data-line="84"></span>Second line
+
+<ul class="ul list-dash compact" data-line="85">
+<li class="li ul-li list-dash-li compact-li" data-line="85"><span data-line="85"></span>Trop I if ECG changes
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="86"><span data-line="86"></span>ECHO
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="87"><span data-line="87"></span>Holter
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="88"><span data-line="88"></span>Serum levels of Lithium and digoxin
+</li></ul></li></ul>
+<h2 id="sec-management" class="h1" data-line="90" data-heading-depth="1" style="display:block"><span data-line="90"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="90"></span>Management</h2>
+<ul class="ul list-dash compact" data-line="91">
+<li class="li ul-li list-dash-li compact-li" data-line="91"><span data-line="91"></span>Asymptomatic patients may need no further investigation or treatment
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="92"><span data-line="92"></span>Address underlying reversible causes
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="93"><span data-line="93"></span>If possible, rationalise medication
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="94"><span data-line="94"></span>If medication rationalisation is not possible or there is intrinsic cardiac disease, patient may require permanent pacing so refer to cardiology
+</li></ul>
+<h2 id="sec-reference" class="h1" data-line="96" data-heading-depth="1" style="display:block"><span data-line="96"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="96"></span>Reference</h2>
+<ol class="ol compact" data-line="97">
+<li class="li ol-li compact-li" data-line="97"><span data-line="97"></span>Pillinger T, Gaughran F, Taylor D. The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry.
+</li></ol>
+<span data-line=""></span></div>
+</body>
+
+</html>

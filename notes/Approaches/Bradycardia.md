@@ -1,0 +1,96 @@
+Title         : Bradycardia
+Author        : Dr. Jagdish Varma
+Affiliation   : Professor of Psychiatry, Bhaikaka University, Karamsad
+Toc Depth     : 6
+
+[TITLE]
+
+[TOC]
+
+# Definition
+
+- Sinus bradycardia is defined as sinus rhythm at a rate of less than 60 beats per minute
+- Normal for
+  - young people esp. exercisers
+  - elderly
+  - during sleep
+- Therefore to guide further assessment practical to categorize the patient into
+  - symptomatic or asymptomatic
+  - appropriate or inappropropriate
+
+# Causes
+- Basically divided into 3 categories
+  - Disease of the heart
+  - Systemic disorders
+  - Medications
+
+## Disease  of the heart
+- Sick sinus
+- AMI
+
+## Systemic
+- Low BMI (esp. those with eating disorders or AUD)
+- Electrolyte distrubances (seen in eating disorders, AUD, Kidney disease)
+- Hypothyroidism
+- Hypothermia
+- OSA
+- Increased vagal tone after coughing, micturition or vomiting
+- Raised ICT (Head injury)
+
+## Medications (Psychiatric)
+- Antidepressants - SSRIs (FXN, Citalopram)
+- Antipsychotics - Olanzapine
+- Mood stabilizers - Lithium
+- Anxiolytic - Benzo
+- Antidementia - AChEI
+
+## Medications (Other)
+- Beta-blockers
+- Methyldopa
+- Opioids
+- CCB (diltiazem)
+- Digoxin
+- Amiodarane
+- Ivabradine
+
+# Evaluation
+
+## History
+- Symptoms of bradycardia and of IHD
+  - mild <---> moderate <---> severe <---> life threat (IHD)
+  - fatigue <---> light-headed <---> collapse <---> low BP, SOB, chest pain
+- Etiological h/o
+  - age
+  - cardiac rfs (smoking, HTN, DM, dyslipidemia, obesity, h/o IHD)
+  - Thyroid
+  - any renal disorder
+  - OSA
+  - fall
+  - eating disorder
+  - alcohol use
+  - family h/o sudden cardiac death, AF
+  - medications
+
+## Examination
+- Vitals, BMI
+- cardiac, respiratory, thyroid
+
+## Investigations
+- First line
+  - ECG
+  - Electrolytes
+  - TSH
+- Second line
+  - Trop I if ECG changes
+  - ECHO
+  - Holter
+  - Serum levels of Lithium and digoxin
+
+# Management
+- Asymptomatic patients may need no further investigation or treatment
+- Address underlying reversible causes
+- If possible, rationalise medication
+- If medication rationalisation is not possible or there is intrinsic cardiac disease, patient may require permanent pacing so refer to cardiology
+
+# Reference
+1. Pillinger T, Gaughran F, Taylor D. The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry. 2020. 

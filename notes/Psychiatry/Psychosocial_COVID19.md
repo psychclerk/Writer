@@ -1,0 +1,592 @@
+Title         : Psychosocial impact of COVID-19 and suggested interventions
+Author        : Dr. Jagdish Varma
+Affiliation   : Professor of Psychiatry, Bhaikaka University, Karamsad
+Toc Depth     : 6
+Heading depth : 7
+HTML Footer : Dr. Jagdish Varma 
+
+[TITLE]
+
+[TOC]
+
+# Introduction
+- First case reported in China in December 2019
+- COVID-19 declared public health emergency on 30th January 2020
+- Ensuing lockdowns and home confinement
+- First and foremost response has been fear and sense of clear and imminent danger
+
+<p align="center">
+  <img width="420" height="300" style="padding:1px;border:thin solid black;" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/bin/gr1_lrg.jpg"></br>
+  <b>Figure 1:</b> Intricate psychosocial relationship between the disease, health care providers, government and population.
+</p>
+
+# How stress gets under our skin?
+
+## Stress
+- Whether of not it feels “stressful”
+- Non-specific response of the body to any demand
+
+## Stressor
+- Any stimulus that gives rise to stress response
+- Psychosocial – by virtue of cognitive interpretation; (real or imagined)
+- Biogenic – inherent stimulus
+
+## Working definition
+- Stressor -> Stress = physiological response which act as a mediating link -> target organ damage
+- Stress is not all negative
+
+## Physiological substrate for stress response
+- Neuron
+- Neurotransmitters
+- Neural impulse
+- CNS
+	- Brain
+	- Spinal cord
+- PNS
+	- Somatic – Muscles
+- ANS
+	- SNS – Arousal
+	- PNS – Relaxation
+- Endocrine
+	- HPA Axis
+
+## Systems model of stress response
+- Current evidence suggests existence of highly specific neuroendocrine and endocrine efferent mechanisms
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-1-4939-9098-6_2/MediaObjects/215187_4_En_2_Fig7_HTML.png"></br>
+  Figure 2: Systems model of stress response
+</p>
+
+### Cognitive appraisal and affective integration
+- Epictetus – “Men are disturbed not by things, but by the views which they take of them.”
+- Likewise, “Stressors, like beauty lies in the eye of the beholder.”
+- Cognitive appraisal refers to the process of cognitive interpretation, that is, the meanings that we assign to the world as it unfolds before us. (forebrain)
+- Affective integration refers to the blending and coloring of felt emotion into the cognitive interpretation. (limbic)
+- The resultant cognitive–affective complex represents how the stressors are ultimately perceived.
+- In effect, this critical integrated perception represents the determination of whether psychosocial stimuli become psychosocial stressors or not.
+- Vulnerable to
+  - Biological predispositions
+	- Personality patterns
+	- Learned behaviors
+	- Coping resources
+
+### Neurological triggering mechanisms
+- Locus ceruleus
+- Limbic nuclei
+- Hypothalamus
+
+### Stress response per se
+
+#### Neural response (quick and short lived)
+- SNS -> arousal via norepinephrine
+- PNS -> relaxation via acetylcholine
+- Somatic
+
+#### Neuroendocrine response (intermediate)
+- Fight or flight = Mobilization of muscle to respond
+- Via release of catecholamines in blood from adrenal medulla (similar to neural response but with 20-30 second delay)
+
+#### Endocrine response (chronic and prolonged)
+- Activated when active coping not possible
+- Passive coping
+- Mainly HPA axis -> corticosteroids from adrenal cortex -> GAS
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.child-encyclopedia.com/sites/default/files/images/contenu/Figure-2-Hypothalamic-Pituitary-Adrenocortical-Axis-or-Stress-Hormone-Axis.jpg"></br>
+  Figure 3: HPA Axis
+</p>
+
+#### General adaptation syndrome
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="http://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/_cliffsnotes/assets/25289.jpg"></br>
+  Figure 4: Phases of the General Adapdation Syndrome
+</p>
+
+- Alarm phase : Body resources are mobilized -> acute target organ damage may occur
+- Resistance stage : Body fights to reestablish and maintain homeostasis. -> target organ adaptation may bring about changes in the organ. Stages 1 and 2 can be repeated throughout one’s life in response to stressful situations.
+- Exhaustion stage : Resources are depleted -> target organ damage likely to occur
+
+### Target organ activation
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.researchgate.net/profile/Bruce-Mcewen-2/publication/6223301/figure/fig1/AS:667176419733521@1536078662833/Central-role-of-the-brain-in-allostasis-and-the-behavioral-and-physiological-response-to.jpg"></br>
+  Figure 5: Brain as the target organ of stress
+</p>
+
+- **Allostasis** is the active process that anticipates, predicts and promotes adaptation
+- **Allostatic load** : The same mediators that allow use to adapt also cause damage when overuse or out of balance.
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://qphs.fs.quoracdn.net/main-qimg-304effc91c3bd0c1bc68e1db0d86e724"></br>
+  Figure 6: Concept of allostatic load
+</p>
+
+- Acute release of cortisol is helpful - stage 1
+- Chronic release of cortical is unhelpful - stage 3
+- More than cortisol / non-linear processes
+- Re-modelling of architecture
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.child-encyclopedia.com/sites/default/files/images/contenu/Figure-1-Non-linear-network-of-mediators-in-the-stress-response.png"></br>
+  Figure 7: Non-linear nature of downstream stress effects
+</p>
+
+### Coping
+- Coping may be thought of as environmental or cognitive tactics designed to attenuate the stress response.
+- Adaptive coping strategies reduce stress while at the same time promoting long-term health (e.g., exercise, relaxation, proper nutrition, seeking support).
+- Maladaptive coping strategies, on the other hand, do indeed reduce stress in the short term but serve to erode health in the long term (alcohol/drug abuse, cigarette smoking, interpersonal withdrawal).
+- When coping is successful, extraordinary target organ activation is reduced or eliminated and homeostasis is reestablished.
+
+# Impact on COVID-19 positive patients and quarantined individuals
+
+## Stigma
+
+### Immediate effects
+- Delay in seeking care
+- Hiding of important information like travel history
+- Increased risk of community transmission
+- Attacks on informers
+	- Bihar man beaten to death for informing arrival of 2 people from Maharashtra [TOI 31 March 2020]
+
+### Delayed effects
+- May continue even years after exposure
+- Making it difficult for many to restart
+- Stoke fears of discrimination and marginalization
+
+## Home quarantined patient
+- Inadequate of confusing information can lead to confusion and anxiety
+- Fear of infection or infecting others
+- Minor physical symptoms may be mis-interpreted as symptoms of illness
+- Frustration and Boredom
+- Financial Loss
+- Unavailability of supplies
+
+## Hospital quarantined patient
+
+### Psychosocial factors predicting hospitalization
+
+- **Batty et al. [Brain, Behavior, and Immunity 2020](https://www.sciencedirect.com/science/article/pii/S088915912031309X)**
+	- Sample taken from UK Biobank [ a large-scale community-based cohort]
+	- 908 hospitalizations for COVID-19 out of 431,051 study members
+	- several factors found to be associated with risk of admission
+		- low education
+		- low income
+		- occupation
+		- **psychological distress**
+		- **past psychiatric history**
+		- **neurotic personality traits**
+		- **low cognitive performance** [**Most Robust association**]
+
+### Isolation in a hospital leads to
+
+- Loss of personal freedom
+- Loss of control
+- Loss of social contact / alienation
+- Exposure to unfamiliar environment
+- Loss of daily routine
+- Dependence on others
+- Exposure to an uncertain situation
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://ars.els-cdn.com/content/image/1-s2.0-S0304394020307618-gr1.jpg"></br>
+  Figure 8: Various mechanisms by which COVID can cause neuropsychiatric effects
+</p>
+
+### New onset mental health problems
+#### Expected emotions
+
+- **Hao et al. [Translational Psychiatry 2020](https://www.nature.com/articles/s41398-020-01039-2)**
+  - emotions experienced by patients after hospitalization for COVID-19
+  - shock, fear, despair, and Boredom
+  - external factors that affected patients’ mood
+    - discrimination
+    - medical expenses
+    - **care by healthcare workers**
+  - can also have anger and frustration
+  - not a diagnosable mental disorder, but need to be identified and managed
+
+#### Anxiety and Depression
+
+- Health related anxiety - especially initially due to uncertainty of outcome and stigma.
+- Panic attacks
+- Acute stress disorder
+- Depression
+- End-of-Life crises
+	- fear of death
+	- "Have I done my duties well"
+	- guilt
+- **Kong et al. Preprint [medRxiv 2020](https://www.medrxiv.org/content/medrxiv/early/2020/04/05/2020.03.24.20043075.full.pdf)**
+  - 144 patients with COVID-19, China
+  - HADS - anx / dep
+	- PSSS - perceived social support
+	- 34.7% - anxiety
+	- 28.5% - depression
+	- MLR
+		- gender, age, low O2Sat, *poor social support* -> anxiety
+		- age, infection of family member and *poor social support* -> depression
+
+#### Insomnia
+
+  - **Deng et al. [Ann N Y Acad Sci. 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7675607/)**
+	- meta-analysis of prevalence of depression, anxiety and sleep disturbances in COVID-19 patients
+	- 31 studied / n=5153
+	- pooled prev. depression 45%
+	- pooled prev. anxiety 47%
+	- pooled prev. sleep disturbance 34%
+
+#### Substance withdrawal
+
+- mainly alcohol withdrawal
+
+#### Delirium
+
+- **Woolley [Geriatric Nursing 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle), Hawkins et al. [Journal of Psychosomatic Research 2021](https://www.sciencedirect.com/science/article/pii/S0022399920309120)**
+- Specific rfs for covid delirium
+	- age > 75 years
+  - nursing home resident
+  - prior psychoactive medication
+  - vision impaired
+  - hearing impaired
+  - stroke
+  - parkinsonism
+- Causes - intrinsic
+	- virus - neuroinflammation
+- Causes - extrinsic
+	-  isolation (physical and psychological)
+  -  medications
+  		- steroids
+    	- sedation for ventilation
+    	- hypothetical association with prone positioning
+	- Length of stay
+- Incidence
+	- more then 70% patients with severe disease
+
+#### Psychosis
+
+- **Lee et al. [Clinical Infectious Diseases 2004.](https://academic.oup.com/cid/article/39/8/1247/297366?login=true)**
+	- 15/1744 patients developed Psychosis (0.9%) during SARS outbreak
+	- Diagnoses
+		- Steroid-Induced Manic Episode (n = 10)
+		- Steroid-Induced Psychotic Disorder (n = 3)
+		- Major Depressive Episode with Psychotic Features (n = 1)
+		- Psychotic Disorder Not Otherwise Specified (n = 1)
+	- Associated factors
+		- received higher total doses of steroids
+		- had family h/o psych illness
+
+#### Drugs which can have neuropsychiatric effects
+
+- Quinolones
+- Polymyxin
+- Ceftriaxone
+- Azithromycin
+- Linezolid
+- Vancomycin
+- Piperacillin/Tazobactam
+- Carbapenems
+- Anti-viral
+- Fluconazole
+- Steroids
+
+#### Qualitative data
+
+- **Sun et al. [J Affect Disord. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/)**
+  - China
+  - psychological experience of 15 COVID-19 patients during hospitalization could be summarized into five themes
+    * fear, denial, and stigma during the early stages, which gradually developed into acceptance in the later stages
+    * major source of stress included the viral nature of the disease, quarantine measures, and concerns regarding the health of family members
+    * reactions of body and mind included disease stage-dependent emotional responses, excessive attention to symptoms, rumination, and changes in diet, sleep, and behavior
+    * supportive factors included psychological adjustments, medical care, and family and social support
+    * disease resulted in psychological growth and patients viewed problems with gratitude through the cherishing of life, family, bravery, and tenacity.
+
+#### Data from our center (2020)
+
+- New onset MH problems 17/42 (40.4%)
+	- 35% males, 50% females
+	- 50% of confirmed patients
+	- Common diagnoses
+		- Health related Anxiety
+		- Anxiety Disorder
+		- Boredom
+		- Adjustment disorder
+
+### Exacerbation of pre-existing mental health problems
+
+- Illness exacerbation
+- Stopping of ongoing medications
+- Drug interactions
+
+## Post COVID-19 neuropsychiatric symptoms
+
+### Anxiety and Depression
+
+- **Mazza et al 2020. [Brain Behav Immun. 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7390748/?fbclid=IwAR2R5IqjcDMTChB7N5x5pjoiuHIMCdiDr8OgsDOiJ11Hm2IOxBsafeBqye8)**
+
+	- Psychiatric screening 1 month after discharge
+	- 402 adult COVID survivors [265 males / mean age 58y], Milan
+	- Demography
+	- Baseline inflammatory markers and follow-up oxygen saturation levels
+	- Clinical interview and a battery of self-report questionnaires for
+		- Depression - 31%
+		- Anxiety - 42%
+		- Insomnia - 40%
+		- OCsymptoms - 20%
+		- PTSD - 28%
+	- Overall 56% had at-least once psychopathology
+	- Female > males despite lower baseline inflammatory markers
+	- Past psych h/o > without past psych h/o with similar baseline markers
+	- Baseline systemic inflammation index (SII) positively  correlated with scores on depression and anxiety at follow-up
+	- WORSE INFLAMMATION LEADS TO WORSE DEPRESSION
+
+- **Taquet et al. [Preprint medRxiv 2021](https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1)**
+	- Six month neurological and psychological outcome in 236,379 of COVID-19
+	- retrospective chart review
+	- Mood/Anxiety/Psychosis - 28%
+
+### Other
+- **Dinakaran et al [Asian J Psychiatry 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7261092/)**
+  - Encephalopathy
+  - Delirium
+  - MCI
+  - Insomnia
+  - Suicide
+  - Psychosis
+
+# Suggested Interventions
+
+## Psychosocial Support
+1. Validation of experiences
+2. Provide information about the infection as required and rationale for quarantine.
+3. Normalization of experience
+4. Reassurance
+5. Coping strategies
+	- Empowering statements – creating hope, providing meaning
+	- Distraction
+	- Staying connected – family and faith
+	- Avoiding speculation
+	- PMR / Calming techniques
+	- Maintain routine
+	- Sleep hygiene
+- Do's
+  - Be honest
+  - Respect people’s right to make their own decisions
+  - Set aside your own biases and prejudices
+  - Make it clear to affected people that even if they refuse help now, they can still access help in the future
+  - Ensure confidentiality
+  - Provide information about COVID-19. Be honest of what you don’t know
+- Dont's
+  - Don’t make false promises or give false information
+  - Don’t force help
+  - Don’t pressure people to tell you their story
+  - Don’t judge the person for their actions or feelings
+  - Don’t talk about yourself or personal issues or troubles.
+  - Don't philosophize, moralize, preach or impose your own religion
+
+## Psychopharmacology
+
+### Treatment
+
+#### Challenges
+- Interactions with COVID-19 medications
+  - Antivirals (Remdesivir, lopinavir/ritonavir)
+  - Antibiotics (Azithromycin)
+  - Immunomodulators (Steroids, interferon-B)
+  - Bronchodilators
+  - Anti-inflammatory and anti-pyretics
+- Adverse effects
+- Co-morbid medical conditions
+
+#### Continuing psychotropic medications of a patients with pre-existing psychiatric illness
+
+- Dhillon et al. **[Ann Indian Psychiatry 2020.](https://www.anip.co.in/text.asp?2020/4/2/226/301441)** and Mental Health Challenges During
+COVID-19 Pandemic Guidance for Psychiatrists [NIMHANS, 2020]
+
+- Most psychiatric illness require long-term prophylaxis of psychotropics, which may have to be continued even after remission of symptoms to prevent relapse. Precautions for commonly used psychotropic agents in the context of COVID-19 are discussed below:
+
+##### Antipsychotics
+
+- Increase QTc [Along with other medications that can increase QTc such as Azithromycin, HCQ, antivirals]
+  - Haloperidol
+  - Quetiapine
+  - Use with ECG monitoring
+- Safer alternatives are
+  - Aripiprazole
+  - Olanzapine
+  - Risperidone
+- Antivirals are CYP inhibitors and hence increase the levels of haloperidol, risperidone, aripiprazole and quetiapine
+  - Reduce the dosage
+  - CAUTION when using clozapine, Bupropion
+
+##### Antidepressants
+
+- Increase Qtc
+  - Citalopram
+  -  TCAs
+  - Mirtazapine
+- Two way interactions b/w some SSRI and Antivirals
+	- Fluoxetine, fluvoxamine, paroxetine, and bupropion are CYP enzyme inhibitors -> alter antiviral levels
+	- Antivirals -> CYP interactions -> increase SSRI levels -> serotonin syndrome
+	- reduce dosage of these psychotropics
+- Safer alternatives
+	- Escitalopram
+	- Sertraline
+
+##### Mood stabilizers
+
+- Lithium
+	- renally excreted -> least interactions with antivirals
+	- but low therapeutic index - toxicity can be ppt with
+  	- NSAIDs
+  	- Dehydration
+  	- Renal failure
+  	- Hyponatremia
+  	- use with caution
+- Valproate is generally safe with antivirals
+  - dose adjustment may be required
+
+##### Sedative / Hypnotics
+
+- Risk of respiratory depression
+- longer acting benzodiazepines like diazepam or clonazepam may be avoided.
+- Lorazepam is preferred as it has the least interaction with antiviral drugs and shorter acting.
+
+#### Acute onset behavioral symptoms in those receiving treatment/prophylaxis for COVID-19
+
+##### Delirium
+- Woolley [Geriatric Nursing 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle), Dhillon et al. **[Ann Indian Psychiatry 2020](https://www.anip.co.in/text.asp?2020/4/2/226/301441)**
+
+- Sleep cycle
+  1. Melatonin
+   - melatonin 3mg PO (per oral) QHS (at hour of sleep)
+   - useful in prevention of delirium
+   - also has immunomodulatory property
+  2. Trazodone can also be used for sleep regulation as monotherapy
+  3. Benzodiazepines
+   - Should be avoided except in cases of delirium tremens
+   - Risk of respiratory depression
+
+- Agitation/Disruptive behaviors
+
+  A. Verbal de-escalation
+    1. How to approach?
+        - ensure privacy
+        - ensure personal safety
+        - approach as a team
+    2. What to say?
+        - stay calm and listen
+        - talk in soft and firm tone
+        - do not provocate
+        - do not judge
+        - try to understand the concern
+        - offer valid solutions
+
+  B. Chemical restraint
+    1. Haloperidol
+       - a dose of 2.5–5 mg can be used orally or intramuscularly.
+       - Monitor QTc when used along with other QTc prolonging meds or when given IV
+       - IV dose of haloperidol is **2-4 times less** that oral or IM because first pass metabolism is being by-passed
+       - maximum daily dose of IM/oral haloperidol to less than or equal to 15 mg/day. [lesser in elderly]
+       - wait for at least 45 minutes before repeat dose
+    2. Olanzapine, 2.5-5mg QHS, can also be given orally
+    3. Quetiapine (25–50 mg) can be given orally, especially in pt with FTD, DLB or movement disorder, due to lower risk of EPSE.
+    4. In the ICU setting - Dexmedetomidine is an alpha-2 agonist and reduces the release of noradrenaline and helps curtailing restlessness.
+    5. In the ward setting, Clonidine can also be used for the same reason. Clonidine 0.1mg BD or TID. It can also be used as a skin patch.
+    6. Valproic acid can be considered as an adjunctive agent for hyperactive or mixed-type delirium, particularly for those with prolonged QT, those with severe movement disorder concerns, or those who experience side effects of anti-psychotics such as akathisia.
+    7. In extreme cases not responding to the above measures, only short-acting low-dose oral benzodiazepines (e.g., lorazepam 1 to 2 mg) may be considered with close monitoring for respiratory distress and respiratory failure.
+
+  C. Mechanical restraint
+     Mechanical restraint should be used for minimum possible time, till chemical restraints start working.
+
+##### Psychosis / Mania
+- Standard antimanic/antipsychotic treatment like risperidone or olanzapine can be given, mindful of the drug interactions.
+- Mood stabilizers can also prescribed in patients with bipolar disorder based on clinical need, with the precautions.
+- Catatonic symptoms can be treated with intravenous/oral lorazepam. But, use with caution due to risk of respiratory suppression.
+- Parenteral haloperidol 5-10mg can be used alone or in combination with promethazine (only through intramuscular route) in severe states of agitation as a chemical restraint.
+
+##### Depression, Anxiety and Insomnia
+- Escitalopram
+- Sertraline
+- Caution for Hyponatremia in the elderly
+- Low dose benzodiazepine preferably a short acting drug like lorazepam orally or parenterally can be helpful in acute management.
+- Zolpidem (2.5-5mg) is relatively safer in terms of respiratory functioning.
+
+### Does psychiatry have anything to offer in terms of COVID-19 management per se?
+
+#### Hamed et al [Medical Hypothesis 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7382922/), Pashaei [J Clin Neuroscience 2021](https://www.sciencedirect.com/science/article/pii/S096758682100120X).
+
+- Inflammatory cytokines -> organ damage
+- 5-HT has been found to regulate innate and adaptive immune responses
+- Increase cytokine levels -> reduce serotonin -> by increasing metabolism of tryptophan through IDO activation
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.frontiersin.org/files/Articles/435368/fendo-10-00158-HTML-r1/image_m/fendo-10-00158-g003.jpg"></br>
+  Figure 9: Tryptophan pathway
+</p>
+
+**Hypothesis**
+
+<p align="center">
+  <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://ars.els-cdn.com/content/image/1-s2.0-S096758682100120X-ga1_lrg.jpg"></br>
+  Figure 10: Drug repurposing of SSRIs. In COVID-19 patients, SSRIs may help in hindering cytokine release syndrome that is responsible for aggravating sickness progression and the subsequent increase in TNFα.
+</p>
+
+### Lenze et al [JAMA 2020](https://jamanetwork.com/journals/jama/fullarticle/2773108)
+
+- Fluvoxamine - SSRI and sigma receptor agonist
+- RCT 152 adult outpatients with confirmed COVID-19 and symptom onset within 7 days
+- Clinical deterioration occurred in 0 patients treated with fluvoxamine vs 6 (8.3%) patients treated with placebo over 15 days, a difference that was statistically significant
+- adult outpatients with symptomatic COVID-19 treated with fluvoxamine, compared with placebo, had a lower likelihood of clinical deterioration over 15 days
+
+### Hortel el al [Molecular Psychiatry 2021](https://www.nature.com/articles/s41380-021-01021-4)
+- Observational multicenter retrospective cohort study [PARIS]
+- Primary endpoint was a composite of intubation or death
+- Of 7230 adults hospitalized for COVID-19, 345 patients (4.8%) received an antidepressant within 48h of hospital admission.
+- Compared endpoint between patients who received antidepressants and those who did not in time-to-event analyses adjusted for patient characteristics, clinical and biological markers of disease severity, and other psychotropic medications
+- Significant association between antidepressant use and reduced risk of intubation or death (HR, 0.56; 95% CI, 0.43–0.73, p < 0.001).
+- Association was also significant for SSRI and non-SSRI antidepressants, and for fluoxetine, paroxetine, escitalopram, venlafaxine, and mirtazapine (all p < 0.05).
+
+### Bottom-line
+- Sertraline has both σ-1 agonism and an SSRI, also cardiac safe and low risk of drug-drug interactions
+- Further double blind RCTs are required
+
+# References
+- Dubey et al. Diabetes Metab Syndr 2020. Psychosocial impact of COVID-19
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/
+  - exhaustive ROL of impact on various starta of the society
+- Pfefferbaum et al. N Engl J Med 2020. Mental Health and the Covid-19
+  Pandemic
+  - https://www.nejm.org/doi/full/10.1056/NEJMp2008017
+  - commentary on the possible causes of psychosocial impact
+- Use of stress adaptation model for coping, see discussion in following link
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154178/
+- Psychosocial factors that have been found associated with an elevated risk
+  of hospitalization for COVID-19
+  - https://www.sciencedirect.com/science/article/pii/S088915912031309X
+- Psychosocial impact of COVID on children
+  - https://onlinelibrary.wiley.com/doi/full/10.1111/apa.15536
+- Evidence base for digital interventions for mitigating negative impact of
+  COVID19
+  - https://www.jmir.org/2021/3/e23365
+- Qualitative study of the psychological experience of COVID-19 patients
+  during hospitalization
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/
+- Immediate psychological distress in quarantined patients with COVID-19 and
+  its association with peripheral inflammation: A mixed-method study
+    -   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7235603/
+- Neuropsychiatric complications at 6 months post covid
+    - https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1
+- Psychosocial counseling manual ICMR
+	- https://www.icmr.gov.in/pdf/covid/techdoc/PSC_COVID_patients_v1_30042021.pdf
+- NIMHANS Manual
+	- http://nimhans.ac.in/wp-content/uploads/2020/04/MentalHealthIssuesCOVID-19NIMHANS.pdf
+- Psychopharmacology of COVID-19
+	- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7232075/
+	- https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-020-01685-9
+	- https://www.anip.co.in/article.asp?issn=2588-8358;year=2020;volume=4;issue=2;spage=226;epage=229;aulast=Dhillon
+	- https://psychopharmacologyinstitute.com/publication/the-clinicians-algorithm-to-managing-covid-19-related-delirium-2607
+- Covid 19 and psychosis
+  - https://www.sciencedirect.com/science/article/pii/S0304394020307618
+- Neuropsychiatric sequelae of covid 19
+  - https://www.nature.com/articles/s41398-020-00949-5

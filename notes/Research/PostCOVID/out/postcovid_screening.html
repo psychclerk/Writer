@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.2.3" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Dr. Jagdish Varma" />
+  <title>Post COVID screening</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote {
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013";
+      position: absolute;
+      margin-left: -1em;
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko span.math-rendering {
+    display:inline-block;
+    width:8em;
+    overflow-x:auto;
+    font-size:70%;
+  }
+  .madoko span.math-rendering::-webkit-scrollbar {
+    width:4px;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 {
+    margin-top: 1.22em;
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  {
+    margin-top: 1ex;
+  }
+  .madoko h5, .madoko h6 {
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 {
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 {
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt,
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="6" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="6" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="6" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="6"></span>Post COVID screening</div></div>
+<div class="authors align-center" data-line="11" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="11" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="11" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="11" style="font-size:large;line-adjust:0"><span data-line="11"></span>Dr. Jagdish Varma</div>
+<div class="authoraddress" data-line="14" style="line-adjust:0"><span data-line="14"></span>Professor of Psychiatry, Bhaikaka University, Karamsad</div></td></tr></tbody></table></div></div><span data-line="8"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-post-covid-functional-assessment-scale" data-toc-depth="1" data-toc-line="[1]{.heading-label}.&#8194;Post COVID functional assessment scale" style="toctarget:sec-post-covid-functional-assessment-scale"><a href="#sec-post-covid-functional-assessment-scale" class="localref"><span class="heading-label">1</span>.&#8194;Post COVID functional assessment scale</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-post-covid-psychological-screening" data-toc-depth="1" data-toc-line="[2]{.heading-label}.&#8194;Post COVID psychological screening" style="toctarget:sec-post-covid-psychological-screening"><a href="#sec-post-covid-psychological-screening" class="localref"><span class="heading-label">2</span>.&#8194;Post COVID psychological screening</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-depression" data-toc-depth="2" data-toc-line="[2.1]{.heading-label}.&#8194;Depression" style="toctarget:sec-depression"><a href="#sec-depression" class="localref"><span class="heading-label">2.1</span>.&#8194;Depression</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-anxiety" data-toc-depth="2" data-toc-line="[2.2]{.heading-label}.&#8194;Anxiety" style="toctarget:sec-anxiety"><a href="#sec-anxiety" class="localref"><span class="heading-label">2.2</span>.&#8194;Anxiety</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-ptsd" data-toc-depth="2" data-toc-line="[2.3]{.heading-label}.&#8194;PTSD" style="toctarget:sec-ptsd"><a href="#sec-ptsd" class="localref"><span class="heading-label">2.3</span>.&#8194;PTSD</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-sleep" data-toc-depth="2" data-toc-line="[2.4]{.heading-label}.&#8194;Sleep" style="toctarget:sec-sleep"><a href="#sec-sleep" class="localref"><span class="heading-label">2.4</span>.&#8194;Sleep</a></div></div></div></nav><h2 id="sec-post-covid-functional-assessment-scale" class="h1" data-line="10" data-heading-depth="1" style="display:block"><span data-line="10"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="10"></span>Post COVID functional assessment scale</h2>
+<ul class="ul list-dash compact" data-line="12">
+<li class="li ul-li list-dash-li compact-li" data-line="12"><span data-line="12"></span>Access date 6/6/21
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="13"><span data-line="13"></span><a href="https://mfr.de-1.osf.io/render?url=https://osf.io/xpvq6/?direct%26mode=render%26action=download%26mode=render">Klok FA, Boon GJAM, Barco S, et al. The Post-COVID-19 Functional Status scale: a toolto measure functional status over time after COVID-19. Eur Respir J 2020; 56: 2001494 [https://doi.org/ 10.1183/13993003.01494-2020].</a><span data-line="13"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="14"><span data-line="14"></span><a href="https://mfr.de-1.osf.io/render?url=https://osf.io/mpfvy/?direct%26mode=render%26action=download%26mode=render">Manual</a><span data-line="14"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="15"><span data-line="15"></span><a href="https://mfr.de-1.osf.io/render?url=https://osf.io/4jz5s/?direct%26mode=render%26action=download%26mode=render">English scale</a><span data-line="15"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="16"><span data-line="16"></span><a href="https://mfr.de-1.osf.io/render?url=https://osf.io/gzm9p/?direct%26mode=render%26action=download%26mode=render">Gujarati Scale</a><span data-line="16"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="17"><span data-line="17"></span><a href="https://mfr.de-1.osf.io/render?url=https://osf.io/8zeyt/?direct%26mode=render%26action=download%26mode=render">Hindi Scale</a><span data-line="17"></span>
+</li></ul>
+<h2 id="sec-post-covid-psychological-screening" class="h1" data-line="19" data-heading-depth="1" style="display:block"><span data-line="19"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="19"></span>Post COVID psychological screening</h2>
+<ul class="ul list-dash compact" data-line="21">
+<li class="li ul-li list-dash-li compact-li" data-line="21"><span data-line="21"></span>Access date 9/6/21
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="22"><span data-line="22"></span>Brief single or two item scales have been chosen keeping in mind level of understanding in our population
+</li></ul>
+<h3 id="sec-depression" class="h2" data-line="24" data-heading-depth="2" style="display:block"><span data-line="24"></span><span class="heading-before"><span class="heading-label">2.1</span>.&#8194;</span><span data-line="24"></span>Depression</h3>
+<ul class="ul list-dash compact" data-line="26">
+<li class="li ul-li list-dash-li compact-li" data-line="26"><span data-line="26"></span>PHQ-2 is suited
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="27"><span data-line="27"></span>Because<span data-line="27"></span> <span data-line="27"></span>- it has only 2 items
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="28"><span data-line="28"></span>Free to use
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="29"><span data-line="29"></span><a href="https://www.hiv.uw.edu/page/mental-health-screening/phq-2">English Version</a><span data-line="29"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="30"><span data-line="30"></span><a href="https://www.phqscreeners.com/images/sites/g/files/g10060481/f/201412/PHQ9_Gujarati%20for%20India.pdf">Gujarati - first 2 questions from this pdf</a><span data-line="30"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="31"><span data-line="31"></span>If the score is 3 or greater, major depressive disorder is likely
+</li></ul>
+<h3 id="sec-anxiety" class="h2" data-line="33" data-heading-depth="2" style="display:block"><span data-line="33"></span><span class="heading-before"><span class="heading-label">2.2</span>.&#8194;</span><span data-line="33"></span>Anxiety</h3>
+<ul class="ul list-dash compact" data-line="35">
+<li class="li ul-li list-dash-li compact-li" data-line="35"><span data-line="35"></span>GAD-2 is suited
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="36"><span data-line="36"></span>Because it has only 2 items
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="37"><span data-line="37"></span>Free to use
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="38"><span data-line="38"></span><a href="https://www.hiv.uw.edu/page/mental-health-screening/gad-2">English version</a><span data-line="38"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="39"><span data-line="39"></span><a href="https://www.phqscreeners.com/images/sites/g/files/g10060481/f/201412/GAD7_Gujarati%20for%20India.pdf">Gujarati - first 2 questions from this pdf</a><span data-line="39"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="40"><span data-line="40"></span>A score of 3 points is the preferred cut-off for identifying possible cases and in which further diagnostic evaluation for generalized anxiety disorder is warranted
+</li></ul>
+<h3 id="sec-ptsd" class="h2" data-line="42" data-heading-depth="2" style="display:block"><span data-line="42"></span><span class="heading-before"><span class="heading-label">2.3</span>.&#8194;</span><span data-line="42"></span>PTSD</h3>
+<ul class="ul list-dash compact" data-line="44">
+<li class="li ul-li list-dash-li compact-li" data-line="44"><span data-line="44"></span>PCL-2<span data-line="44"></span> [which is the 2 item abbreviated version of the PCL-C; PTSD Checklist civilian version]<span data-line="44"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="45"><span data-line="45"></span>Free to use
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="46"><span data-line="46"></span>but not validated in Indian population
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="47"><span data-line="47"></span>Cut-off score of PCL-2 = 4
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="48"><span data-line="48"></span><a href="https://www.mirecc.va.gov/docs/visn6/3_ptsd_checklist_and_scoring.pdf">English version of PCL-C</a><span data-line="48"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="49"><span data-line="49"></span>We will be using 2 questions from them based on study by<span data-line="49"></span>&nbsp;<a href="https://sci-hub.do/10.1016/j.brat.2004.04.005">Lang et el</a><span data-line="49"></span>
+</li></ul>
+
+<p class="p noindent" data-line="51"><span data-line="51"></span><em class="em-star1">Below is a list of problems and complaints that people  sometimes have in response to stressful life experiences. Please read each one carefully, put an “X” in the box to indicate how much you have been bothered by that problem in the two weeks.</em><span data-line="51"></span>
+</p>
+<p class="p indent" data-line="53"><span data-line="53"></span><em class="em-star1">1. Repeated, disturbing memories, thoughts, or images</em><span data-line="53"></span>
+</p>
+<p class="p indent" data-line="55"><span data-line="55"></span><em class="em-star1">2. Feeling very upset when something reminded you of a stressful experience from the past?</em><span data-line="55"></span>
+</p>
+<p class="p indent" data-line="57"><span data-line="57"></span>Scale
+</p>
+<ul class="ul list-dash compact" data-line="59">
+<li class="li ul-li list-dash-li compact-li" data-line="59"><span data-line="59"></span>Not at all (1)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="60"><span data-line="60"></span>A little bit  (2)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="61"><span data-line="61"></span>Moderately (3)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>Quite a bit (4)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="63"><span data-line="63"></span>Extremely (5)
+</li></ul>
+<h3 id="sec-sleep" class="h2" data-line="65" data-heading-depth="2" style="display:block"><span data-line="65"></span><span class="heading-before"><span class="heading-label">2.4</span>.&#8194;</span><span data-line="65"></span>Sleep</h3>
+<ul class="ul list-dash compact" data-line="66">
+<li class="li ul-li list-dash-li compact-li" data-line="66"><span data-line="66"></span>Single item adapted from Single item sleep quality scale by<span data-line="66"></span>&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6223557/">Snyder et al</a><span data-line="66"></span>
+</li></ul>
+
+<p class="p noindent" data-line="68"><span data-line="68"></span><em class="em-star1">During the past two weeks how would you rate your sleep quality overall?</em><span data-line="68"></span>
+</p>
+<p class="p indent" data-line="70"><span data-line="70"></span>Scale
+</p>
+<ul class="ul list-dash compact" data-line="72">
+<li class="li ul-li list-dash-li compact-li" data-line="72"><span data-line="72"></span>Poor (0)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="73"><span data-line="73"></span>Fair (1)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="74"><span data-line="74"></span>Good (2)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="75"><span data-line="75"></span>Excellent (3)
+</li></ul>
+<span data-line=""></span></div>
+</body>
+
+</html>

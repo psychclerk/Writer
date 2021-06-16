@@ -1,0 +1,192 @@
+<head>
+<style>
+
+body {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 680px;
+  margin: auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+#tpmenu {
+  width: 100%;
+}
+#tpmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #1bc2a2;
+}
+
+#tpmenu ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #1bc2a2;
+}
+
+/* This hides the dropdowns */
+
+
+#tpmenu li ul { display: none; }
+
+#tpmenu ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+#tpmenu ul li a:hover { background: #2c3e50; }
+
+/* Display the dropdown */
+
+
+#tpmenu li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+#tpmenu li:hover li { float: none; }
+
+#tpmenu li:hover a { background: #1bc2a2; }
+
+#tpmenu li:hover li a:hover { background: #2c3e50; }
+
+#tpmenu .main-navigation li ul li { border-top: 0; }
+
+/* Displays second level dropdowns to the right of the first level dropdown */
+
+
+#tpmenu ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* Simple clearfix */
+
+
+
+#tpmenu ul:before,
+#tpmenu ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+#tpmenu ul:after { clear: both; }
+</style>
+</head>
+
+
+<link rel="preload" href="menu.html">
+
+<div id="tpmenu">
+
+<ul class="main-navigation">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Front End Design</a>
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a>
+        <ul>
+          <li><a href="#">Resets</a></li>
+          <li><a href="#">Grids</a></li>
+          <li><a href="#">Frameworks</a></li>
+        </ul>
+      </li>
+      <li><a href="#">JavaScript</a>
+        <ul>
+          <li><a href="#">Ajax</a></li>
+          <li><a href="#">jQuery</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">WordPress Development</a>
+    <ul>
+      <li><a href="#">Themes</a></li>
+      <li><a href="#">Plugins</a></li>
+      <li><a href="#">Custom Post Types</a>
+        <ul>
+          <li><a href="#">Portfolios</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Options</a></li>
+    </ul>
+  </li>
+  <li><a href="#">About Us</a></li>
+</ul>
+</div>
+
+<div class="content">
+<h1>Multi-Level Drop Down Menu with Pure CSS</h1>
+
+
+
+# LitePub 
+
+
+A lightweight static blog generator written in Go.
+
+> Why another one? I wrote a blog post that briefly describes
+[why I created it](http://www.mirovarga.com/a-lightweight-static-blog-generator-in-go.html).
+
+## Overview
+
+LitePub is a static blog generator that tries to be as easy to use as possible.
+
+It requires no software dependencies, needs no configuration files, uses no
+databases. All it needs is one binary, posts written in
+[Markdown](https://en.wikipedia.org/wiki/Markdown) and a set of templates to
+render the posts to static HTML files.
+
+Posts don't have to include any special metadata (aka front matter) like title
+or date in them - the title, date and optional tags are parsed from
+the natural flow of the posts.
+
+## Quick Start
+
+To create a sample blog follow these steps:
+
+1. Download a [release](https://github.com/mirovarga/litepub/releases) and
+unpack it to a directory.
+
+2. `cd` to the directory.
+
+3. Create a sample blog:
+
+  	```
+  	$ ./litepub create
+  	```
+
+4. Build the blog:
+
+	```
+	$ ./litepub build
+  Generating: index.html
+  Generating: tags/reference.html
+  Generating: tags/tutorial.html
+  Generating: tags/advanced.html
+  Generating: tags/docs.html
+  Generating: tags/basics.html
+  Generating: overview.html
+  Generating: quick-start.html
+  Generating: installation.html
+  Generating: creating-a-blog.html
+  Generating: creating-posts.html
+  Generating: generating-html-files-for-a-blog-aka-building-a-blog.html
+  Generating: serving-a-blog.html
+  Generating: templates.html
+  Generating: getting-help.html
+	```
+
+</div>
+<script>window.markdeepOptions = {tocStyle: 'none'};</script>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script src="markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.2.3" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Dr. Jagdish Varma" />
+  <title>Approach to QTc Prolongation</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote {
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013";
+      position: absolute;
+      margin-left: -1em;
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko span.math-rendering {
+    display:inline-block;
+    width:8em;
+    overflow-x:auto;
+    font-size:70%;
+  }
+  .madoko span.math-rendering::-webkit-scrollbar {
+    width:4px;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 {
+    margin-top: 1.22em;
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  {
+    margin-top: 1ex;
+  }
+  .madoko h5, .madoko h6 {
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 {
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 {
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt,
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="6" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="6" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="6" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="6"></span>Approach to QTc Prolongation</div></div>
+<div class="authors align-center" data-line="11" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="11" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="11" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="11" style="font-size:large;line-adjust:0"><span data-line="11"></span>Dr. Jagdish Varma</div>
+<div class="authoraddress" data-line="14" style="line-adjust:0"><span data-line="14"></span>Professor of Psychiatry, Bhaikaka University, Karamsad</div></td></tr></tbody></table></div></div><span data-line="8"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-outline" data-toc-depth="1" data-toc-line="[1]{.heading-label}.&#8194;Outline" style="toctarget:sec-outline"><a href="#sec-outline" class="localref"><span class="heading-label">1</span>.&#8194;Outline</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-prescribing-screening-and-monitoring" data-toc-depth="2" data-toc-line="[1.1]{.heading-label}.&#8194;Prescribing, screening, and monitoring" style="toctarget:sec-prescribing-screening-and-monitoring"><a href="#sec-prescribing-screening-and-monitoring" class="localref"><span class="heading-label">1.1</span>.&#8194;Prescribing, screening, and monitoring</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-assessment" data-toc-depth="2" data-toc-line="[1.2]{.heading-label}.&#8194;Assessment" style="toctarget:sec-assessment"><a href="#sec-assessment" class="localref"><span class="heading-label">1.2</span>.&#8194;Assessment</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-management" data-toc-depth="2" data-toc-line="[1.3]{.heading-label}.&#8194;Management" style="toctarget:sec-management"><a href="#sec-management" class="localref"><span class="heading-label">1.3</span>.&#8194;Management</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-understanding-qtc" data-toc-depth="1" data-toc-line="[2]{.heading-label}.&#8194;Understanding QTc" style="toctarget:sec-understanding-qtc"><a href="#sec-understanding-qtc" class="localref"><span class="heading-label">2</span>.&#8194;Understanding QTc</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-psychotropic-medications-and-qtc" data-toc-depth="2" data-toc-line="[2.1]{.heading-label}.&#8194;Psychotropic medications and QTc" style="toctarget:sec-psychotropic-medications-and-qtc"><a href="#sec-psychotropic-medications-and-qtc" class="localref"><span class="heading-label">2.1</span>.&#8194;Psychotropic medications and QTc</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-non-psychotropic-medications-and-qtc" data-toc-depth="2" data-toc-line="[2.2]{.heading-label}.&#8194;Non-psychotropic medications and QTc" style="toctarget:sec-non-psychotropic-medications-and-qtc"><a href="#sec-non-psychotropic-medications-and-qtc" class="localref"><span class="heading-label">2.2</span>.&#8194;Non-psychotropic medications and QTc</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-non-pharmacological-causes-of-prolonged-qtc" data-toc-depth="2" data-toc-line="[2.3]{.heading-label}.&#8194;Non-pharmacological causes of prolonged QTc" style="toctarget:sec-non-pharmacological-causes-of-prolonged-qtc"><a href="#sec-non-pharmacological-causes-of-prolonged-qtc" class="localref"><span class="heading-label">2.3</span>.&#8194;Non-pharmacological causes of prolonged QTc</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-prescribing-qtc-prolonging-medications" data-toc-depth="1" data-toc-line="[3]{.heading-label}.&#8194;Prescribing QTc prolonging medications" style="toctarget:sec-prescribing-qtc-prolonging-medications"><a href="#sec-prescribing-qtc-prolonging-medications" class="localref"><span class="heading-label">3</span>.&#8194;Prescribing QTc prolonging medications</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-assessment" data-toc-depth="1" data-toc-line="[4]{.heading-label}.&#8194;Assessment" style="toctarget:sec-assessment"><a href="#sec-assessment" class="localref"><span class="heading-label">4</span>.&#8194;Assessment</a></div>
+<div class="tocblock tocblock2">
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-history" data-toc-depth="2" data-toc-line="[4.1]{.heading-label}.&#8194;History" style="toctarget:sec-history"><a href="#sec-history" class="localref"><span class="heading-label">4.1</span>.&#8194;History</a></div>
+<div class="tocblock tocblock3">
+<div class="tocitem tocitem3" data-toc-target-elem="h3" data-toc-target="sec-cardiac-symptoms" data-toc-depth="3" data-toc-line="[4.1.1]{.heading-label}.&#8194;Cardiac symptoms" style="toctarget:sec-cardiac-symptoms"><a href="#sec-cardiac-symptoms" class="localref"><span class="heading-label">4.1.1</span>.&#8194;Cardiac symptoms</a></div>
+<div class="tocitem tocitem3" data-toc-target-elem="h3" data-toc-target="sec-etiologic-history" data-toc-depth="3" data-toc-line="[4.1.2]{.heading-label}.&#8194;Etiologic history" style="toctarget:sec-etiologic-history"><a href="#sec-etiologic-history" class="localref"><span class="heading-label">4.1.2</span>.&#8194;Etiologic history</a></div>
+<div class="tocitem tocitem3" data-toc-target-elem="h3" data-toc-target="sec-fho" data-toc-depth="3" data-toc-line="[4.1.3]{.heading-label}.&#8194;F/H/O" style="toctarget:sec-fho"><a href="#sec-fho" class="localref"><span class="heading-label">4.1.3</span>.&#8194;F/H/O</a></div></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-examination" data-toc-depth="2" data-toc-line="[4.2]{.heading-label}.&#8194;Examination" style="toctarget:sec-examination"><a href="#sec-examination" class="localref"><span class="heading-label">4.2</span>.&#8194;Examination</a></div>
+<div class="tocitem tocitem2" data-toc-target-elem="h2" data-toc-target="sec-investigations" data-toc-depth="2" data-toc-line="[4.3]{.heading-label}.&#8194;Investigations" style="toctarget:sec-investigations"><a href="#sec-investigations" class="localref"><span class="heading-label">4.3</span>.&#8194;Investigations</a></div></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-management" data-toc-depth="1" data-toc-line="[5]{.heading-label}.&#8194;Management" style="toctarget:sec-management"><a href="#sec-management" class="localref"><span class="heading-label">5</span>.&#8194;Management</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-reference" data-toc-depth="1" data-toc-line="[6]{.heading-label}.&#8194;Reference" style="toctarget:sec-reference"><a href="#sec-reference" class="localref"><span class="heading-label">6</span>.&#8194;Reference</a></div></div></nav><h2 id="sec-outline" class="h1" data-line="10" data-heading-depth="1" style="display:block"><span data-line="10"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="10"></span>Outline</h2><h3 id="sec-prescribing-screening-and-monitoring" class="h2" data-line="12" data-heading-depth="2" style="display:block"><span data-line="12"></span><span class="heading-before"><span class="heading-label">1.1</span>.&#8194;</span><span data-line="12"></span>Prescribing, screening, and monitoring</h3>
+<ul class="ul list-dash compact" data-line="14">
+<li class="li ul-li list-dash-li compact-li" data-line="14"><span data-line="14"></span>Avoid QTc prolonging medication if possible
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="15"><span data-line="15"></span>Use lowest effective dose
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="16"><span data-line="16"></span>Avoid polypharmacy
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="17"><span data-line="17"></span>Assess cardiovascular risk and consider need for screening ECG
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="18"><span data-line="18"></span>Consult cardiologist if in doubt
+</li></ul>
+<h3 id="sec-assessment" class="h2" data-line="20" data-heading-depth="2" style="display:block"><span data-line="20"></span><span class="heading-before"><span class="heading-label">1.2</span>.&#8194;</span><span data-line="20"></span>Assessment</h3>
+<ul class="ul list-dash compact" data-line="22">
+<li class="li ul-li list-dash-li compact-li" data-line="22"><span data-line="22"></span>Screen for symptoms of arrhythmia
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="23"><span data-line="23"></span>Identify pharmacological and non‐pharmacological causes
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="24"><span data-line="24"></span>Assess cardiovascular risk
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="25"><span data-line="25"></span>Bloods plus ECG (with or without 24‐hour tape/echocardiogram)
+</li></ul>
+<h3 id="sec-management" class="h2" data-line="27" data-heading-depth="2" style="display:block"><span data-line="27"></span><span class="heading-before"><span class="heading-label">1.3</span>.&#8194;</span><span data-line="27"></span>Management</h3>
+<ul class="ul list-dash compact" data-line="29">
+<li class="li ul-li list-dash-li compact-li" data-line="29"><span data-line="29"></span>Consider stopping or reducing dose of offending drugs
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="30"><span data-line="30"></span>Address non‐pharmacological risk factors
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="31"><span data-line="31"></span>Monitor proactively
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="32"><span data-line="32"></span>🚩 Refer to cardiologist if:
+
+<ul class="ul list-dash compact" data-line="33">
+<li class="li ul-li list-dash-li compact-li" data-line="33"><span data-line="33"></span>more than 500 ms or more then 60 ms increase
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="34"><span data-line="34"></span>associated with history suggestive of arrhythmia
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="35"><span data-line="35"></span>prior cardiac event
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="36"><span data-line="36"></span>unable to stop or reduce medication
+</li></ul></li></ul>
+<h2 id="sec-understanding-qtc" class="h1" data-line="38" data-heading-depth="1" style="display:block"><span data-line="38"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="38"></span>Understanding QTc</h2>
+<ul class="ul list-dash compact" data-line="39">
+<li class="li ul-li list-dash-li compact-li" data-line="39"><span data-line="39"></span><strong class="strong-star2">Males : &gt; 440ms</strong><span data-line="39"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="40"><span data-line="40"></span><strong class="strong-star2">Females : &gt; 470ms</strong><span data-line="40"></span>
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="41"><span data-line="41"></span>Increased QTc (<span data-line="41"></span><strong class="strong-star2">more than 500ms</strong><span data-line="41"></span>)<span data-line="41"></span> <span data-line="41"></span>-<span data-line="41"></span>&gt;<span data-line="41"></span> RF for Torsades<span data-line="41"></span> <span data-line="41"></span>-<span data-line="41"></span>&gt;<span data-line="41"></span> Sudden cardiac death
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="42"><span data-line="42"></span>Inherited (rare)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="43"><span data-line="43"></span>Acquired (8% of psychiatric patient)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="44"><span data-line="44"></span>MCC Acquired = Medications
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="45"><span data-line="45"></span>esp. IV antipsychotics<span data-line="45"></span> <span data-line="45"></span>+ CYP 450 inhibitors (Fluvox, FXN, PXN)
+</li></ul>
+<h3 id="sec-psychotropic-medications-and-qtc" class="h2" data-line="47" data-heading-depth="2" style="display:block"><span data-line="47"></span><span class="heading-before"><span class="heading-label">2.1</span>.&#8194;</span><span data-line="47"></span>Psychotropic medications and QTc</h3>
+<p class="p noindent" data-line="49"><span data-line="49"></span><img src="../../attachments/Clipboard_2021-06-07-21-56-08.png" style='width:100%;'><span data-line="49"></span>
+</p><h3 id="sec-non-psychotropic-medications-and-qtc" class="h2" data-line="51" data-heading-depth="2" style="display:block"><span data-line="51"></span><span class="heading-before"><span class="heading-label">2.2</span>.&#8194;</span><span data-line="51"></span>Non-psychotropic medications and QTc</h3>
+<p class="p noindent" data-line="52"><span data-line="52"></span><img src="../../attachments/Clipboard_2021-06-07-22-10-01.png" style='width:100%;'><span data-line="52"></span>
+</p><h3 id="sec-non-pharmacological-causes-of-prolonged-qtc" class="h2" data-line="54" data-heading-depth="2" style="display:block"><span data-line="54"></span><span class="heading-before"><span class="heading-label">2.3</span>.&#8194;</span><span data-line="54"></span>Non-pharmacological causes of prolonged QTc</h3>
+<p class="p noindent" data-line="56"><span data-line="56"></span><img src="../../attachments/Clipboard_2021-06-07-22-12-36.png" style='width:100%;'><span data-line="56"></span>
+<span data-line="57"></span><img src="../../attachments/Clipboard_2021-06-07-22-13-46.png" style='width:100%;'><span data-line="57"></span>
+</p><h2 id="sec-prescribing-qtc-prolonging-medications" class="h1" data-line="59" data-heading-depth="1" style="display:block"><span data-line="59"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="59"></span>Prescribing QTc prolonging medications</h2>
+<ul class="ul list-dash compact" data-line="61">
+<li class="li ul-li list-dash-li compact-li" data-line="61"><span data-line="61"></span>Avoid QTc prolonging medication if possible
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>Use lowest effective dose
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="63"><span data-line="63"></span>Avoid polypharmacy
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="64"><span data-line="64"></span>Assess cardiovascular risk and consider need for screening ECG
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="65"><span data-line="65"></span>Consult cardiologist if in doubt
+</li></ul>
+<h2 id="sec-assessment" class="h1" data-line="67" data-heading-depth="1" style="display:block"><span data-line="67"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="67"></span>Assessment</h2>
+<ul class="ul list-dash compact" data-line="68">
+<li class="li ul-li list-dash-li compact-li" data-line="68"><span data-line="68"></span>QTc prolongation should be suspected in any individual presenting with symptoms suggestive of arrhythmia (e.g. palpitations or unexplained collapse)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="69"><span data-line="69"></span>The diagnosis may also be made on a screening ECG or as an incidental finding
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="70"><span data-line="70"></span>A detailed assessment as follows need to be carried out once diagnosed
+</li></ul>
+<h3 id="sec-history" class="h2" data-line="72" data-heading-depth="2" style="display:block"><span data-line="72"></span><span class="heading-before"><span class="heading-label">4.1</span>.&#8194;</span><span data-line="72"></span>History</h3><h4 id="sec-cardiac-symptoms" class="h3" data-line="74" data-heading-depth="3" style="display:block"><span data-line="74"></span><span class="heading-before"><span class="heading-label">4.1.1</span>.&#8194;</span><span data-line="74"></span>Cardiac symptoms</h4>
+<ul class="ul list-dash compact" data-line="75">
+<li class="li ul-li list-dash-li compact-li" data-line="75"><span data-line="75"></span>Palpitations
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="76"><span data-line="76"></span>Syncope
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="77"><span data-line="77"></span>Dizziness / Lightheadedness
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="78"><span data-line="78"></span>Chest pain
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="79"><span data-line="79"></span>SOB
+</li></ul>
+<h4 id="sec-etiologic-history" class="h3" data-line="81" data-heading-depth="3" style="display:block"><span data-line="81"></span><span class="heading-before"><span class="heading-label">4.1.2</span>.&#8194;</span><span data-line="81"></span>Etiologic history</h4>
+<ul class="ul list-dash compact" data-line="82">
+<li class="li ul-li list-dash-li compact-li" data-line="82"><span data-line="82"></span><strong class="strong-star2">Non-pharmacologic conditions</strong><span data-line="82"></span>
+
+<ul class="ul list-dash compact" data-line="83">
+<li class="li ul-li list-dash-li compact-li" data-line="83"><span data-line="83"></span>Electrolyte disturbances: diarrhoea, vomiting, malnutrition, and eating disorder
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="84"><span data-line="84"></span>Cardiovascular conditions: history of CVD, smoking, obesity, diabetes mellitus, hypertension, and hypercholesterolaemia.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="85"><span data-line="85"></span>Cardiac events: ventricular tachyarrhythmia, TdP, cardiac arrest
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="86"><span data-line="86"></span>Other medical conditions: Liver failure, renal failure, Thyroid
+</li></ul></li>
+<li class="li ul-li list-dash-li compact-li" data-line="87"><span data-line="87"></span><strong class="strong-star2">Drugs and substance use</strong><span data-line="87"></span>
+
+<ul class="ul list-dash compact" data-line="88">
+<li class="li ul-li list-dash-li compact-li" data-line="88"><span data-line="88"></span>drug h/o including possible deliberate or accidental overdose.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="89"><span data-line="89"></span>Alcohol, smoking
+</li></ul></li></ul>
+<h4 id="sec-fho" class="h3" data-line="91" data-heading-depth="3" style="display:block"><span data-line="91"></span><span class="heading-before"><span class="heading-label">4.1.3</span>.&#8194;</span><span data-line="91"></span>F/H/O</h4>
+<ul class="ul list-dash compact" data-line="92">
+<li class="li ul-li list-dash-li compact-li" data-line="92"><span data-line="92"></span>Sudden cardiac death
+</li></ul>
+<h3 id="sec-examination" class="h2" data-line="94" data-heading-depth="2" style="display:block"><span data-line="94"></span><span class="heading-before"><span class="heading-label">4.2</span>.&#8194;</span><span data-line="94"></span>Examination</h3>
+<ul class="ul list-dash compact" data-line="95">
+<li class="li ul-li list-dash-li compact-li" data-line="95"><span data-line="95"></span>CVS
+
+<ul class="ul list-dash compact" data-line="96">
+<li class="li ul-li list-dash-li compact-li" data-line="96"><span data-line="96"></span>Inspection: high or low BMI, peripheral oedema, raised jugular venous pressure
+(heart failure).
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="98"><span data-line="98"></span>Palpation: pulse (regularity plus rate).
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="99"><span data-line="99"></span>Auscultation: murmurs or added sounds (heart failure/left ventricular hypertrophy), pulmonary oedema.
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="100"><span data-line="100"></span>Palpation for pedal/sacral oedema (heart failure, renal failure).
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="101"><span data-line="101"></span>Lying and standing blood pressure if history of presyncope/syncope.
+</li></ul></li></ul>
+<h3 id="sec-investigations" class="h2" data-line="103" data-heading-depth="2" style="display:block"><span data-line="103"></span><span class="heading-before"><span class="heading-label">4.3</span>.&#8194;</span><span data-line="103"></span>Investigations</h3>
+<ul class="ul list-dash compact" data-line="104">
+<li class="li ul-li list-dash-li compact-li" data-line="104"><span data-line="104"></span>Blood
+
+<ul class="ul list-dash compact" data-line="105">
+<li class="li ul-li list-dash-li compact-li" data-line="105"><span data-line="105"></span>CBC
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="106"><span data-line="106"></span>RFT (renal failure, hypokalaemia, hypomagnesaemia, hypocalcaemia)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="107"><span data-line="107"></span>LFT (liver failure)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="108"><span data-line="108"></span>Lipid profile (hypercholesterolaemia)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="109"><span data-line="109"></span>TFT (hyperthyroidism/hypothyroidism)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="110"><span data-line="110"></span>Antipsychotic plasma levels (toxicity)
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="111"><span data-line="111"></span>BNP (if history suggestive of heart failure).
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="112"><span data-line="112"></span>ECG<span data-line="112"></span> <span data-line="112"></span>+- ECHO and HOLTER
+</li></ul></li></ul>
+<h2 id="sec-management" class="h1" data-line="114" data-heading-depth="1" style="display:block"><span data-line="114"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="114"></span>Management</h2><h2 id="sec-reference" class="h1" data-line="116" data-heading-depth="1" style="display:block"><span data-line="116"></span><span class="heading-before"><span class="heading-label">6</span>.&#8194;</span><span data-line="116"></span>Reference</h2>
+<ol class="ol compact" data-line="117">
+<li class="li ol-li compact-li" data-line="117"><span data-line="117"></span>Pillinger T, Gaughran F, Taylor D. The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry. 2020.
+</li></ol>
+<span data-line=""></span></div>
+</body>
+
+</html>

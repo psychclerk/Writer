@@ -1,0 +1,19 @@
+html, body, p, td, li { font-family: arial, sans-serif, helvetica; font-size: 10pt; }
+h1 { font-size: 14pt; font-weight: bold; }
+h2 { font-size: 12pt; color: rgb(32, 48, 160); font-weight: bold; width: 100%; border-bottom: 1px solid rgb(192, 144, 96); }
+h3 { font-size: 10pt; color: rgb(32, 48, 160); font-weight: bold; }
+h4 { font-size: 10pt; color: rgb(32, 48, 160); font-weight: bold; }
+h5 { font-size: 10pt; font-weight: bold; }
+tt { font-family: monospace, courier; font-size: 10pt; color: rgb(0, 96, 0); }
+pre { font: bold 10pt "courier new", monospace, console; background-color: rgb(224, 224, 224); padding: 16px; border: 1px solid rgb(160, 160, 160); }
+li { margin-bottom: 10px; }
+.toc1 { margin-left: 1cm; font-size: 12pt; font-weight: bold; }
+.toc2 { margin-left: 2cm; font-size: 10pt; font-weight: bold; }
+.toc3 { margin-left: 3cm; font-size: 10pt; }
+.toc4 { margin-left: 4cm; font-size: 10pt; color: rgb(96, 96, 96); }
+.output { color: rgb(0, 0, 96); font-weight: normal; }
+.note { background-color: rgb(240, 224, 144); width: 100%; padding: 16px; border: 1px solid rgb(160, 160, 160); }
+.tail { color: gray; font-size: 8pt; }
+.title { font-size: 16pt; font-weight: bold; }
+.fset { background-color: rgb(255, 248, 224); }
+legend { color: rgb(96, 0, 0); font-weight: bold; }
