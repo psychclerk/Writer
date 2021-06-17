@@ -15,6 +15,7 @@
 ## Psychiatry
 
 ### Core Psychiatry
+- ✨[Should we combine antipsychotics](https://psychclerk.github.io/Writer/notes/Psychiatry/Antipsychotic_combinations.md.html)
 - [Managing bipolar disorder in a woman of childbearing age](https://psychclerk.github.io/Writer/notes/Psychiatry/bipolarchildbearing.md.html)
 - [How exercise changes the brain?](https://psychclerk.github.io/Writer/notes/Psychiatry/How_Exercise_changes_the_Brain.md.html)
 - [How I handled an EMR prescription error?](https://psychclerk.github.io/Writer/notes/Psychiatry/How_I_handled_an_EMR_prescription_error.md.html)
