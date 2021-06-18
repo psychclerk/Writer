@@ -1,0 +1,136 @@
+/* Style sheet for Markdeep that corresponds closely to the default Latex article format 
+   Put the following in your Markdeep document to use this:
+ 
+   <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/dark.css">
+*/
+
+
+@media screen {
+body#md {
+  background: white;
+  color: black;
+  font-family: arial, sans-serif, helvetica; font-size: 10pt;
+  text-align: left;
+}
+}
+
+.md div.title {
+  font-family: arial, sans-serif, helvetica; font-size: 200%;
+}
+
+.md a:link, .md a:visited{
+  color:blue;
+  font-family: arial, sans-serif, helvetica; font-size: 10pt;
+}
+
+.md hr {
+  height: 0px;
+  border: none;
+  border-top: 0.1pt solid #777;
+}
+
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+  color: #2030a0;
+  border-color: orange;
+  border-bottom: 1px solid #c09060;
+  font-family: arial, sans-serif, helvetica;
+  font-size: 150%;
+  padding-bottom: 0px;
+}
+
+@media screen {
+  .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+    background: white;
+  }
+}
+
+.md svg.diagram {
+  stroke: #ccc;
+  fill: #ccc;
+}
+
+.md svg.diagram .opendot {
+  fill: #000;
+}
+
+.md .listing {
+  background: #ddd;
+}
+
+.md .tilde code {
+  color: #000;
+}
+
+.md .backtick code {
+  color: #000;
+}
+
+div.markdeepFooter, div.markdeepFooter a {
+  color: #bc9249 !important;
+}
+
+b, em.asterisk {
+    font-family: arial, sans-serif, helvetica; font-size: 10pt;
+}
+
+@media screen {
+    b, em.asterisk {
+        color: #CBA;
+    }
+}
+
+a em.asterisk {
+    color: #6dafff;
+}
+
+.md h2, .md .nonumberh2 {
+    font-size: 125%
+}
+.md h3, .md h4, .md h5, .md h6, .md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+    font-size: 115%
+}
+
+@media screen {
+    .md table.table td {
+        border: 1px solid #513302;
+    }
+    
+    .md table.table th {
+        background: #af730c;
+        background: -webkit-linear-gradient(#d3a658, #af730c);
+        border: none;
+    }
+    
+    .md table.table th:last-child {
+        border-right: 1px solid #845509;
+    }
+    
+    .md table.table tr:nth-child(even) {
+        background-color: #231601;
+    }
+}
+
+html, body, p, td, li {font-family: arial, sans-serif, helvetica; font-size: 10pt;}
+h1 {font-size: 16pt; Font-Weight: bold;}
+h2 {font-size: 14pt; color: #2030a0; Font-Weight: bold; width: 100%;
+	border-bottom: 1px solid #c09060;}
+h3 {font-size: 12pt; color: #2030a0; Font-Weight: bold;}
+h4 {font-size: 10pt; color: #2030a0; Font-Weight: bold;}
+h5 {font-size: 10pt; Font-Weight: bold;}
+tt {font-family: "courier new", monospace, courier; color: darkgreen;}
+pre {font: bold 10pt "courier new", monospace, console;
+	background-color: #e0e0e0; padding: 16px; border: solid #a0a0a0 1px;}
+.toc1 {margin-left: 1cm; font-size: 12pt; font-weight: bold;}
+.toc2 {margin-left: 2cm; font-size: 10pt; Font-Weight: bold; text-decoration: none;}
+.toc3 {margin-left: 3cm; font-size: 10pt; text-decoration: none;}
+.toc4 {margin-left: 4cm; font-size: 10pt; color: grey; text-decoration: none;}
+.output {color: #000080; font-weight: normal;}
+.note {background-color: #f0e090; width: 100%; padding: 16px; border: solid #a0a0a0 1px;}
+.tail {color: gray; font-size: 8pt;}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
