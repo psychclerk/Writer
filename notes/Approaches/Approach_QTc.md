@@ -1,3 +1,11 @@
+---
+attachments: [Clipboard_2021-06-16-17-23-23.png]
+favorited: true
+title: Approach_QTc
+created: '2021-06-11T04:40:55.809Z'
+modified: '2021-06-17T04:32:47.876Z'
+---
+
 Title         : Approach to QTc Prolongation
 Author        : Dr. Jagdish Varma
 Affiliation   : Professor of Psychiatry, Bhaikaka University, Karamsad
@@ -112,6 +120,8 @@ Toc Depth     : 6
   - ECG +- ECHO and HOLTER
 
 # Management
+
+![](../../attachments/Clipboard_2021-06-16-17-23-23.png)
 
 # Reference
 1. Pillinger T, Gaughran F, Taylor D. The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry. 2020.
