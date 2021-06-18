@@ -73,3 +73,22 @@ Scale
 - Fair (1)
 - Good (2)
 - Excellent (3)
+
+# ROL
+
+- ✨ **Imran et al.** [Indian J Psychiatry 2021;63:285-9](https://www.indianjpsychiatry.org/text.asp?2021/63/3/285/318707) Access date 18/06/21
+  - patients discharged from the hospital after moderate-to-critical COVID-19 (UAE)
+  - interviewed using e-mail at 30 and 60 days
+  - PHQ-9, GAD-7, PCL-5
+  - 103 patients
+  - 96% were immigrant workers
+  - 30 days
+    - Anxiety 21.4%
+    - Depression 12.7%
+    - PTSD 8.7%
+  - 60 days
+    - Anxiety 9.5%
+    - Depression 7.1%
+    - PTSD 4.7%
+  - Higher anxiety in patients of Indian nationality
+  - Higher depression in patients with chronic illness

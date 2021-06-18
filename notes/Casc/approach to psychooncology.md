@@ -1,3 +1,9 @@
+---
+title: approach to psychooncology
+created: '2021-06-10T11:03:45.556Z'
+modified: '2021-06-17T13:42:25.890Z'
+---
+
 Title         : Approach to the psycho-oncology patient
 Author        : Dr. Jagdish Varma
 Affiliation   : Professor of Psychiatry, Bhaikaka University, Karamsad

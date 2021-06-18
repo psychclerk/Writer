@@ -1,9 +1,15 @@
+---
+title: Psychosocial_COVID19
+created: '2021-06-11T04:41:57.633Z'
+modified: '2021-06-18T04:32:46.709Z'
+---
+
 Title         : Psychosocial impact of COVID-19 and suggested interventions
 Author        : Dr. Jagdish Varma
 Affiliation   : Professor of Psychiatry, Bhaikaka University, Karamsad
 Toc Depth     : 6
 Heading depth : 7
-HTML Footer : Dr. Jagdish Varma 
+HTML Footer : Dr. Jagdish Varma
 
 [TITLE]
 
@@ -138,6 +144,25 @@ HTML Footer : Dr. Jagdish Varma
 - Adaptive coping strategies reduce stress while at the same time promoting long-term health (e.g., exercise, relaxation, proper nutrition, seeking support).
 - Maladaptive coping strategies, on the other hand, do indeed reduce stress in the short term but serve to erode health in the long term (alcohol/drug abuse, cigarette smoking, interpersonal withdrawal).
 - When coping is successful, extraordinary target organ activation is reduced or eliminated and homeostasis is reestablished.
+
+# ✨Impact on HCW
+
+## Indian Data
+[ Indian J Psychiatry 2021;63:222-7](https://www.indianjpsychiatry.org/text.asp?2021/63/3/222/318709) Access date 18/06/21
+
+**CAVEAT**: Data from this survey is limited due to being Open ended survey and therefore lack of being able to calculate response rate. A sample size of only 303, considering that the survey was shared with various hospitals across India. Generalizability of the findings to general HCW population may be limited.
+
+- online survey using Survey Monkey® platform
+- PHQ-9, GAD-7 and a self designed questionnaire
+- 303 participants with a mean age of 41.2
+- 69% male
+- 79.9% married
+- 46.2% of the participants had either anxiety disorder or depression
+- Higher level of anxiety and depression scores were associated with being
+    - female
+    - having undergone quarantine
+    - directly involved in the care of COVID-19 patients
+    - younger age (<30 years)
 
 # Impact on COVID-19 positive patients and quarantined individuals
 
@@ -320,7 +345,7 @@ HTML Footer : Dr. Jagdish Varma
 
 ## Post COVID-19 neuropsychiatric symptoms
 
-### Anxiety and Depression
+### ✨Anxiety and Depression
 
 - **Mazza et al 2020. [Brain Behav Immun. 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7390748/?fbclid=IwAR2R5IqjcDMTChB7N5x5pjoiuHIMCdiDr8OgsDOiJ11Hm2IOxBsafeBqye8)**
 
@@ -344,6 +369,23 @@ HTML Footer : Dr. Jagdish Varma
 	- Six month neurological and psychological outcome in 236,379 of COVID-19
 	- retrospective chart review
 	- Mood/Anxiety/Psychosis - 28%
+
+- ✨ **Imran et al.** [Indian J Psychiatry 2021;63:285-9](https://www.indianjpsychiatry.org/text.asp?2021/63/3/285/318707)
+  - patients discharged from the hospital after moderate-to-critical COVID-19 (UAE)
+  - interviewed using e-mail at 30 and 60 days
+  - PHQ-9, GAD-7, PCL-5
+  - 103 patients
+  - 96% were immigrant workers
+  - 30 days
+    - Anxiety 21.4%
+    - Depression 12.7%
+    - PTSD 8.7%
+  - 60 days
+    - Anxiety 9.5%
+    - Depression 7.1%
+    - PTSD 4.7%
+  - Higher anxiety in patients of Indian nationality
+  - Higher depression in patients with chronic illness
 
 ### Other
 - **Dinakaran et al [Asian J Psychiatry 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7261092/)**
@@ -511,6 +553,24 @@ COVID-19 Pandemic Guidance for Psychiatrists [NIMHANS, 2020]
 - Caution for Hyponatremia in the elderly
 - Low dose benzodiazepine preferably a short acting drug like lorazepam orally or parenterally can be helpful in acute management.
 - Zolpidem (2.5-5mg) is relatively safer in terms of respiratory functioning.
+
+### ✨ Grief management in COVID-19
+[Indian J Psychiatry 2021;63:211](https://www.indianjpsychiatry.org/text.asp?2021/63/3/211/318728) Access date 18/06/21
+
+- **Grief**: The perception of death followed by the gradual “sinking in” of its consequences leads to psychobiological reaction.
+- Unmanaged grief can have serious consequences.
+- **Death rituals** have a therapeutic function wherein they allow a family and a group to mourn in a ritualistic way. This allows people to share grief and keep the deceased as focus of attention for a fixed time and then to move on with life.
+- Sometimes, this process is hampered by what Kenneth Doka called **“disenfranchised grief”**.
+- COVID-19 has unexpectedly disturbed the process of death rituals as it leads to:
+  1. Unexpected or sudden loss
+  2. Depletion of emotional and coping resources
+  3. Limitation in visiting and end of care support
+  4. Not able to perform last rituals
+  5. Lack of social support due to COVID restrictions
+- The mechanical and impersonal process has led to severe psychological trauma in the survivors. **So, what should be the model of care for these people?**
+  1. We should try to increase the sharing of grief and the handling of the person should be allowed to take place
+  2. The physical support and the economical support have to be arranged, particularly where both parents have died
+  3. There are some common modes like “condolence meetings” or “smaran sabha” (may be in online mode) which should be attended by both family members and colleagues.
 
 ### Does psychiatry have anything to offer in terms of COVID-19 management per se?
 
