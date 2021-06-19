@@ -20,7 +20,7 @@ body#md {
 
 .md a:link, .md a:visited{
   color:blue;
-  font-family: arial, sans-serif, helvetica; font-size: 10pt;
+  font-family: arial, sans-serif, helvetica; 
 }
 
 .md hr {
@@ -110,8 +110,9 @@ a em.asterisk {
     }
 }
 
-html, body, p, td, li {font-family: arial, sans-serif, helvetica; font-size: 10pt;}
-h1 {font-size: 16pt; Font-Weight: bold;}
+html, body, p, td, li {font-family: arial, sans-serif, helvetica; font-size: 10pt; }
+h1 {font-size: 16pt; Font-Weight: bold; color: #2030a0; width: 100%;
+	border-bottom: 1px solid #c09060;}
 h2 {font-size: 14pt; color: #2030a0; Font-Weight: bold; width: 100%;
 	border-bottom: 1px solid #c09060;}
 h3 {font-size: 12pt; color: #2030a0; Font-Weight: bold;}
@@ -134,3 +135,4 @@ pre {font: bold 10pt "courier new", monospace, console;
   margin-right: auto;
   width: 50%;
 }
+

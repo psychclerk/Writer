@@ -29,10 +29,10 @@ body#md {
   border-top: 0.1pt solid #777;
 }
 
-.md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+.md h1, .md div.nonumberh1, .md div.nonumberh2,.md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
   color: #2030a0;
   border-color: orange;
-  border-bottom: 1px solid #c09060;
+  border-bottom: 1px solid #c09060; 
   font-family: arial, sans-serif, helvetica;
   font-size: 150%;
   padding-bottom: 0px;
@@ -86,7 +86,7 @@ a em.asterisk {
 .md h2, .md .nonumberh2 {
     font-size: 125%
 }
-.md h3, .md h4, .md h5, .md h6, .md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
+ .md div.nonumberh3, .md div.nonumberh4, .md div.nonumberh5, .md div.nonumberh6 {
     font-size: 115%
 }
 
@@ -110,16 +110,16 @@ a em.asterisk {
     }
 }
 
-html, body, p, td, li {font-family: arial, sans-serif, helvetica; font-size: 10pt; }
-h1 {font-size: 16pt; Font-Weight: bold; color: #2030a0; width: 100%;
-	border-bottom: 1px solid #c09060;}
-h2 {font-size: 14pt; color: #2030a0; Font-Weight: bold; width: 100%;
-	border-bottom: 1px solid #c09060;}
-h3 {font-size: 12pt; color: #2030a0; Font-Weight: bold;}
-h4 {font-size: 10pt; color: #2030a0; Font-Weight: bold;}
-h5 {font-size: 10pt; Font-Weight: bold;}
-tt {font-family: "courier new", monospace, courier; color: darkgreen;}
-pre {font: bold 10pt "courier new", monospace, console;
+.md html, body, p, td, li {font-family: arial, sans-serif, helvetica; font-size: 10pt;}
+.md h1 {font-size: 16pt; Font-Weight: bold;}
+.md h2 {font-size: 14pt; color: #2030a0; Font-Weight: bold; width: 100%; border-bottom: 0px solid #c09060;}
+.md h3 {font-size: 12pt; color: #2030a0; Font-Weight: bold;}
+.md h4 {font-size: 10pt; color: #2030a0; Font-Weight: bold;}
+.md h5 {font-size: 10pt; Font-Weight: bold;}
+.md h6 {font-size: 8pt; Font-Weight: bold;}
+
+.md tt {font-family: "courier new", monospace, courier; color: darkgreen;}
+.md pre {font: bold 10pt "courier new", monospace, console;
 	background-color: #e0e0e0; padding: 16px; border: solid #a0a0a0 1px;}
 .toc1 {margin-left: 1cm; font-size: 12pt; font-weight: bold;}
 .toc2 {margin-left: 2cm; font-size: 10pt; Font-Weight: bold; text-decoration: none;}
@@ -135,4 +135,3 @@ pre {font: bold 10pt "courier new", monospace, console;
   margin-right: auto;
   width: 50%;
 }
-
