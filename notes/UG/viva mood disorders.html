@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="..\Approaches\Bradycardia.html">Bradycardia</a></li>
+<li><a class="" href="..\Approaches\Tachycardia.html">Tachycardia</a></li>
+<li><a class="" href="..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="..\Casc\Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="..\Casc\Grief reaction.html">Grief reaction</a></li>
+<li><a class="" href="..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\Psychiatry\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\Psychiatry\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\Psychiatry\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Manganism.html">Manganism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\NBIA.html">NBIA</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="active" href="viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>viva mood disorders</p>
+<hr>
+<h2 id="tags%3A-%5Bnotebooks%2Fpsychiatry%2Fug%5Dtitle%3A-viva-mood-disorderscreated%3A-%E2%80%982021-02-13t03%3A56%3A08.411z%E2%80%99modified%3A-%E2%80%982021-06-06t12%3A56%3A00.426z%E2%80%99">tags: [Notebooks/Psychiatry/UG]
+title: viva mood disorders
+created: ‘2021-02-13T03:56:08.411Z’
+modified: ‘2021-06-06T12:56:00.426Z’ <a class="heading-anchor-permalink" href="#tags%3A-%5Bnotebooks%2Fpsychiatry%2Fug%5Dtitle%3A-viva-mood-disorderscreated%3A-%E2%80%982021-02-13t03%3A56%3A08.411z%E2%80%99modified%3A-%E2%80%982021-06-06t12%3A56%3A00.426z%E2%80%99">#</a></h2>
+<h1 id="viva-questions---chapter-mood-disorders">Viva questions - Chapter Mood Disorders <a class="heading-anchor-permalink" href="#viva-questions---chapter-mood-disorders">#</a></h1>
+<p>‘*’ bonus questions</p>
+<h2 id="introduction">Introduction <a class="heading-anchor-permalink" href="#introduction">#</a></h2>
+<ul>
+<li>What is mood?</li>
+<li>What constitutes a mood disorder?</li>
+<li>What is Affect?</li>
+<li>What dimensions are used to describe affect?</li>
+</ul>
+<h2 id="mdd---etiology-and-epidemiology">MDD - etiology and epidemiology <a class="heading-anchor-permalink" href="#mdd---etiology-and-epidemiology">#</a></h2>
+<ul>
+<li>What gender and age are at most risk of developing Major Depressive Disorder?</li>
+<li>What is the lifetime prevalence of MDD?</li>
+<li>What ethnic and socio-economic groups are at most risk for depression?</li>
+<li>What are some predisposing factors for depression?</li>
+<li>What is the concordance rate for of depression in monozygotic and dizygotic twins? * 50% M, 20% D</li>
+<li>What is the risk of completed suicide in major depression? 15%</li>
+<li>Abnormal levels of which neurotransmitters are believed to contribute to depression?</li>
+<li>Dysfunction of which neuroendocrine axis is believed to be involved in depression? *</li>
+<li>How does behavioral theory explain depression? * Learned helplessness</li>
+<li>How does cognitive theory explain depression? * Faulty cognitive networks</li>
+<li>How does humanistic theory explain depression? * Sense of seperation from others</li>
+<li>How does psychodynamic theory explain depression? * inability to recover from loss of attached object</li>
+<li>What medications can trigger depression? * Steroids, Interferon, Benzodiazepines</li>
+<li>What are the most common medical causes of depression? * Endocrine (hypothyroidism, adrenal dysfunction), neurologic (Parkinson’s disease, strokes, dementia), metabolic disorders (vitamin B12 deficiency), cancer (pancreatic), and infections (human immunodeficiency virus [HIV], hepatitis)</li>
+<li>What endocrine disorder is most commonly associated with depressive symptoms?</li>
+<li>What type of cancers can manifest with depressive symptoms?</li>
+<li>What personalities are more likely to develop depression?</li>
+</ul>
+<h2 id="mdd---diagnosis">MDD - Diagnosis <a class="heading-anchor-permalink" href="#mdd---diagnosis">#</a></h2>
+<ul>
+<li>Is depression classified as a psychotic or neurotic disorder?</li>
+<li>What are the clinical features of depression? SIGECAPS</li>
+<li>What are the DSM-5 criteria for diagnosis of MDE?</li>
+<li>What are the cardinal symptoms of depression?</li>
+<li>What is anhedonia?</li>
+<li>What are the vegetative symptoms of depression?</li>
+<li>What are reverse vegetative symptoms of depression?</li>
+<li>What sleep disturbances are seen in depression?</li>
+<li>What are cognitive symptoms of depression?</li>
+<li>What is the typical course of a depressive episode?</li>
+<li>How does depression present differently in children? *</li>
+<li>How does depression present differently in elderly? *</li>
+<li>What is the differential diagnosis of depression? *</li>
+<li>What subtypes of depression exist? *</li>
+<li>A mood disorder with marked motor immobility, excessive movement, or mutism is generally classified as what type of depression?</li>
+<li>What is melancholic depression?*</li>
+<li>Do all depressive episodes feature lack of sleep and weight loss?*</li>
+<li>What is seasonal affective disorder? *</li>
+</ul>
+<h2 id="mdd---treatment">MDD - treatment <a class="heading-anchor-permalink" href="#mdd---treatment">#</a></h2>
+<ul>
+<li>What classes of antidepressants are used to treat depression?</li>
+<li>What are the different types of psychotherapies used to treat depression?*</li>
+<li>What are the indications for using ECT?</li>
+<li>What are the contraindications for ECT?</li>
+<li>How is ECT performed? *</li>
+<li>What are the major side effects associated with ECT?</li>
+<li>What is the pharmacologic treatment regimen for a major depressive episode?</li>
+</ul>
+<h2 id="bipolar-disorder---epidemiology-and-etiology">Bipolar Disorder - Epidemiology and Etiology <a class="heading-anchor-permalink" href="#bipolar-disorder---epidemiology-and-etiology">#</a></h2>
+<ul>
+<li>What is the lifetime prevalence of bipolar I disorder?</li>
+<li>Are there any gender disparities in the incidence of bipolar I mood disorder?</li>
+<li>What is the lifetime prevalence of bipolar II disorder (BD II)?</li>
+<li>Are there any gender disparities in the incidence of BD II?</li>
+<li>What is the typical age of onset of bipolar disorder?</li>
+<li>What are the proposed causes of BD?</li>
+<li>What is the mortality rate in BD? *</li>
+<li>What are the risk factors for suicide completions? SADPERSONS</li>
+</ul>
+<h2 id="bipolar-disorder---diagnosis">Bipolar disorder - Diagnosis <a class="heading-anchor-permalink" href="#bipolar-disorder---diagnosis">#</a></h2>
+<ul>
+<li>What are the known precipitants of manic episode? *</li>
+<li>What are the diagnostic features of bipolar I disorder?</li>
+<li>What are the diagnostic features of Bipolar II disorder?</li>
+<li>What are the clinical features of a manic episode? DIGFAST</li>
+<li>What are the various levels of elevated mood?</li>
+<li>What sleep changes occur in mania?</li>
+<li>What distinguishes mania from hypomania? *</li>
+<li>What is the differential diagnosis of bipolar disorder? *</li>
+<li>What are some common medical causes of manic symptoms? Endocrine (hyperthyroidism), neurologic (seizures, stroke), and systemic disorders (HIV, vitamin B12 deficiency)</li>
+<li>What medications / drug tend to produce mania?* Stimulants, steroids, sympathomimetics, antidepressants, cocaine, alcohol, withdrawal from alcohol and other CNS depressants</li>
+<li>What is the typical course of a manic episode? *</li>
+<li>What is meant by rapid cycling?*</li>
+</ul>
+<h2 id="bipolar-disorder---treatment">Bipolar disorder - treatment <a class="heading-anchor-permalink" href="#bipolar-disorder---treatment">#</a></h2>
+<ul>
+<li>What medications are used to treat bipolar disorder?</li>
+<li>What medications are commonly used to treat depressive phase of bipolar disorder?</li>
+<li>What medications are most effective in treating rapid cycling? *</li>
+<li>What adjunctive therapies are useful for patients with bipolar disorder? *</li>
+<li>What non pharmacological treatment can be used for acute mania?</li>
+</ul>
+<h2 id="other-mood-disorders---epidemiology-and-etiology-*">Other mood disorders - epidemiology and etiology * <a class="heading-anchor-permalink" href="#other-mood-disorders---epidemiology-and-etiology-*">#</a></h2>
+<ul>
+<li>What is dysthymic disorder?</li>
+<li>What is the lifetime prevalence of dysthymia? 6%</li>
+<li>What age group is most at risk for developing dysthymia?</li>
+<li>Is dysthymia more common in women than men? 2-3 times common in women</li>
+<li>What percentage of patients with dysthymia will develop bipolar or major depression? 5% bipolar 20% depression</li>
+<li>What is cyclothymic disorder?</li>
+<li>What is the lifetime prevalence of cyclothymia? &lt;1%</li>
+<li>Is cyclothymia is more common in women then men? No. Equal.</li>
+<li>What age group is most at risk for cyclothymia?</li>
+</ul>
+<h2 id="other-mood-disorders---diagnosis-*">Other mood disorders - diagnosis * <a class="heading-anchor-permalink" href="#other-mood-disorders---diagnosis-*">#</a></h2>
+<ul>
+<li>What are the clinical features of dysthymia?</li>
+<li>What is double depression?</li>
+<li>What is the differential diagnosis of dysthymia?</li>
+<li>What are the clinical features of cyclothymia?</li>
+<li>How are cyclothymia and bipolar II disorder different?</li>
+<li>What is post partum depression?</li>
+<li>What is substance induced mood disorder?</li>
+</ul>
+<h2 id="other-mood-disorders---treatment-*">Other mood disorders - treatment * <a class="heading-anchor-permalink" href="#other-mood-disorders---treatment-*">#</a></h2>
+<ul>
+<li>What are the most effective treatment for dysthymia?</li>
+<li>How is cyclothymia usually treated?</li>
+<li>What is the treatment for patients with substance-induced mood disorders?</li>
+<li>If symptoms of a substance-induced mood disorder do not resolve within a few weeks after cessation of the causative medication, what is the best approach to treatment?</li>
+</ul>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>

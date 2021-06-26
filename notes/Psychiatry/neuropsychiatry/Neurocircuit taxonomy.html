@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="..\..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="..\..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="..\..\Approaches\Bradycardia.html">Bradycardia</a></li>
+<li><a class="" href="..\..\Approaches\Tachycardia.html">Tachycardia</a></li>
+<li><a class="" href="..\..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="..\..\Casc\Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="..\..\Casc\Grief reaction.html">Grief reaction</a></li>
+<li><a class="" href="..\..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="..\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="" href="..\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="..\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="..\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="..\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="..\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="..\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="..\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="..\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="..\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="..\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="..\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="..\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="..\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="Manganism.html">Manganism</a></li>
+<li><a class="" href="NBIA.html">NBIA</a></li>
+<li><a class="active" href="Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="..\..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="..\..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="..\..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="" href="..\..\UG\viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="..\..\UG\viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>Neurocircuit taxonomy</p>
+<h1 id="neurocircuit-taxonomy">Neurocircuit taxonomy <a class="heading-anchor-permalink" href="#neurocircuit-taxonomy">#</a></h1>
+<p>Edit date: 26/06/2021 21:34</p>
+<p><strong>CONTENTS</strong></p>
+<hr>
+<ul>
+<li><a href="#neurocircuit-taxonomy">Neurocircuit taxonomy</a></li>
+<li><a href="#why-understand-neurocircuits">Why understand neurocircuits?</a></li>
+<li><a href="#why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry">Why there is a gap in neuroscience advances and their application in psychiatry?</a></li>
+<li><a href="#current-diagnostic-systems-and-neurocircuits-taxonomy">Current diagnostic systems and neurocircuits taxonomy?</a></li>
+<li><a href="#which-large-scale-circuits">Which large-scale circuits?</a></li>
+<li><a href="#how-circuts-can-get-marred">How circuts can get marred?</a></li>
+<li><a href="#limitations-of-current-research">Limitations of current research?</a></li>
+<li><a href="#putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature">Putative biotypes of neural circuit dysfunction in depression and anxiety based on pulished literature</a>
+<ul>
+<li><a href="#dmn">DMN</a></li>
+<li><a href="#sn">SN</a></li>
+<li><a href="#negative-affect-circuit">Negative affect circuit</a></li>
+<li><a href="#positive-affect-circuit-reward">Positive affect circuit (Reward)</a></li>
+<li><a href="#attention-circuit">Attention circuit</a></li>
+<li><a href="#cognitive-control-circuit">Cognitive control circuit</a></li>
+</ul>
+</li>
+<li><a href="#use-of-neural-circuts-to-guide-treatment">Use of neural circuts to guide treatment?</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<hr>
+<h1 id="why-understand-neurocircuits%3F">Why understand neurocircuits? <a class="heading-anchor-permalink" href="#why-understand-neurocircuits%3F">#</a></h1>
+<ul>
+<li>Dysfunctions within and between these circuits give rise to the symptoms that characterize mental disease.</li>
+<li>Understanding these dysfunctions offers the opportunity to specify symptoms at the level of the organ that generates them—the brain.</li>
+<li>By doing so, the notion of mental disease could be revolutionized and treatments could be tailored according to individual experiences and underlying neural disconnections.</li>
+</ul>
+<h1 id="why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry%3F">Why there is a gap in neuroscience advances and their application in psychiatry? <a class="heading-anchor-permalink" href="#why-there-is-a-gap-in-neuroscience-advances-and-their-application-in-psychiatry%3F">#</a></h1>
+<ul>
+<li>Language of brain circuit not incorporated into clinically meaningful taxonomy.</li>
+<li>Training programs do not provide training in neural circuit taxonomy.</li>
+<li>Practitioners do not have neuroiscience based decision making tools.</li>
+</ul>
+<h1 id="current-diagnostic-systems-and-neurocircuits-taxonomy%3F">Current diagnostic systems and neurocircuits taxonomy? <a class="heading-anchor-permalink" href="#current-diagnostic-systems-and-neurocircuits-taxonomy%3F">#</a></h1>
+<ul>
+<li>Current systems like DSM-5 are syndromic and arguably conflate several types of individuals in who diverse brain dysfunctions drive symptoms.</li>
+<li>It is proposed that specific dysfunctions in the functional and structural connectivity of large-scale circuits that govern emotional, cognitive, and self-reflective functions define unique biotypes of depression and anxiety.</li>
+<li>These biotypes will probably differ from traditional diagnostic categories and are likely to overlap, interact, or co-occur in individual patients. A single mechanism is unlikely to underlie a broad descriptive diagnosis such as depression.
+If a taxonomy based on brain dysfunctions is articulated, then it can be mapped onto the profiles of symptoms to which these dysfunctions give rise.</li>
+<li>Also help is reducing stigma - reformulate mental disorders as brain disorders.</li>
+</ul>
+<h1 id="which-large-scale-circuits%3F">Which large-scale circuits? <a class="heading-anchor-permalink" href="#which-large-scale-circuits%3F">#</a></h1>
+<p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f1.jpg" alt="Figure: Circuits of importance"></p>
+<ul>
+<li>
+<p>Legend</p>
+<ul>
+<li>aMPFC = anterior medial prefrontal cortex</li>
+<li>AG = Angular gyrus</li>
+<li>PCC = posterior cingulate cortex</li>
+<li>dACC = dorsal anterior cingulate cortex</li>
+<li>aI = anterior Insula</li>
+<li>TP = Temporal pole</li>
+<li>EA = Extended amgygdala (BNST)</li>
+<li>sgACC = subgenual ACC</li>
+<li>pACC = pregenual ACC</li>
+<li>MPFC = medial PFC</li>
+<li>I = Insula</li>
+<li>A - Amygdala</li>
+<li>OFC = orbital frontal cortex</li>
+<li>msPFC = medial superior PFC</li>
+<li>LPFC = lateral PFC</li>
+<li>aIPL = anterior Inferior parietal lobule</li>
+<li>DLPFC = Dorsolateral PFC</li>
+<li>PCG = precentral gyrus</li>
+<li>DPC = dorsal parietal cortex</li>
+<li>Nacc = nucleus accumbens</li>
+<li>VTA = Ventral tegmental area</li>
+</ul>
+</li>
+<li>
+<p>6 important ones</p>
+<ul>
+<li>Self-reflection (DMN) = aMPFC, AG, PCC</li>
+<li>Salience perception (SN) = dACC, aI, TP, EA</li>
+<li>Negative affect = ACC(sgACC, dACC, pACC), MPFC, I, A</li>
+<li>Positive affect (Reward) = dACC/MPFC, OFC, Striatum (Nacc + VTA)</li>
+<li>Attention = msPFC, LPFC, aI, aIPL, Precuneus</li>
+<li>Cognitive control (CEN, fronto-parietal) = DLPFC, PCG, DPC</li>
+</ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li>Sensorimotor</li>
+<li>Visual</li>
+<li>Auditory</li>
+</ul>
+</li>
+<li>
+<p>DMN is task-negative (activity of the brain when doing nothing)</p>
+</li>
+<li>
+<p>CEN is task-postive</p>
+</li>
+<li>
+<p>DMN and CEN function in anti-correlational manner</p>
+</li>
+</ul>
+<h1 id="how-circuts-can-get-marred%3F">How circuts can get marred? <a class="heading-anchor-permalink" href="#how-circuts-can-get-marred%3F">#</a></h1>
+<ul>
+<li>hypoactivation of node</li>
+<li>hyperactivation of node</li>
+<li>increased connectivity b/w nodes</li>
+<li>decreased connectivity b/w nodes</li>
+</ul>
+<h1 id="limitations-of-current-research%3F">Limitations of current research? <a class="heading-anchor-permalink" href="#limitations-of-current-research%3F">#</a></h1>
+<ul>
+<li>Existing finding tend to be inconsistent</li>
+<li>probably because sample is heterogeneous - meaning similar symptoms due to different circuit dysfunctions</li>
+<li>Hence future studies will first identify neural biotypes based on underlying circuit dysfunctions</li>
+</ul>
+<h1 id="putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature">Putative biotypes of neural circuit dysfunction in depression and anxiety based on pulished literature <a class="heading-anchor-permalink" href="#putative-biotypes-of-neural-circuit-dysfunction-in-depression-and-anxiety-based-on-pulished-literature">#</a></h1>
+<p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f2.jpg" alt="Figure: Putative biotypes."></p>
+<h2 id="dmn">DMN <a class="heading-anchor-permalink" href="#dmn">#</a></h2>
+<ul>
+<li>Task-free or task negative condition (e.g. subject asked to reflect on their thoughts)</li>
+<li>Functional overactivation and hyperconnection of DMN in depression -&gt; RUMINATIONS</li>
+</ul>
+<h2 id="sn">SN <a class="heading-anchor-permalink" href="#sn">#</a></h2>
+<ul>
+<li>detects salient change in the environment - interoceptive and external</li>
+<li>after detection relay signal for further processing to CEN, which guides switching of function from DMN to CEN</li>
+<li>Insular-amygdala hypoconnection -&gt; ANXIOUS AVOIDANCE</li>
+<li>Difficulty in differentiating relevant salient cues and an avoidance of situations that could generate stimulus overload</li>
+</ul>
+<h2 id="negative-affect-circuit">Negative affect circuit <a class="heading-anchor-permalink" href="#negative-affect-circuit">#</a></h2>
+<ul>
+<li>Appraisal of negatively valenced stimuli</li>
+<li>Expression of emotions</li>
+<li>May be engaged in absence of conscious sensory awareness</li>
+<li>commonly co-activated with the SN in response to negative stimuli</li>
+<li>NEGATIVE-BIASES
+<ul>
+<li>MDD pt -&gt; shown sad face -&gt; increased activation of insula + increased activation of amygdala</li>
+<li>GAD pt -&gt; shown emotional faces -&gt; increased insular activation + Insular-amygdala hypoconnection</li>
+<li>MDD pt -&gt; at rest -&gt; hyperconnectivity of anterior notes of the negative affect circuit and SN -&gt; drives ruminations and negative attributions</li>
+</ul>
+</li>
+<li>THREAT DYSREGULATION
+<ul>
+<li>Amygdala hyperactivation + ACC hypoactivation</li>
+<li>Amygdala-ACC hypoconnection</li>
+<li>leading to poor emotional regulation</li>
+</ul>
+</li>
+</ul>
+<h2 id="positive-affect-circuit-(reward)">Positive affect circuit (Reward) <a class="heading-anchor-permalink" href="#positive-affect-circuit-(reward)">#</a></h2>
+<ul>
+<li>ANHEDONIA
+<ul>
+<li>MDD pt -&gt; happy faces -&gt; hypoactivation of striatum -&gt; loss of sensitivity to socially rewarding stimuli</li>
+<li>also hyperactivation of OFC when shown happy faces</li>
+</ul>
+</li>
+<li>CONTEXT INSENSITIVITY
+<ul>
+<li>In remitted depression -&gt; pt shown reward stimuli -&gt; overactivation of     ACC</li>
+<li>heightened anticipation of reward without sensitivity to surrounding context</li>
+</ul>
+</li>
+</ul>
+<h2 id="attention-circuit">Attention circuit <a class="heading-anchor-permalink" href="#attention-circuit">#</a></h2>
+<ul>
+<li>Alertness, sustained attention</li>
+<li>Switching b/w resting and task positive network</li>
+<li>hypoconnection of fronto-parietal network -&gt; INATTENTION</li>
+</ul>
+<h2 id="cognitive-control-circuit">Cognitive control circuit <a class="heading-anchor-permalink" href="#cognitive-control-circuit">#</a></h2>
+<ul>
+<li>Working memory and selective attention</li>
+<li>While effortful selective processing -&gt; inability to inhibit irrelevant stimuli -&gt; COGNITVE DYSCONTROL</li>
+</ul>
+<h1 id="use-of-neural-circuts-to-guide-treatment%3F">Use of neural circuts to guide treatment? <a class="heading-anchor-permalink" href="#use-of-neural-circuts-to-guide-treatment%3F">#</a></h1>
+<p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/bin/nihms794824f3.jpg" alt="Figure: Circuits based treatment"></p>
+<h1 id="reference">Reference <a class="heading-anchor-permalink" href="#reference">#</a></h1>
+<ol>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/#R1">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4922884/#R1</a></li>
+</ol>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>

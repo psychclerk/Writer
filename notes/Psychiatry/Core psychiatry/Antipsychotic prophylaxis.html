@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="..\..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="..\..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="..\..\Approaches\Bradycardia.html">Bradycardia</a></li>
+<li><a class="" href="..\..\Approaches\Tachycardia.html">Tachycardia</a></li>
+<li><a class="" href="..\..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="..\..\Casc\Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="..\..\Casc\Grief reaction.html">Grief reaction</a></li>
+<li><a class="" href="..\..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="active" href="Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="..\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="..\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="..\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="..\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="..\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="..\neuropsychiatry\Manganism.html">Manganism</a></li>
+<li><a class="" href="..\neuropsychiatry\NBIA.html">NBIA</a></li>
+<li><a class="" href="..\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="..\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="..\neuropsychiatry\catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="..\..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="..\..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="..\..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="" href="..\..\UG\viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="..\..\UG\viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>Antipsychotic prophylaxis</p>
+<h1 id="antipsychotic-prophylaxis">Antipsychotic prophylaxis <a class="heading-anchor-permalink" href="#antipsychotic-prophylaxis">#</a></h1>
+<p>Edit date: 26/06/2021 07:40</p>
+<p>CAVEAT - before reading and interpreting the following data, be mindful of the following:</p>
+<blockquote>
+<ol>
+<li>It should be noted that definitions of relapse usually focus on the severity of positive symptoms, and largely ignore cognitive and negative symptoms: positive symptoms are more likely to lead to hospitalization while cognitive and negative symptoms (which respond less well, and in some circumstances may even be exacerbated by antipsychotic treatment) have a greater overall impact on quality of life.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Lack of relapse is not the same as good functioning</li>
+</ol>
+</blockquote>
+<h1 id="first-episode-psychosis">First episode psychosis <a class="heading-anchor-permalink" href="#first-episode-psychosis">#</a></h1>
+<p><strong>Q. What is the reduction in relapse rate with antipsychotics?</strong></p>
+<p>A. 26% of first-episode patients randomized to receive maintenance antipsychotics relapsed after 6–12 months compared with 61% randomized to receive placebo. (<em>Leucht et al. Lancet 2012;379:2063–2071</em>)</p>
+<p><strong>Q. What happens after withdrawal of antipsychotics as per consensus in FEP?</strong></p>
+<p>A. Withdrawing antipsychotic treatment in line with this consensus led to a relapse rate of almost 80% after 1 year  medication‐free and 98% after 2 years. (<em>Gitlin et al. Am J Psychiatry 2001;158:1835–1842.</em>)</p>
+<p><strong>Q. Does continuation of antipsychotics in FEP offer any advantage?</strong></p>
+<p>A. 5-year follow-up of a 2-year RCT, during which patients received either maintenance antipsychotic treatment or had their antipsychotic dose reduced or discontinued completely, found that while there was a clear advantage for maintenance treatment with respect to reducing short‐term relapse this advantage was lost in the medium term. Further, the dose-reduction/discontinuation group were receiving lower doses of antipsychotic drugs at follow‐up and had better functional outcomes. (<em>Wunderink et al. JAMA Psychiatry 2013;70:913–920</em>)</p>
+<p><strong>Q. How many percentage of patients do not need long term prophylaxis after FEP?</strong></p>
+<p>A. 18–30%. (<em>Murray et al. Br J Psychiatry 2016;209:361–365</em>)</p>
+<p><strong>Q. Are there any predictors of discontinuation of antipsychotics after FEP maintenance?</strong></p>
+<p>A. No reliable predictors.</p>
+<p><strong>Q. What is the current practice?</strong></p>
+<ul>
+<li>After 1 year of maintenance treatment, patients should have their <strong>dose reduced gradually</strong> and all relevant family members and health‐care staff should be aware of the discontinuation.</li>
+<li>It is vital that patients, carers and key‐workers are <strong>aware of the early signs of relapse</strong> and how to access help.</li>
+<li>Antipsychotics should not be considered the only intervention. Evidence based <strong>psychosocial and psychological interventions</strong> are clearly also important.</li>
+</ul>
+<h1 id="multi-episode-schizophrenia">Multi-episode schizophrenia <a class="heading-anchor-permalink" href="#multi-episode-schizophrenia">#</a></h1>
+<p><strong>Q. Who is most likely to relapse?</strong></p>
+<p>A. Patients with residual symptoms, a greater adverse‐effect burden and a less positive attitude to treatment are at greater risk of relapse. (<em>Schennach et al. Psychiatr Serv 2012;63:87–90</em>)</p>
+<p><strong>Q. What is the evidence-base for relapse prevention with antipsychotics in schizophrenia?</strong></p>
+<ul>
+<li>Antipsychotic drugs, when taken regularly, <strong>protect against relapse</strong> in the short, medium and (with less certainty) long term. (<em>Leucht et al. Lancet 2012;379:2063–2071</em>, <em>Almerie et al. Schizophr Bull 2008;34:13–14</em>)</li>
+<li>Those who receive targeted antipsychotics (i.e. only when symptoms re‐emerge) seem to have a worse outcome than those who receive <strong>prophylactic antipsychotics</strong>. (<em>Jolley et al. Br Med J 1990;301:837–842</em>, <em>Herz et al. Arch Gen Psychiatry 1991; 48:333–339</em>)</li>
+<li>Low-dose antipsychotics are less effective than
+<strong>standard doses</strong>. (<em>Schooler et al. Arch Gen Psychiatry 1997;54:453–463</em>)
+<ul>
+<li>Lower doses of the older drugs (8 mg haloperidol/day or equivalent) are, when compared with higher doses, associated with less severe adverse effects, better subjective state and better community adjustment. Very low doses increase the risk of psychotic relapse.</li>
+<li>There are no data to support the use of lower than standard doses of the newer drugs as prophylaxis. Doses that are acutely effective should generally be continued as prophylaxis. An exception to this is prophylaxis after a first episode where very careful dose reduction is supportable.</li>
+</ul>
+</li>
+<li>Meta‐analyses of clinical trials have shown that the relative and absolute risks of relapse with <strong>depot maintenance treatment</strong> were 30% and 10% lower, compared to oral treatment. (<em>Leucht et al. Lancet 2012;379:2063–2071</em>, <em>Leucht et al. Schizophr Res 2011;127:83–92</em>)</li>
+<li>A large meta‐analysis concluded that the <strong>risk of relapse with newer antipsychotics is similar to that associated with older drugs</strong>. (<em>Leucht et al. Lancet 2012;379:2063–2071</em>)</li>
+</ul>
+<p><strong>Q.What is the data on attrition rates in long term antipsychotic prophylaxis?</strong></p>
+<p>A. CATIE and SOHO trail data shows that attrition rate
+from olanzapine was lower than the attrition rate from other antipsychotic drugs, suggesting that olanzapine may be more effective than other antipsychotic drugs (except clozapine). However, prescribing choice should be based on potential risk–benefit and it should be noted that olanzapine is associated with a high propensity for metabolic adverse effects. (<em>Lieberman et al. N Engl J Med 2005;353:1209–1223</em>, <em>Ciudad et al. Eur Psychiatry 2008; 23:1–7</em>)</p>
+<p><strong>Q. What is the data on adherence to antipsychotic treatment?</strong>
+A. Non-compliance with long-term antipsychotic treatment is very high. An estimated 40 to 50 percent of patients become non-compliant within 1 or 2 years. (<em>Kaplan Synopsis 11e</em>)</p>
+<p><strong>Q. How and when to stop antipsychotic treatment?</strong></p>
+<ul>
+<li>Before discontinuation consider the following:
+<ul>
+<li>Is the patient symptom‐free, and, if so, for how long? (excluding long-standing, non-distressing symptoms)</li>
+<li>What is the severity of adverse effects (EPS, TD, sedation, obesity, etc.)?</li>
+<li>What was the previous pattern of illness? Consider the speed of onset, duration and severity of episodes and any danger posed to self and others.</li>
+<li>Has dosage reduction been attempted before, and, if so, what was the outcome?</li>
+<li>What are the patient’s current social circumstances? Is it a period of relative stability, or are stressful life events anticipated?</li>
+<li>What is the social cost of relapse (e.g. is the patient the sole breadwinner for a family)?</li>
+<li>Is the patient/carer able to monitor symptoms, and, if so, will they seek help?</li>
+</ul>
+</li>
+<li>Those with a history of aggressive behaviour or serious suicide attempts and those with residual psychotic symptoms should be considered for life‐long treatment.</li>
+<li>If a decision to discontinue has been made, then patients, carers and key‐workers should be aware of the early signs of relapse and how to access help. And, dose reduction should be gradual.</li>
+</ul>
+<p><strong>Q. Key points that patients should know about rx with antipsychotics?</strong></p>
+<ul>
+<li>Antipsychotics do not ‘cure’ schizophrenia. They treat symptoms in the same way that insulin treats diabetes.</li>
+<li>Some antipsychotic drugs may be more effective than others.</li>
+<li>Many antipsychotic drugs are available. Different drugs suit different patients.</li>
+<li>Perceived adverse effects should always be discussed, so that the best tolerated drug can be found.</li>
+<li>Long‐term treatment is generally required to prevent relapses.</li>
+<li>Antipsychotics should never be stopped suddenly.</li>
+<li>Psychological and psychosocial interventions increase the chance of staying well.</li>
+</ul>
+<h1 id="reference">Reference <a class="heading-anchor-permalink" href="#reference">#</a></h1>
+<p>Maudsley 13th ed</p>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>
