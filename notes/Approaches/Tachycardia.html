@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="Bradycardia.html">Bradycardia</a></li>
+<li><a class="active" href="Tachycardia.html">Tachycardia</a></li>
+<li><a class="" href="Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="..\Casc\Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="..\Casc\Grief reaction.html">Grief reaction</a></li>
+<li><a class="" href="..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\Psychiatry\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\Psychiatry\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\Psychiatry\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Manganism.html">Manganism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\NBIA.html">NBIA</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li><a class="" href="..\Research\Jaishree comments on stress and coping article.html">Jaishree comments on stress and coping article</a></li>
+<li><a class="" href="..\Research\Orcid.html">Orcid</a></li>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="" href="..\UG\viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="..\UG\viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>Tachycardia</p>
+<h1 id="tachycardia">Tachycardia <a class="heading-anchor-permalink" href="#tachycardia">#</a></h1>
+<p>Edit date: 25/06/2021 22:22</p>
+<p><strong>CONTENTS</strong></p>
+<hr>
+<ul>
+<li><a href="#tachycardia">Tachycardia</a></li>
+<li><a href="#differentiating-major-sub-categories">Differentiating major sub-categories</a></li>
+<li><a href="#common-or-important-in-clinical-practice">Common or important in clinical practice</a>
+<ul>
+<li><a href="#sinus-tachycardia">Sinus Tachycardia</a>
+<ul>
+<li><a href="#metabolic">Metabolic</a></li>
+<li><a href="#infective">Infective</a></li>
+<li><a href="#structural">Structural</a></li>
+<li><a href="#toxic">Toxic</a></li>
+<li><a href="#psychological">Psychological</a></li>
+</ul>
+</li>
+<li><a href="#svt">SVT</a>
+<ul>
+<li><a href="#metabolic-1">Metabolic</a></li>
+<li><a href="#infective-1">Infective</a></li>
+<li><a href="#structural-1">Structural</a></li>
+<li><a href="#toxic-1">Toxic</a></li>
+</ul>
+</li>
+<li><a href="#af">AF</a>
+<ul>
+<li><a href="#metabolic-2">Metabolic</a></li>
+<li><a href="#infective-2">Infective</a></li>
+<li><a href="#structural-2">Structural</a></li>
+<li><a href="#toxic-2">Toxic</a></li>
+</ul>
+</li>
+<li><a href="#vt">VT</a>
+<ul>
+<li><a href="#metabolic-3">Metabolic</a></li>
+<li><a href="#infective-3">Infective</a></li>
+<li><a href="#structural-3">Structural</a></li>
+<li><a href="#toxic-3">Toxic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assessment">Assessment</a>
+<ul>
+<li><a href="#history-taking">History taking</a>
+<ul>
+<li><a href="#define-cardiac-symptoms">Define cardiac symptoms</a></li>
+<li><a href="#etiologic-history">Etiologic history</a></li>
+<li><a href="#past-medical-and-psychiatric-history">Past medical and psychiatric history</a></li>
+<li><a href="#family-history">Family history</a></li>
+</ul>
+</li>
+<li><a href="#examination">Examination</a></li>
+<li><a href="#investigations">Investigations</a></li>
+</ul>
+</li>
+<li><a href="#management">Management</a>
+<ul>
+<li><a href="#sinus-tachycardia-1">Sinus Tachycardia</a></li>
+<li><a href="#af-1">AF</a></li>
+<li><a href="#svt-1">SVT</a></li>
+<li><a href="#broad-complex-tachycardia">Broad-complex tachycardia</a></li>
+<li><a href="#when-to-refer">When to refer</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<hr>
+<h1 id="differentiating-major-sub-categories">Differentiating major sub-categories <a class="heading-anchor-permalink" href="#differentiating-major-sub-categories">#</a></h1>
+<ol>
+<li>ECG</li>
+<li>Length of QRS</li>
+<li>Regularity of rhythm</li>
+</ol>
+<p><img src="../../_resources/82406bbf7ebf405d9a6d5ebc260531cd.png" alt="tachycardia_causes.png"></p>
+<h1 id="common-or-important-in-clinical-practice">Common or important in clinical practice <a class="heading-anchor-permalink" href="#common-or-important-in-clinical-practice">#</a></h1>
+<h2 id="sinus-tachycardia">Sinus Tachycardia <a class="heading-anchor-permalink" href="#sinus-tachycardia">#</a></h2>
+<h3 id="metabolic">Metabolic <a class="heading-anchor-permalink" href="#metabolic">#</a></h3>
+<ul>
+<li>Hyperthyroid</li>
+<li>Electrolytes (HypoK+, HypoMg++)</li>
+<li>Anaemia</li>
+</ul>
+<h3 id="infective">Infective <a class="heading-anchor-permalink" href="#infective">#</a></h3>
+<ul>
+<li>Sepsis</li>
+</ul>
+<h3 id="structural">Structural <a class="heading-anchor-permalink" href="#structural">#</a></h3>
+<ul>
+<li>Pain</li>
+<li>Pregnancy</li>
+<li>HF</li>
+<li>MI</li>
+<li>PE</li>
+<li>Hypovolemia during hge</li>
+<li>Postural fall</li>
+</ul>
+<h3 id="toxic">Toxic <a class="heading-anchor-permalink" href="#toxic">#</a></h3>
+<ul>
+<li>Alcohol / opioid / benzo withdrawal</li>
+<li>Cannabis use</li>
+<li>Clozapine</li>
+<li>TCAs</li>
+<li>Salbutamol</li>
+<li>Stimulants - Amphetamines</li>
+<li>Carbamazepine</li>
+<li>Caffeine use</li>
+<li>Cocaine intoxication</li>
+<li>Serotonin syndrome</li>
+<li>NMS</li>
+</ul>
+<h3 id="psychological">Psychological <a class="heading-anchor-permalink" href="#psychological">#</a></h3>
+<ul>
+<li>Emotional/physical arousal: anxiety/panic/agitation</li>
+</ul>
+<h2 id="svt">SVT <a class="heading-anchor-permalink" href="#svt">#</a></h2>
+<h3 id="metabolic-2">Metabolic <a class="heading-anchor-permalink" href="#metabolic-2">#</a></h3>
+<ul>
+<li>Electrolyte disturbances (hypokalaemia/hyperkalemia, hypomagnesaemia)</li>
+</ul>
+<h3 id="infective-2">Infective <a class="heading-anchor-permalink" href="#infective-2">#</a></h3>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="structural-2">Structural <a class="heading-anchor-permalink" href="#structural-2">#</a></h3>
+<ul>
+<li>IHD</li>
+<li>WPW</li>
+</ul>
+<h3 id="toxic-2">Toxic <a class="heading-anchor-permalink" href="#toxic-2">#</a></h3>
+<ul>
+<li>Alcohol</li>
+<li>Cocaine</li>
+<li>Amphetamine</li>
+<li>Caffeine</li>
+</ul>
+<h2 id="af">AF <a class="heading-anchor-permalink" href="#af">#</a></h2>
+<h3 id="metabolic-3">Metabolic <a class="heading-anchor-permalink" href="#metabolic-3">#</a></h3>
+<ul>
+<li>Hyperthyroidism</li>
+<li>Electrolyte disturbance (hypokalaemia, hypomagnesaemia)</li>
+</ul>
+<h3 id="infective-3">Infective <a class="heading-anchor-permalink" href="#infective-3">#</a></h3>
+<ul>
+<li>Sepsis</li>
+</ul>
+<h3 id="structural-3">Structural <a class="heading-anchor-permalink" href="#structural-3">#</a></h3>
+<ul>
+<li>Older age</li>
+<li>Pulmonary embolism</li>
+<li>Heart failure</li>
+<li>Valvular heart disease</li>
+<li>Hypertension</li>
+<li>Chronic lung disease and lung cancer</li>
+</ul>
+<h3 id="toxic-3">Toxic <a class="heading-anchor-permalink" href="#toxic-3">#</a></h3>
+<ul>
+<li>Atropine</li>
+<li>Alcohol</li>
+<li>Caffeine</li>
+<li>Cocaine</li>
+<li>Amphetamine</li>
+</ul>
+<h2 id="vt">VT <a class="heading-anchor-permalink" href="#vt">#</a></h2>
+<h3 id="metabolic-4">Metabolic <a class="heading-anchor-permalink" href="#metabolic-4">#</a></h3>
+<ul>
+<li>Electrolyte disturbances (hypokalemia/hyperkalemia, hypomagnesaemia)</li>
+<li>Eating disorders</li>
+</ul>
+<h3 id="infective-4">Infective <a class="heading-anchor-permalink" href="#infective-4">#</a></h3>
+<h3 id="structural-4">Structural <a class="heading-anchor-permalink" href="#structural-4">#</a></h3>
+<ul>
+<li>Myocardial infarction</li>
+<li>Cardiomyopathy</li>
+<li>Structural heart disease</li>
+<li>Prolonged QTc interval (congenital or acquired)</li>
+<li>Brugada syndrome (phenotype associated with antipsychotics)</li>
+</ul>
+<h3 id="toxic-4">Toxic <a class="heading-anchor-permalink" href="#toxic-4">#</a></h3>
+<ul>
+<li>Cocaine</li>
+<li>Amphetamines</li>
+<li>Tricyclic antidepressants</li>
+<li>QTc prolonging medication including antipsychotics</li>
+<li>Digoxin</li>
+</ul>
+<h1 id="assessment">Assessment <a class="heading-anchor-permalink" href="#assessment">#</a></h1>
+<h2 id="history-taking">History taking <a class="heading-anchor-permalink" href="#history-taking">#</a></h2>
+<h3 id="define-cardiac-symptoms">Define cardiac symptoms <a class="heading-anchor-permalink" href="#define-cardiac-symptoms">#</a></h3>
+<ul>
+<li>Palpitations
+<ul>
+<li>Continuous v/s Paroxysmal</li>
+<li>Regular v/s irregular</li>
+</ul>
+</li>
+<li>Other cardiac sx
+<ul>
+<li>hemodynamic compromise
+<ul>
+<li>chest pain</li>
+<li>SOB</li>
+<li>syncope / pre-syncope</li>
+</ul>
+</li>
+<li>HF
+<ul>
+<li>Orthopnea</li>
+<li>PND</li>
+<li>swollen ankles</li>
+</ul>
+</li>
+<li>MI
+<ul>
+<li>pain : character</li>
+<li>N/V</li>
+<li>sweating</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="etiologic-history">Etiologic history <a class="heading-anchor-permalink" href="#etiologic-history">#</a></h3>
+<ul>
+<li>Sepsis (Fever, rigor, presyncope/syncope, symptoms related to infective source)</li>
+<li>Dehydration (diarrhea, vomiting, reduced oral intake, blood loss)</li>
+<li>Hyperthyroidism (heat intolerance, weight loss, oligomenorrhea)</li>
+<li>Anxiety (parasthesia, stressors)</li>
+<li>Exercise</li>
+<li>Medication history (any new medications or dose change, particularly sympathomimetic or anticholinergic)</li>
+<li>Alcohol use / other substance use</li>
+<li>Caffeine use</li>
+</ul>
+<h3 id="past-medical-and-psychiatric-history">Past medical and psychiatric history <a class="heading-anchor-permalink" href="#past-medical-and-psychiatric-history">#</a></h3>
+<ul>
+<li>Any cardiac disease, hypertension, diabetes, thyroid disease, chronic lung disease, anxiety, panic</li>
+<li>Eating disorder (purging behavior may be associated with electrolyte distrubance)</li>
+</ul>
+<h3 id="family-history">Family history <a class="heading-anchor-permalink" href="#family-history">#</a></h3>
+<ul>
+<li>sudden cardiac death</li>
+</ul>
+<h2 id="examination">Examination <a class="heading-anchor-permalink" href="#examination">#</a></h2>
+<ul>
+<li>ABCDE assessment</li>
+<li>Cardiovascular examination</li>
+<li>Focused examination if systemic illness suspected</li>
+<li>MSE to look for psych symptoms associated with autonomic activation e.g. anxiety, delusions, hallucinations</li>
+</ul>
+<h2 id="investigations">Investigations <a class="heading-anchor-permalink" href="#investigations">#</a></h2>
+<ul>
+<li>ECG</li>
+</ul>
+<p><img src="../../_resources/3c8466b734a74b41891f587485826e76.png" alt="ECG_tachycardia.png"></p>
+<ul>
+<li>Bloods
+<ul>
+<li>CBC (anemia, high/low neutrophil count)</li>
+<li>RFT (hypovolemia, hypokalaemia/hyperkalemia)</li>
+<li>Bone profile (hypomagnesaemia, hypocalcaemia)</li>
+<li>CRP (infection)</li>
+<li>TFT (hyperthyroidism)</li>
+<li>Antipsychotic levels (toxicity)</li>
+<li>Trop-I (if suspecting an ischemic event or myocarditis)</li>
+<li>D-dimer</li>
+<li>BNP (heart failure)</li>
+<li>HbA1c (diabetes mellitus)</li>
+<li>RBS (diabetic ketoacidosis/hyperosmolar hyperglycemic state).</li>
+</ul>
+</li>
+<li>Urine
+<ul>
+<li>toxicology (cocaine, amphetamines, cannabis).</li>
+<li>dipstick (urinary tract infection, ketonuria, glycosuria).</li>
+</ul>
+</li>
+<li>CXR (cardiomegaly, pulmonary edema, pneumonia, lung cancer).</li>
+<li>Special Ix
+<ul>
+<li>Consider echocardiogram or 24-hour tape</li>
+</ul>
+</li>
+</ul>
+<h1 id="management">Management <a class="heading-anchor-permalink" href="#management">#</a></h1>
+<h2 id="sinus-tachycardia-2">Sinus Tachycardia <a class="heading-anchor-permalink" href="#sinus-tachycardia-2">#</a></h2>
+<ul>
+<li>
+<p>🚩 Sinus tachycardia may represent a physiological response, attempts to slow the heart rate in this context may result in hypotension</p>
+</li>
+<li>
+<p>🚩 Red flag symptoms including persistent chest pain, syncope, hypotension, pyrexia, tachypnea or hypoxia may necessitate transfer</p>
+</li>
+<li>
+<p>If a specific cause is identified, management should focus on treatment of the underlying condition.</p>
+</li>
+<li>
+<p>In psychiatric inpatients, if agitation or panic is suspected but alternative diagnoses cannot initially be discounted (e.g. evolving infection), then increasing frequency of observations and clinical reviews may be indicated, even if only temporarily.</p>
+</li>
+<li>
+<p><strong>Clozapine induced sinus tachycardia</strong></p>
+<ul>
+<li>Very common in the early stages of treatment</li>
+<li>usually benign and dose related</li>
+<li>If <em><strong>Asymptomatic patients</strong></em>
+<ul>
+<li>And no signs of myocarditis (e.g fever or chest pain)</li>
+<li>Then, manage conservatively</li>
+</ul>
+</li>
+<li>If <em><strong>Symptomatic</strong></em>
+<ul>
+<li>Then, start rate control with Beta-blockers</li>
+<li>Else, start Ivabradine</li>
+</ul>
+</li>
+<li>If <em><strong>first line rx fails</strong></em>
+<ul>
+<li>consider p/o cardiomyopathy and seek Cardiac consult</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="af-2">AF <a class="heading-anchor-permalink" href="#af-2">#</a></h2>
+<ul>
+<li>General principles involve offering symptomatic patients rate control (e.g. a beta-blocker) and anticoagulation if the risk of thromboembolism is high (CHA2DS2VASc score ≥2) but not outweighed by the risk of major bleeding (calculated using the HAS-BLED score).</li>
+<li>Anticoagulants could include warfarin or apixaban, dabigatran, rivaroxaban, endoxaban.</li>
+</ul>
+<h2 id="svt-2">SVT <a class="heading-anchor-permalink" href="#svt-2">#</a></h2>
+<ul>
+<li>🚩 Persistent new‐onset SVT requires immediate transfer.</li>
+<li>Further acute management may involve intravenous adenosine administration, synchronized cardioversion or intravenous antiarrhythmics such as diltiazem or beta‐blockers.</li>
+<li>Long-term management should be directed by a cardiologist. Lifestyle advice on alcohol, caffeine, and illicit drug use as potential precipitants should be offered,as well as strict control of general cardiac risk factors (e.g. smoking cessation).</li>
+</ul>
+<h2 id="broad-complex-tachycardia">Broad-complex tachycardia <a class="heading-anchor-permalink" href="#broad-complex-tachycardia">#</a></h2>
+<ul>
+<li>🚩 Any broad-complex tachycardia should be managed as VT until proven otherwise</li>
+<li>For psychiatric inpatients or people in the community, this is likely to require urgent transfer.</li>
+</ul>
+<h2 id="when-to-refer">When to refer <a class="heading-anchor-permalink" href="#when-to-refer">#</a></h2>
+<ul>
+<li>🚩 Red flags</li>
+<li>hemodynamic instability</li>
+<li>significant breathlessness</li>
+<li>chest pain</li>
+<li>syncope or near syncope</li>
+<li>family history of sudden cardiac death under 40</li>
+<li>symptoms precipitated by exercise.</li>
+<li>Suspected VT</li>
+<li>Suspected SVT</li>
+<li>AF with evidence of complications (e.g stroke or HF)</li>
+<li>Evidence of concurrent illness that necessitates admission (e.g. sepsis)</li>
+</ul>
+<h1 id="reference">Reference <a class="heading-anchor-permalink" href="#reference">#</a></h1>
+<ol>
+<li>Pillinger T, Gaughran F, Taylor D. The Maudsley Practice Guidelines for Physical Health Conditions in Psychiatry. 2020.</li>
+</ol>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>

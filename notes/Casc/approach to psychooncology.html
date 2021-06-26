@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="..\Approaches\Bradycardia.html">Bradycardia</a></li>
+<li><a class="" href="..\Approaches\Tachycardia.html">Tachycardia</a></li>
+<li><a class="" href="..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="Grief reaction.html">Grief reaction</a></li>
+<li><a class="active" href="approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\Psychiatry\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\Psychiatry\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\Psychiatry\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Manganism.html">Manganism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\NBIA.html">NBIA</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li><a class="" href="..\Research\Jaishree comments on stress and coping article.html">Jaishree comments on stress and coping article</a></li>
+<li><a class="" href="..\Research\Orcid.html">Orcid</a></li>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="" href="..\UG\viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="..\UG\viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>approach to psychooncology</p>
+<h1 id="approach-to-the-psycho-oncology-patient">Approach to the psycho-oncology patient <a class="heading-anchor-permalink" href="#approach-to-the-psycho-oncology-patient">#</a></h1>
+<p>Edit date: 25/06/2021 22:48</p>
+<p><strong>CONTENTS</strong></p>
+<hr>
+<ul>
+<li><a href="#approach-to-the-psycho-oncology-patient">Approach to the psycho-oncology patient</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#evaluation-should-include">Evaluation should include</a>
+<ul>
+<li><a href="#symptoms-of-depression">Symptoms of depression</a></li>
+<li><a href="#rule-out-syndromic-differentials">Rule out syndromic differentials</a></li>
+<li><a href="#look-for-comorbidities">Look for comorbidities</a></li>
+<li><a href="#past-psychiatric-ho">Past Psychiatric h/o</a></li>
+<li><a href="#look-for-etiological-factors">Look for etiological factors</a></li>
+<li><a href="#risk-assessment">Risk assessment</a></li>
+</ul>
+</li>
+<li><a href="#common-diagnoses-to-consider">Common diagnoses to consider</a>
+<ul>
+<li><a href="#major-depression">Major depression</a></li>
+<li><a href="#adjustment-disorder">Adjustment disorder</a></li>
+<li><a href="#primary-or-secondary-mania">Primary or Secondary Mania</a></li>
+</ul>
+</li>
+<li><a href="#management">Management</a>
+<ul>
+<li><a href="#medication-management">Medication management</a>
+<ul>
+<li><a href="#antidepressants">Antidepressants</a></li>
+<li><a href="#psychostimulants">Psychostimulants</a></li>
+<li><a href="#mood-stabilizers-and-antipsychotics">Mood Stabilizers and Antipsychotics</a></li>
+<li><a href="#generic-comment-on-medications">Generic comment on medications</a></li>
+</ul>
+</li>
+<li><a href="#management-of-suicide-threat">Management of Suicide threat</a></li>
+<li><a href="#psychotherapy-for-mood-disorders">Psychotherapy for Mood Disorders</a></li>
+<li><a href="#other-non-pharmacological-interventions">Other non-pharmacological interventions</a>
+<ul>
+<li><a href="#spiritual-interventions---fica-assessment">Spiritual interventions - FICA assessment</a></li>
+<li><a href="#meditation">Meditation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="introduction">Introduction <a class="heading-anchor-permalink" href="#introduction">#</a></h1>
+<p>Patients should be assessed when they or their families complain of depressive symptoms and when a mood disorder is suspected clinically.</p>
+<p>Rating scales are routinely used to <strong>screen for mood disorders.</strong> Patient Health Questionnaire (PHQ-9) is a popular tool with 93% sensitivity and 81% specificity. It on its own is not sufficient for diagnosis.</p>
+<p>Currently one to one interview will be done with those who <strong>score more than 15 on PHQ-9 (LR of MDE 7) or scoring 1 or more on question 9 of PHQ-9</strong> (suicidal ideation)</p>
+<h1 id="evaluation-should-include">Evaluation should include <a class="heading-anchor-permalink" href="#evaluation-should-include">#</a></h1>
+<h2 id="symptoms-of-depression">Symptoms of depression <a class="heading-anchor-permalink" href="#symptoms-of-depression">#</a></h2>
+<p>More emphasis must be placed on psychological symptoms</p>
+<ul>
+<li>dysphoria</li>
+<li>anhedonia</li>
+<li>hopelessness</li>
+<li>feelings of guilt</li>
+</ul>
+<p>Because vegetative and somatic symptoms are common to the experience of cancer and it’s treatment as well as depression</p>
+<h2 id="rule-out-syndromic-differentials">Rule out syndromic differentials <a class="heading-anchor-permalink" href="#rule-out-syndromic-differentials">#</a></h2>
+<p>Hypoactive delirium, Cognitive impairment - can be co-morbid with depression</p>
+<h2 id="look-for-comorbidities">Look for comorbidities <a class="heading-anchor-permalink" href="#look-for-comorbidities">#</a></h2>
+<p>Anxiety, psychosis, mania, cognitive impairments, substance use</p>
+<h2 id="past-psychiatric-h%2Fo">Past Psychiatric h/o <a class="heading-anchor-permalink" href="#past-psychiatric-h%2Fo">#</a></h2>
+<p>Depression and suicidal attempts</p>
+<h2 id="look-for-etiological-factors">Look for etiological factors <a class="heading-anchor-permalink" href="#look-for-etiological-factors">#</a></h2>
+<p><strong>Drugs</strong> - corticosteroids, especially in chronic use, may cause depressive syndromes and acutely may cause presentations consistent with mania.</p>
+<p><strong>Central nervous system depressant medications</strong>, including opioid analgesics, benzodiazepines, and barbiturates, may cause depression in patients with idiosyncratic vulnerability or with cognitive impairments.</p>
+<p><strong>Anti-neoplastic drugs</strong> - Depressive syndromes may be encountered as side effects of vinca alkyloids; L-asparaginase; procarbazine; of much greater concern are biological response modifiers including interferon-alpha and interleukin-2 (IL-2). Interferon especially is associated with depression and may occasionally cause mania.</p>
+<p><strong>Unrelieved pain</strong> - is a significant cause of depression in cancer patients. Rate pain on a scale of 0-10.</p>
+<p><strong>Social support</strong> - level of social support and social isolation to be assessed</p>
+<h2 id="risk-assessment">Risk assessment <a class="heading-anchor-permalink" href="#risk-assessment">#</a></h2>
+<p><strong>Suicidal ideations</strong> (it is fairly common for cancer patients to have passive suicidal ideations with no active desire to die, or plan.)</p>
+<p>Most of the generic risk factors for suicide (SADPERSONS) are already covered in the protocol above. Specific cancer related risks are advanced disease and unrelieved pain.</p>
+<p>Conducted in an open, nonjudgmental manner, gives the patient permission  to talk about thoughts that may be very frightening.</p>
+<p>Slightly indirect approach to the question of suicide risk may be helpful at first. The patient might be asked if he ever has thoughts that life is no longer worth living; if yes, does he have thoughts of ending his own life and if so, does he have a plan?</p>
+<h1 id="common-diagnoses-to-consider">Common diagnoses to consider <a class="heading-anchor-permalink" href="#common-diagnoses-to-consider">#</a></h1>
+<h2 id="major-depression">Major depression <a class="heading-anchor-permalink" href="#major-depression">#</a></h2>
+<p>Diagnosis of primary or secondary major depression will experience one or both of the hallmark emotional symptoms of depression (dysphoria, anhedonia) and at least five of the listed symptoms. DSM-5 criteria also require the presence of vegetative and/or somatic symptoms, which, with psychological symptoms, must be present for at least two weeks and represent a distinct change from prior function</p>
+<h2 id="adjustment-disorder">Adjustment disorder <a class="heading-anchor-permalink" href="#adjustment-disorder">#</a></h2>
+<p>Adjustment disorders (also known as “minor depression” or “reactive depression”) are the most common mood disorders diagnosed in cancer patients. The diagnosis requires that the patient experiences sadness or inability to take pleasure in life as a response to a stressor like cancer temporally related to the onset of symptoms, and that the symptoms are sufficiently severe that they cause impairment of social or occupational function. They may not meet criteria for major depression or secondary mood disorders because low mood is not persistent.</p>
+<h2 id="primary-or-secondary-mania">Primary or Secondary Mania <a class="heading-anchor-permalink" href="#primary-or-secondary-mania">#</a></h2>
+<p>Elevated and expansive or irritable mood and rapid or pressured speech. Thought processes can seem illogical. Patients often experience a decreased need for sleep, increased energy and impulsive or erratic behavior. Patients may speak of depressed mood when they are irritable.</p>
+<h1 id="management">Management <a class="heading-anchor-permalink" href="#management">#</a></h1>
+<h2 id="medication-management">Medication management <a class="heading-anchor-permalink" href="#medication-management">#</a></h2>
+<h3 id="antidepressants">Antidepressants <a class="heading-anchor-permalink" href="#antidepressants">#</a></h3>
+<ul>
+<li>Use of antidepressants is a matter or clinical judgment</li>
+<li>Patients who meet criteria for major depression should be treated.</li>
+<li>Patients with severe adjustment disorders or who do not meet full criteria for depression may also benefit from antidepressant therapy.</li>
+<li>Almost all the antidepressants available in general clinical practice can be used in cancer patients.</li>
+<li>Selective serotonin reuptake inhibitor (SSRI) antidepressants (Citalopram, Fluoxetine, Escitalopram, paroxetine, sertraline) and the newer combination agents (bupropion, duloxetine, venlafaxine, mirtazapine) are used most frequently in oncology because of their safety and generally favorable side effect profiles.</li>
+<li>Tricyclic antidepressants (TCAs) are potentially problematic because of anticholinergic and anti-alpha-adrenergic effects. However, they are inexpensive and can be useful in patients with co-morbid neuropathic pain syndromes.</li>
+<li>They take anywhere from 2–4 weeks to take effect.</li>
+<li>Patients should be monitored for side effects and response of symptoms.</li>
+<li>Seriously ill and elderly patients should be started at low doses, with cautious dose escalation if the drug is tolerated.</li>
+<li>Continue for 4–6 months of sustained response before considering discontinuation.</li>
+</ul>
+<h3 id="psychostimulants">Psychostimulants <a class="heading-anchor-permalink" href="#psychostimulants">#</a></h3>
+<ul>
+<li>modafinil</li>
+<li>methylphenidate.</li>
+<li>Can be very beneficial in treatment of associated fatigue, mild cognitive impairment, and anorexia, especially in advanced and end-stage disease settings.</li>
+<li>More rapid effect than standard antidepressants</li>
+<li>Generally well tolerated but can have adverse effects on blood pressure</li>
+</ul>
+<h3 id="mood-stabilizers-and-antipsychotics">Mood Stabilizers and Antipsychotics <a class="heading-anchor-permalink" href="#mood-stabilizers-and-antipsychotics">#</a></h3>
+<ul>
+<li>Cancer patients with preexisting bipolar mood disorder ideally should be maintained on mood stabilizers (i.e., lithium, valproic acid) and antipsychotic medications.</li>
+<li>Dehydration associated with treatment-associated vomiting and diarrhea can affect lithium levels, which should be monitored closely during active treatment.</li>
+<li>Steroid-induced mania will usually respond to decrease of steroid doses.</li>
+<li>In some cases this is not feasible and the patient will require treatment with an antipsychotic drug such as olanzapine.</li>
+</ul>
+<h3 id="generic-comment-on-medications">Generic comment on medications <a class="heading-anchor-permalink" href="#generic-comment-on-medications">#</a></h3>
+<ul>
+<li>Drug-drug interactions and possible cardiac conduction abnormalities should be monitored.</li>
+</ul>
+<h2 id="management-of-suicide-threat">Management of Suicide threat <a class="heading-anchor-permalink" href="#management-of-suicide-threat">#</a></h2>
+<ul>
+<li>Safety of patients at risk for suicide must be secured.</li>
+<li>Do not leave alone until they can be evaluated and started in treatment.</li>
+<li>May need to pursue admission to hospital.</li>
+<li>Any disease and treatment related factors (especially pain) that may be contributing to the presenting mood disorder should be addressed.</li>
+</ul>
+<h2 id="psychotherapy-for-mood-disorders">Psychotherapy for Mood Disorders <a class="heading-anchor-permalink" href="#psychotherapy-for-mood-disorders">#</a></h2>
+<p>Supportive psychotherapy in patients with major and minor depression is almost universally appropriate as one element of treatment.</p>
+<ul>
+<li>Goal: decrease perception of isolation and bolster coping skills.</li>
+<li>Support can be provided by members of the primary team and also by allied health professionals including social workers and chaplains.</li>
+<li>More formal and structured psychotherapy may be appropriate on a case-by-case basis. This usually involves referral to a mental health professional of any discipline with appropriate training.</li>
+</ul>
+<h2 id="other-non-pharmacological-interventions">Other non-pharmacological interventions <a class="heading-anchor-permalink" href="#other-non-pharmacological-interventions">#</a></h2>
+<h3 id="spiritual-interventions---fica-assessment">Spiritual interventions - FICA assessment <a class="heading-anchor-permalink" href="#spiritual-interventions---fica-assessment">#</a></h3>
+<p>Faith, Importance, Community, Address Questions. Spirituality is an important part of many people’s lives and provides a sense of connectedness and comfort during times of illness and distress. Cancer often precipitates a spiritual crisis as a person searches for meaning in their life and illness. Spirituality is evaluated by questions around four main themes to guide history taking and give a better sense of the patient’s dependence on spirituality in coping with illness. They are not scored and focus on strengths. The four themes—faith, importance, community, address—can be remembered using the acronym, FICA</p>
+<p><strong>F</strong>: What is your faith or belief?
+Do you consider yourself spiritual or religious?
+What things do you believe in that give meaning to your life?</p>
+<p><strong>I</strong>: Is it important in your life?
+What influence does it have on how you take care of yourself?
+How have your beliefs influenced your behavior during this illness?
+What role do your beliefs play in regaining your health?</p>
+<p><strong>C</strong>: Are you part of a spiritual or religious community?
+Is this of support to you and how?
+Is there a person or group of people you really love or who are really important to you?</p>
+<p><strong>A</strong>: How would you like me, your health-care provider, to address these issues in your health care?</p>
+<h3 id="meditation">Meditation <a class="heading-anchor-permalink" href="#meditation">#</a></h3>
+<p>With cancer specific suggestions. Recording of PMR with soothing music and cancer specific suggestions will be shared with patients or family members for daily practice.</p>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>

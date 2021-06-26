@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li class="heading"><a class="" href="..\index.html">notes</a></li>
+<ul>
+<li class="heading"><span>Approaches</span></li>
+<ul>
+<li><a class="" href="Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
+<li><a class="" href="Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
+<li><a class="" href="Bradycardia.html">Bradycardia</a></li>
+<li><a class="" href="Tachycardia.html">Tachycardia</a></li>
+<li><a class="active" href="Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
+</ul>
+<li class="heading"><span>Casc</span></li>
+<ul>
+<li><a class="" href="..\Casc\Alcohol history.html">Alcohol history</a></li>
+<li><a class="" href="..\Casc\Grief reaction.html">Grief reaction</a></li>
+<li><a class="" href="..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
+</ul>
+<li class="heading"><span>Psychiatry</span></li>
+<ul>
+<li class="heading"><span>Core psychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
+<li><a class="" href="..\Psychiatry\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
+</ul>
+<li class="heading"><span>bookreading</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\bookreading\bookreading17062021.html">bookreading17062021</a></li>
+</ul>
+<li class="heading"><span>community psych</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
+</ul>
+<li class="heading"><span>consultation liaison</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
+</ul>
+<li class="heading"><span>covid</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
+<li><a class="" href="..\Psychiatry\covid\COVID update number 9.html">COVID update number 9</a></li>
+<li><a class="" href="..\Psychiatry\covid\Drbasucomments.html">Drbasucomments</a></li>
+<li><a class="" href="..\Psychiatry\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
+<li><a class="" href="..\Psychiatry\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
+</ul>
+<li class="heading"><span>neuropsychiatry</span></li>
+<ul>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Manganism.html">Manganism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\NBIA.html">NBIA</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
+<li><a class="" href="..\Psychiatry\neuropsychiatry\catatonia.html">catatonia</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Research</span></li>
+<ul>
+<li class="heading"><span>Abhishek</span></li>
+<ul>
+<li><a class="" href="..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
+</ul>
+<li><a class="" href="..\Research\Jaishree comments on stress and coping article.html">Jaishree comments on stress and coping article</a></li>
+<li><a class="" href="..\Research\Orcid.html">Orcid</a></li>
+<li class="heading"><span>PostCOVID</span></li>
+<ul>
+<li><a class="" href="..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
+</ul>
+</ul>
+<li class="heading"><span>UG</span></li>
+<ul>
+<li><a class="" href="..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
+<li><a class="" href="..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
+<li><a class="" href="..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
+<li><a class="" href="..\UG\viva mood disorders.html">viva mood disorders</a></li>
+<li><a class="" href="..\UG\viva psychosis.html">viva psychosis</a></li>
+</ul>
+
+</ul>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <p>Workup of First episode psychosis</p>
+<h1 id="workup-of-first-episode-psychosis">Workup of First Episode Psychosis <a class="heading-anchor-permalink" href="#workup-of-first-episode-psychosis">#</a></h1>
+<p>Edit date: 25/06/2021 22:29</p>
+<p><strong>CONTENTS</strong></p>
+<hr>
+<ul>
+<li><a href="#workup-of-first-episode-psychosis">Workup of First Episode Psychosis</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#common-labs-and-imaging">Common Labs and Imaging</a>
+<ul>
+<li><a href="#cbc">CBC</a></li>
+<li><a href="#cmp">CMP</a></li>
+<li><a href="#lft">LFT</a></li>
+<li><a href="#tft">TFT</a></li>
+<li><a href="#bal-and-utox">BAL and UTox</a></li>
+<li><a href="#beta-hcg">Beta-HCG</a></li>
+<li><a href="#fta-abs">FTA-ABS</a></li>
+<li><a href="#hiv">HIV</a></li>
+<li><a href="#brain-ct-or-mri">Brain CT or MRI</a></li>
+</ul>
+</li>
+<li><a href="#extra-testing">Extra testing</a>
+<ul>
+<li><a href="#vitamin-b12-cobalamin-and-vitamin-b9-folate">Vitamin B12 (cobalamin) and Vitamin B9 (folate)</a></li>
+<li><a href="#vitamin-b1-thiamine">Vitamin B1 (thiamine)</a></li>
+<li><a href="#esr">ESR</a></li>
+<li><a href="#ana">ANA</a></li>
+<li><a href="#cortisol">Cortisol</a></li>
+<li><a href="#heavy-metal-screen">Heavy metal screen</a></li>
+<li><a href="#copperceruloplasmin">Copper/Ceruloplasmin</a></li>
+<li><a href="#anti-nmdar-antibodies">Anti-NMDAR antibodies</a></li>
+<li><a href="#anti-tpo-antibodies">Anti-TPO antibodies</a></li>
+<li><a href="#serum-porphobilinogen">Serum porphobilinogen</a></li>
+<li><a href="#genetic-testing">Genetic testing</a></li>
+<li><a href="#eeg">EEG</a></li>
+<li><a href="#lp">LP</a></li>
+<li><a href="#neuropsych-testing">Neuropsych testing</a></li>
+<li><a href="#other-tests-when-clinical-history-suggests-high-suspicion">Other tests when clinical history suggests high suspicion</a></li>
+</ul>
+</li>
+<li><a href="#metabolic-monitoring">Metabolic monitoring</a></li>
+<li><a href="#cardiac-monitoring">Cardiac monitoring</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<h1 id="introduction">Introduction <a class="heading-anchor-permalink" href="#introduction">#</a></h1>
+<p>Whenever a patient presents for the first time with symptoms of psychosis (hallucinations, delusions, disorganized speech/behavior), before making a psychiatric diagnosis it is very important to determine if these symptoms are caused primarily by a medical or neurological condition or induced by medications or other substances. Also keep in mind that first episode psychosis is typically preceded by subtle pre-morbid signs in childhood and prodromal symptoms.</p>
+<p>Keep in mind that although schizophrenia can occur at any age, the average age of onset tends to be in the <strong>late teens to the early 20s for men, and the late 20s to early 30s for women</strong>. It is uncommon for schizophrenia to be diagnosed in a person <strong>younger than 12 or older than 40</strong>. If psychotic symptoms present younger than 12 or older than 20 a thorough medical workup becomes that much more important.</p>
+<p>Review the <strong>vital signs</strong>. If they are normal they don’t tell you much, but if abnormal this can be the first clue that something other than purely psychiatric is going on. For example if the patient is febrile then consider infections, malignancy, or drug reactions. If the patient is hypertensive and tachycardiac then consider alcohol withdrawal, intoxication (cocaine, amphetamines, etc…), or drug reactions.</p>
+<p>Perform a complete <strong>physical and neurological exam</strong>. Don’t underestimate this step. This is an area that I need to continue to work on as well. Many medical conditions masquerading as schizophrenia have positive findings on physical exam. You may see cranial nerve abnormalities or focal weakness (brain tumors or space occupying lesions), yellowing of the eyes (scleral icterus in liver failure), or palpate an enlarged thyroid gland (thyroiditis), and much more.</p>
+<h1 id="common-labs-and-imaging">Common Labs and Imaging <a class="heading-anchor-permalink" href="#common-labs-and-imaging">#</a></h1>
+<p>Most hospitals and emergency departments tend to have a routine protocol or a <strong>“standard psych order set”</strong>. These orders often include a CBC, CMP, LFTs, TSH, BAL, U tox, beta hCG, FTA-ABS, HIV, +/- head imaging (CT or MRI). This topic can be very complex, but for now let’s briefly discuss why these are commonly included, so we can understand what we are looking for.</p>
+<h2 id="cbc">CBC <a class="heading-anchor-permalink" href="#cbc">#</a></h2>
+<p>Rule out <strong>infectious</strong> causes (white blood cells). If patient is febrile also obtain blood cultures and rule out common infections such as UTI (urinalysis), pneumonia (chest x ray), abdominal infection (abdominal exam), and head CT +/- lumbar puncture if focal neurological signs.</p>
+<h2 id="cmp">CMP <a class="heading-anchor-permalink" href="#cmp">#</a></h2>
+<p>Rule out <strong>electrolyte disturbances</strong> (pay attention to sodium and calcium specifically), <strong>glucose</strong> (hypoglycemia or diabetic ketoacidosis), <strong>renal failure</strong> (creatinine and BUN).</p>
+<h2 id="lft">LFT <a class="heading-anchor-permalink" href="#lft">#</a></h2>
+<p>This is commonly included in the CMP. <strong>Liver failure</strong> from alcohol, fatty liver, or viral hepatitis can causes psychosis at its extreme. If elevated LFTs in the absence of drinking history consider screening for viral hepatitis (HBV, HCV).</p>
+<h2 id="tft">TFT <a class="heading-anchor-permalink" href="#tft">#</a></h2>
+<p><strong>Hyper</strong> (thyroid storm) or <strong>hypothyroid</strong> (myxedema) can cause psychosis.</p>
+<h2 id="bal-and-utox">BAL and UTox <a class="heading-anchor-permalink" href="#bal-and-utox">#</a></h2>
+<p>Screen for substance use to include alcohol, cocaine, amphetamines, PCP, marijuana, and opiates. Be aware that not all substances will show up including bath salts, inhalants, hallucinogens, synthetic cannabis, etc…</p>
+<h2 id="beta-hcg">Beta-HCG <a class="heading-anchor-permalink" href="#beta-hcg">#</a></h2>
+<p>(pregnancy test): affects treatment decisions!</p>
+<h2 id="fta-abs">FTA-ABS <a class="heading-anchor-permalink" href="#fta-abs">#</a></h2>
+<p>Testing for syphilis. If not treated, 30% of patients may develop tertiary syphilis, where neurosyphilis is included. Neurosyphilis can present with a variety of psychiatric symptoms including mania, depression, psychosis and dementia.</p>
+<h2 id="hiv">HIV <a class="heading-anchor-permalink" href="#hiv">#</a></h2>
+<p>The classic gold standard test used to be an ELISA and confirmed with western blot. New-onset psychosis is thought generally to occur in AIDS or in later stages of HIV disease.</p>
+<h2 id="brain-ct-or-mri">Brain CT or MRI <a class="heading-anchor-permalink" href="#brain-ct-or-mri">#</a></h2>
+<p>This is controversial as the % of patients with abnormal/treatment altering imaging findings is low. Still, some clinicians advocate for imaging at least once given the potential to dramatically influence disease course and prognosis. Evaluate for space-occupying lesions (tumors, AVM’s, abscess, etc…), demyelinating disorders, stroke, or hemorrhage.</p>
+<h1 id="extra-testing">Extra testing <a class="heading-anchor-permalink" href="#extra-testing">#</a></h1>
+<p>Other diagnostic tests that are less commonly included in standard order sets, but should still be considered in certain patients. These include vit B12, folate, ESR, ANA, heavy metal screen, copper/ceruloplasmin screen, prolactin level, genetic testing, EEG, LP, and neuropsychiatric testing.</p>
+<h2 id="vitamin-b12-(cobalamin)-and-vitamin-b9-(folate)">Vitamin B12 (cobalamin) and Vitamin B9 (folate) <a class="heading-anchor-permalink" href="#vitamin-b12-(cobalamin)-and-vitamin-b9-(folate)">#</a></h2>
+<p>The exact role of vitamins B12 and folic acid in the pathogenesis and treatment of psychotic disorders is not fully understood; however, there is significant evidence to suggest that there is an association. A study by Silver (2000) on 644 bedridden psychotics reported that 78.3% of schizophrenic patients had vitamin B12 deficiency. Some studies have clearly indicated the contribution of folic acid, vitamin B12 and homocysteine to altered single-carbon metabolism and its role in the psychopathophysiology of schizophrenia.</p>
+<h2 id="vitamin-b1-(thiamine)">Vitamin B1 (thiamine) <a class="heading-anchor-permalink" href="#vitamin-b1-(thiamine)">#</a></h2>
+<p>Thiamine deficiency over time can lead to something called Wernicke–Korsakoff syndrome. This is commonly from  alcoholism or malabsorption.  You WILL see someone with this condition at  some point in your career. This is commonly missed. It is generally agreed that Wernicke encephalopathy results from severe acute deficiency of thiamine (vitamin B1), whilst Korsakoff’s psychosis is a chronic neurologic sequela of Wernicke encephalopathy.</p>
+<h2 id="esr">ESR <a class="heading-anchor-permalink" href="#esr">#</a></h2>
+<p>ESR is a marker of inflammation. High ESR is associated with increased risk for schizophrenia and can also be used to screen for vasculitis for specific patients, a known rare cause of psychosis.</p>
+<h2 id="ana">ANA <a class="heading-anchor-permalink" href="#ana">#</a></h2>
+<p>Several large-scale epidemiologic studies have found positive associations between autoimmune diseases and psychosis. Particularly, autoimmune diseases as multiple sclerosis and lupus are known to have higher frequencies of neuropsychiatric symptoms, including psychosis, compared to healthy controls.</p>
+<h2 id="cortisol">Cortisol <a class="heading-anchor-permalink" href="#cortisol">#</a></h2>
+<p>Adrenal insufficiency has been shown to display a wealth of possible psychiatric presentations including psychosis, depression, anxiety, mania, and cognitive impairment, alongside the known vague physical symptoms. Also, mildly high cortisol levels are seen in schizophrenia.</p>
+<h2 id="heavy-metal-screen">Heavy metal screen <a class="heading-anchor-permalink" href="#heavy-metal-screen">#</a></h2>
+<p>The heavy metals most commonly associated with poisoning of humans are lead, mercury, arsenic and cadmium. Heavy metal poisoning may occur as a result of industrial exposure, air or water pollution, foods, medicines, improperly coated food containers, or the ingestion of lead-based paints.</p>
+<h2 id="copper%2Fceruloplasmin">Copper/Ceruloplasmin <a class="heading-anchor-permalink" href="#copper%2Fceruloplasmin">#</a></h2>
+<p>Wilson’s disease (disorder of copper metabolism) is very rare, however can have neuropsychiatric manifestations to include psychosis.</p>
+<h2 id="anti-nmdar-antibodies">Anti-NMDAR antibodies <a class="heading-anchor-permalink" href="#anti-nmdar-antibodies">#</a></h2>
+<p>Autoimmune encephalitis affecting predominantly young females. It is characterized with neuropsychiatric symptoms, including personality changes, psychosis, autonomic dysfunction, seizures and movement disorders.</p>
+<h2 id="anti-tpo-antibodies">Anti-TPO antibodies <a class="heading-anchor-permalink" href="#anti-tpo-antibodies">#</a></h2>
+<p>Esp. in patients with sub-clinical hypothyroidism</p>
+<h2 id="serum-porphobilinogen">Serum porphobilinogen <a class="heading-anchor-permalink" href="#serum-porphobilinogen">#</a></h2>
+<p>To screen for Acute Porphyria.</p>
+<h2 id="genetic-testing">Genetic testing <a class="heading-anchor-permalink" href="#genetic-testing">#</a></h2>
+<p>There are a number of studies looking at testable genes to predict risk of schizophrenia and other psychotic disorders.</p>
+<h2 id="eeg">EEG <a class="heading-anchor-permalink" href="#eeg">#</a></h2>
+<p>To rule out seizure disorder if there is a history consistent with possible seizure activity.</p>
+<h2 id="lp">LP <a class="heading-anchor-permalink" href="#lp">#</a></h2>
+<p>A lumbar puncture is indicated to rule out meningitis or other evidence of infection if there is evidence of delirium, fever, leukocytosis, or change in level of consciousness.</p>
+<h2 id="neuropsych-testing">Neuropsych testing <a class="heading-anchor-permalink" href="#neuropsych-testing">#</a></h2>
+<p>You may opt to send the patient for thorough neuropsychiatric testing to gain a more in-depth understanding of the effects on their cognition and personality.</p>
+<h2 id="other-tests-when-clinical-history-suggests-high-suspicion">Other tests when clinical history suggests high suspicion <a class="heading-anchor-permalink" href="#other-tests-when-clinical-history-suggests-high-suspicion">#</a></h2>
+<ul>
+<li>Testing for adrenoleukodystrophy (<em>VLCFA</em>) and other inherited metabolic disorders</li>
+<li>Testing for Huntington’s disease (<em>genetic tests for CAG repeat</em>)</li>
+<li>Screen for velocardiofacial syndrome (<em>FISH to look for deletion on 22q11</em>)</li>
+<li>Testing for tuberous sclerosis</li>
+<li>Testing for adult-onset Tay-Sachs disease</li>
+<li>Testing for Niemann-Pick disease</li>
+<li>Screening for paraneoplastic syndromes</li>
+</ul>
+<h1 id="metabolic-monitoring">Metabolic monitoring <a class="heading-anchor-permalink" href="#metabolic-monitoring">#</a></h1>
+<ul>
+<li>Lipid Profile</li>
+<li>FBS, HbA1C</li>
+</ul>
+<h1 id="cardiac-monitoring">Cardiac monitoring <a class="heading-anchor-permalink" href="#cardiac-monitoring">#</a></h1>
+<ul>
+<li>ECG</li>
+</ul>
+<h1 id="conclusion">Conclusion <a class="heading-anchor-permalink" href="#conclusion">#</a></h1>
+<p>It is important to balance being thorough in your workup, considering risk factors specific to the patient in front of you, and also being conscientious of the cost associated with extensive workups.</p>
+<h1 id="references">References <a class="heading-anchor-permalink" href="#references">#</a></h1>
+<ol>
+<li><a href="https://www.bulletpsych.com/post/day-9-workup-for-first-psychotic-episode-and-non-pharm-treatment">Bulletpsych.com</a></li>
+<li>APA Textbook of Psychiatry, 7e</li>
+<li>Gabbards Treatment of Psychiatric Disorders, 5e</li>
+</ol>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>
