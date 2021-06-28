@@ -1,759 +1,93 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      /*! ADAPTED
-    Typeplate : Starter Kit
-    URL ........... http://typeplate.com
-    Version ....... 3.0.2
-    Github ........ https://github.com/typeplate/starter-kit
-    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-    License ....... Creative Commmons Attribution 3.0
-    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
-    */
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        text-rendering: optimizeLegibility;
-        line-height: 1;
-        margin-top: 0;
-        color: #222;
-      }
-
-      blockquote + figcaption cite {
-        display: block;
-        font-size: inherit;
-        text-align: right;
-      }
-
-      body {
-        word-wrap: break-word;
-      }
-
-      pre code {
-        word-wrap: normal;
-      }
-
-      body {
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        color: #444;
-      }
-
-      h1 {
-        font-size: 2em;
-        /* 2*16 = 32 */
-      }
-
-      h2 {
-        font-size: 1.5em;
-        /* 1.5*16 = 24 */
-      }
-
-      h3 {
-        font-size: 1.17em;
-        /* 1.17*16 = 18.72 */
-      }
-
-      h4 {
-        font-size: 1em;
-        /* 1*16 = 16 */
-      }
-
-      h5 {
-        font-size: 0.83em;
-        /* 0.83*16 = 13.28 */
-      }
-
-      h6 {
-        font-size: 0.75em;
-        /* 0.75*16 = 12 */
-      }
-
-      h1 {
-        margin: 2.42424rem 0 1.454544rem;
-      }
-
-      h2 {
-        margin: 2.0202rem 0 1.21212rem;
-      }
-
-      h3 {
-        margin: 1.61616rem 0 1rem;
-      }
-
-      h4 {
-        margin: 1.21212rem 0 1;
-      }
-
-      h5 {
-        margin: 0.80808rem 0;
-      }
-
-      h6 {
-        margin: 0.70707rem 0;
-      }
-
-      p {
-        margin: auto auto 1.5rem;
-      }
-
-      small {
-        font-size: 65%;
-      }
-
-      input,
-      abbr,
-      acronym,
-      blockquote,
-      code,
-      kbd,
-      q,
-      samp,
-      var {
-        -webkit-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-      }
-
-      pre {
-        white-space: pre;
-      }
-
-      pre code {
-        white-space: -moz-pre-wrap;
-        white-space: pre-wrap;
-      }
-
-      code {
-        white-space: pre;
-        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
-      }
-
-      abbr {
-        -webkit-font-variant: small-caps;
-        -moz-font-variant: small-caps;
-        -ms-font-variant: small-caps;
-        font-variant: small-caps;
-        font-weight: 600;
-        text-transform: lowercase;
-        color: gray;
-      }
-
-      abbr[title]:hover {
-        cursor: help;
-      }
-
-      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
-        color: #444;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-      }
-
-      code,
-      pre {
-        background-color: #f5f5f5;
-        color: #444;
-        border-radius: 2px;
-        text-shadow: 0px 1px 0px white;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-      }
-
-      pre code {
-        border: none;
-        box-shadow: none;
-      }
-
-      pre {
-        padding: 0.5em;
-      }
-
-      code {
-        display: inline-block;
-        padding: 0 0.5em;
-        line-height: 1.4;
-        font-size: 0.9em;
-      }
-
-      table {
-        border-spacing: 0;
-        margin-bottom: 1.5rem;
-      }
-
-      table th,
-      table td {
-        padding: 0.3em 0.7em;
-      }
-
-      table th {
-        background-color: #f4f4f4;
-        border-bottom: 2px solid #444;
-      }
-
-      table td {
-        border: 1px solid #f5f5f5;
-      }
-
-      /* Add transition to containers so they can push in and out. */
-
-      #layout,
-      #menu,
-      .menu-link {
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-      }
-
-      /* This is the parent `<div>` that contains the menu and the content area. */
-
-      #layout {
-        position: relative;
-        padding-left: 0;
-      }
-
-      #layout.active #menu {
-        left: 250px;
-        width: 250px;
-      }
-
-      #layout.active .menu-link {
-        left: 250px;
-      }
-
-      /* The content `<div>` is where all your content goes. */
-
-      .content {
-        margin: 50px auto;
-        padding: 0 2em;
-        max-width: 80ex;
-        line-height: 1.6em;
-      }
-
-      /*
-      The `#menu` `<div>` is the parent `<div>` that contains the menu that
-      appears on the left side of the page.
-      */
-
-      #menu {
-        margin-left: -250px;
-        /* "#menu" width */
-        width: 250px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        /* so the menu or its navicon stays above all content */
-        background: #f4f4f4;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        font-size: 0.9em;
-      }
-
-      @media print {
-        #menu,
-        .menu-link {
-          display: none !important;
-        }
-      }
-
-      a,
-      a * {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      a:visited {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      /* All anchors inside the menu should be styled like this. */
-
-      #menu a {
-        display: block;
-        padding: 0.5em 0.5em;
-      }
-
-      #menu a:first-letter {
-        text-transform: capitalize;
-      }
-
-      #menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 1em 0.5em;
-      }
-
-      #menu ul ul {
-        margin-top: 0.5em;
-        margin-left: 0.5em;
-        border-left: 4px solid rgba(255, 255, 255, 0.5);
-      }
-
-      /* Change color of the anchor links on hover/focus. */
-
-      #menu li a:hover,
-      #menu li a:focus {
-        background: rgba(255, 255, 255, 0.4);
-      }
-
-      /* This styles the selected menu item `<li>`. */
-
-      #menu li a.active {
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      /* This styles a link within a selected menu item `<li>`. */
-
-      #menu li a.active {
-        color: #222;
-      }
-
-      /* This styles the menu heading. */
-
-      #menu li.heading {
-        font-size: 0.9em;
-        text-transform: uppercase;
-        color: #000;
-      }
-
-      #menu li.heading > * {
-        padding: 0.5em;
-        display: block;
-      }
-
-      #menu li.heading a {
-        color: #0c68af;
-      }
-
-      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
-
-      /*
-      `.menu-link` represents the responsive menu toggle that shows/hides on
-      small screens.
-      */
-
-      .menu-link {
-        position: fixed;
-        display: block;
-        /* show this only on small screens */
-        top: 0;
-        left: 0;
-        /* "#menu width" */
-        font-size: 10px;
-        /* change this value to increase/decrease button size */
-        z-index: 10;
-        width: 2em;
-        height: auto;
-        padding: 1.6em 1.2em;
-        border-radius: 0 2px 2px 0;
-      }
-
-      .menu-link:hover {
-        background: #f4f4f4;
-      }
-
-      .menu-link span {
-        position: relative;
-        display: block;
-      }
-
-      .menu-link span,
-      .menu-link span:before,
-      .menu-link span:after {
-        background-color: #555;
-        width: 100%;
-        height: 0.2em;
-        border-radius: 1em;
-      }
-
-      .menu-link span:before,
-      .menu-link span:after {
-        position: absolute;
-        margin-top: -0.6em;
-        content: " ";
-      }
-
-      .menu-link span:after {
-        margin-top: 0.6em;
-      }
-
-      /* Hides the menu at `48em`, but modify this based on your app's needs. */
-
-      @media (min-width: 48em) {
-        .header,
-        .content {
-          padding-left: 2em;
-          padding-right: 2em;
-        }
-
-        #layout {
-          padding-left: 250px;
-          /* left col width "#menu" */
-          left: 0;
-        }
-        #menu {
-          left: 250px;
-        }
-
-        .menu-link {
-          position: fixed;
-          left: 250px;
-          display: none;
-        }
-
-        #layout.active .menu-link {
-          left: 250px;
-        }
-      }
-
-      @media (max-width: 48em) {
-        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
-         * Make the window small.
-         * Tap the menu to trigger the active state.
-         * Make the window large again.
-         */
-        #layout.active {
-          position: relative;
-          left: 250px;
-        }
-      }
-
-      /* Heading anchors and permalinks */
-      h1[id],
-      h2[id],
-      h3[id],
-      h4[id],
-      h5[id],
-      h6[id] {
-        position: relative;
-      }
-      .heading-anchor-permalink {
-        /* Position the permalink to the left of the title */
-        position: absolute;
-        right: 100%;
-        /* Add some spacing as padding to not lose the hover */
-        padding-right: 0.6rem;
-        /* Make it only visible on heading hover, see below */
-        opacity: 0;
-      }
-      h1[id]:hover .heading-anchor-permalink,
-      h2[id]:hover .heading-anchor-permalink,
-      h3[id]:hover .heading-anchor-permalink,
-      h4[id]:hover .heading-anchor-permalink,
-      h5[id]:hover .heading-anchor-permalink,
-      h6[id]:hover .heading-anchor-permalink {
-        opacity: 0.5;
-      }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-  </head>
-
-  <body>
-    <div id="layout">
-      <!-- Menu toggle -->
-      <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-      </a>
-      <nav id="menu">
-        <ul>
-<li class="heading"><a class="" href="..\..\index.html">notes</a></li>
-<ul>
-<li class="heading"><span>Approaches</span></li>
-<ul>
-<li><a class="" href="..\..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
-<li><a class="" href="..\..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
-<li><a class="" href="..\..\Approaches\Bradycardia.html">Bradycardia</a></li>
-<li><a class="" href="..\..\Approaches\Tachycardia.html">Tachycardia</a></li>
-<li><a class="" href="..\..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
-</ul>
-<li class="heading"><span>Casc</span></li>
-<ul>
-<li><a class="" href="..\..\Casc\Alcohol history.html">Alcohol history</a></li>
-<li><a class="" href="..\..\Casc\Grief reaction.html">Grief reaction</a></li>
-<li><a class="" href="..\..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
-</ul>
-<li class="heading"><span>Psychiatry</span></li>
-<ul>
-<li class="heading"><span>Core psychiatry</span></li>
-<ul>
-<li><a class="" href="..\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
-<li><a class="" href="..\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
-<li><a class="" href="..\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
-<li><a class="" href="..\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
-<li><a class="" href="..\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
-<li><a class="" href="..\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
-<li><a class="" href="..\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
-<li><a class="" href="..\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
-<li><a class="" href="..\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
-<li><a class="" href="..\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
-<li><a class="" href="..\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
-<li><a class="" href="..\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
-</ul>
-<li class="heading"><span>bookreading</span></li>
-<ul>
-<li><a class="" href="..\bookreading\bookreading17062021.html">bookreading17062021</a></li>
-</ul>
-<li class="heading"><span>community psych</span></li>
-<ul>
-<li><a class="" href="..\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
-</ul>
-<li class="heading"><span>consultation liaison</span></li>
-<ul>
-<li><a class="" href="..\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
-</ul>
-<li class="heading"><span>covid</span></li>
-<ul>
-<li><a class="" href="..\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
-<li><a class="" href="..\covid\COVID update number 9.html">COVID update number 9</a></li>
-<li><a class="" href="..\covid\Drbasucomments.html">Drbasucomments</a></li>
-<li><a class="" href="..\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
-<li><a class="" href="..\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
-<li><a class="" href="..\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
-</ul>
-<li class="heading"><span>neuropsychiatry</span></li>
-<ul>
-<li><a class="" href="DD of psychosis detailed.html">DD of psychosis detailed</a></li>
-<li><a class="" href="DD of psychosis simple.html">DD of psychosis simple</a></li>
-<li><a class="active" href="Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
-<li><a class="" href="Fahr Syndrome.html">Fahr Syndrome</a></li>
-<li><a class="" href="Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
-<li><a class="" href="Manganism.html">Manganism</a></li>
-<li><a class="" href="NBIA.html">NBIA</a></li>
-<li><a class="" href="Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
-<li><a class="" href="Parkinsonism.html">Parkinsonism</a></li>
-<li><a class="" href="catatonia.html">catatonia</a></li>
-</ul>
-</ul>
-<li class="heading"><span>Research</span></li>
-<ul>
-<li class="heading"><span>Abhishek</span></li>
-<ul>
-<li><a class="" href="..\..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
-</ul>
-<li class="heading"><span>PostCOVID</span></li>
-<ul>
-<li><a class="" href="..\..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
-</ul>
-</ul>
-<li class="heading"><span>UG</span></li>
-<ul>
-<li><a class="" href="..\..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
-<li><a class="" href="..\..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
-<li><a class="" href="..\..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
-<li><a class="" href="..\..\UG\viva mood disorders.html">viva mood disorders</a></li>
-<li><a class="" href="..\..\UG\viva psychosis.html">viva psychosis</a></li>
-</ul>
-
-</ul>
-</ul>
-      </nav>
-      <article id="main" class="content">
-        <p>Differentiating Encephalopathy from psychosis</p>
-<h1 id="differentiating-encephalopathy-from-psychopathology">Differentiating Encephalopathy from Psychopathology <a class="heading-anchor-permalink" href="#differentiating-encephalopathy-from-psychopathology">#</a></h1>
-<p>Edit date: 26/06/2021 21:30</p>
-<p><strong>CONTENTS</strong></p>
-<hr>
-<ul>
-<li><a href="#differentiating-encephalopathy-from-psychopathology">Differentiating Encephalopathy from Psychopathology</a></li>
-<li><a href="#case---initial">Case - initial</a></li>
-<li><a href="#case---progress">Case - progress</a></li>
-<li><a href="#diagnostic-tests">Diagnostic tests</a></li>
-<li><a href="#case---progress">Case - Progress</a></li>
-<li><a href="#discussion">Discussion</a></li>
-<li><a href="#reference">Reference</a></li>
-</ul>
-<hr>
-<h1 id="case---initial">Case - initial <a class="heading-anchor-permalink" href="#case---initial">#</a></h1>
-<ul>
-<li>57/m</li>
-<li>involuntary psychiatric commitment</li>
-<li>on presentation
-<ul>
-<li>paranoid [felt was being followed, friend wanted to kill him] x 1 month</li>
-</ul>
-</li>
-<li>no known past medical or psychiatric history</li>
-<li>irritable mood</li>
-<li>MoCA 18/30</li>
-<li>poor insight</li>
-<li>Slow responses to question</li>
-<li>Bradykinesia</li>
-<li>Prov CI - Schizophrenia spectrum disorder -&gt; started on Risperidone 1mg/day</li>
-</ul>
-<h1 id="case---progress">Case - progress <a class="heading-anchor-permalink" href="#case---progress">#</a></h1>
-<ul>
-<li>no improvement after 2 weeks</li>
-<li>due to non-response + lack of past and family h/o, other D/Ds were pursued
-<ul>
-<li>meningoencephalitis</li>
-<li>delirium</li>
-<li>Lewy body dementia</li>
-<li>dementia with behavioral disturbance</li>
-<li>frontotemporal dementia</li>
-<li>Parkinson’s disease</li>
-<li>anti-N-methyl-d-aspartate (NMDA) receptor encephalitis</li>
-</ul>
-</li>
-</ul>
-<h1 id="diagnostic-tests">Diagnostic tests <a class="heading-anchor-permalink" href="#diagnostic-tests">#</a></h1>
-<ul>
-<li>
-<p>Brain CT and MRI, EEG, Urine drug screen, rapid plasma reagin, NMDA antibodies, and lumbar puncture serology/immunology testing</p>
-</li>
-<li>
-<p><strong>Negative Results</strong></p>
-<ul>
-<li>Imaging and EEG</li>
-<li>Urine drug screen</li>
-<li>CBC</li>
-<li>NMDA testing</li>
-<li>Inflammatory panel
-<ul>
-<li>Rheumatoid factor</li>
-<li>ANA pattern</li>
-<li>c-ANCA, p-ANCA</li>
-<li>anti-proteinase 3, and anti-myeloperoxidase</li>
-</ul>
-</li>
-<li>Infective panel
-<ul>
-<li>syphilis</li>
-<li>HIV</li>
-<li>tuberculosis</li>
-</ul>
-</li>
-<li>Lumbar puncture
-<ul>
-<li>CSF alpha 1-globulin, alpha 2-globulin, beta globulin, gamma globulin, beta 2-microglob</li>
-<li>serum protein electrophoresis M spike</li>
-<li>Venereal Disease Research Laboratory Test</li>
-<li>Lyme immunoglobulin G/M (IgG/IgM)</li>
-<li>coccidiosis IgG</li>
-<li>cryptococcus Ag</li>
-<li>herpes DNA</li>
-<li>toxoplasma IgM/IgG</li>
-<li>varicella-zoster virus DNA</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Positive results</strong></p>
-<ul>
-<li>CSF
-<ul>
-<li>elevated CSF IgG</li>
-<li>increased IgG synthesis rate</li>
-<li>elevated total protein</li>
-</ul>
-</li>
-<li>TFT
-<ul>
-<li>TSH 1.340 uIU/mL (N)</li>
-<li>FT4 1.04 ng/dl (L)</li>
-<li>Anti-TPO 39.4 (H)</li>
-</ul>
-</li>
-<li>Serology
-<ul>
-<li>elevated Epstein-Barr virus (EBV) capsid Ag IgG and EBV nuclear antigen antibodies</li>
-<li>CRP 0.40 (increased)</li>
-<li>ESR 14 (increased)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="case---progress-2">Case - Progress <a class="heading-anchor-permalink" href="#case---progress-2">#</a></h1>
-<ul>
-<li>on the basis of the presentation and elevated thyroid peroxidase antibodies, the patient was diagnosed as having Hashimoto’s encephalopathy</li>
-<li>methylprednisolone sodium succinate (1,000 mg intravenous infusion, over 24 hours for 5 days)</li>
-<li>Treatment with steroids led to resolution of the patient’s delusions and paranoia. His mental status and cognitive function returned to his baseline, and the patient was discharged home</li>
-</ul>
-<h1 id="discussion">Discussion <a class="heading-anchor-permalink" href="#discussion">#</a></h1>
-<ul>
-<li>Psychiatrists must maintain a broad differential diagnosis for non-psychiatricS causes of acute psychosis that do not fit the normal clinical picture.</li>
-<li>Hashimoto’s
-<ul>
-<li>most patients with Hashimoto’s encephalopathy present euthyroid at the time of diagnosis</li>
-<li>Often under recognized</li>
-<li>Presentations vary
-<ul>
-<li>Psychiatric [psychosis, depression, dementia] to Neurological [stroke, seizure, tremor, myoclonus]</li>
-</ul>
-</li>
-<li>Treatment of choice includes high-dose prednisone (1–2 mg/kg) for up to 4–6 weeks, followed by a slow taper to avoid recurrence</li>
-</ul>
-</li>
-</ul>
-<h1 id="reference">Reference <a class="heading-anchor-permalink" href="#reference">#</a></h1>
-<ol>
-<li><a href="https://psychiatryonline.org/doi/10.1176/appi.ajp-rj.2019.150204">Rumano et al</a></li>
-</ol>
-
-      </article>
-    </div>
-    <script>
-      // Load contents.json if you need it
-    </script>
-    <script>
-      // FROM http://purecss.io/js/ui.js
-      (function(window, document) {
-        var layout = document.getElementById("layout"),
-          menu = document.getElementById("menu"),
-          menuLink = document.getElementById("menuLink");
-
-        function toggleClass(element, className) {
-          var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
-
-          for (; i < length; i++) {
-            if (classes[i] === className) {
-              classes.splice(i, 1);
-              break;
-            }
-          }
-          // The className is not found
-          if (length === classes.length) {
-            classes.push(className);
-          }
-
-          element.className = classes.join(" ");
-        }
-
-        menuLink.onclick = function(e) {
-          var active = "active";
-
-          e.preventDefault();
-          toggleClass(layout, active);
-          toggleClass(menu, active);
-          toggleClass(menuLink, active);
-        };
-      })(this, this.document);
-    </script>
-  </body>
-</html>
+<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
+					**Differentiating Encephalopathy from Psychopathology**
+					Edit date: 26/06/2021 21:30
+
+<img src="../../../_resources/reb-tail.jpg" border=0>
+
+# Case - initial
+- 57/m
+- involuntary psychiatric commitment
+- on presentation
+	- paranoid [felt was being followed, friend wanted to kill him] x 1 month
+- no known past medical or psychiatric history
+- irritable mood
+- MoCA 18/30
+- poor insight
+- Slow responses to question
+- Bradykinesia
+- Prov CI - Schizophrenia spectrum disorder -> started on Risperidone 1mg/day
+
+# Case - progress
+- no improvement after 2 weeks
+- due to non-response + lack of past and family h/o, other D/Ds were pursued
+   - meningoencephalitis
+   - delirium
+   - Lewy body dementia
+   - dementia with behavioral disturbance
+   - frontotemporal dementia
+   - Parkinson’s disease
+   - anti-N-methyl-d-aspartate (NMDA) receptor encephalitis
+
+# Diagnostic tests
+- Brain CT and MRI, EEG, Urine drug screen, rapid plasma reagin, NMDA antibodies, and lumbar puncture serology/immunology testing
+
+- **Negative Results**
+	- Imaging and EEG
+	- Urine drug screen
+	- CBC
+	- NMDA testing
+	- Inflammatory panel
+      - Rheumatoid factor
+      - ANA pattern
+      - c-ANCA, p-ANCA
+      - anti-proteinase 3, and anti-myeloperoxidase
+	- Infective panel
+      - syphilis
+      - HIV
+      - tuberculosis
+	- Lumbar puncture
+      - CSF alpha 1-globulin, alpha 2-globulin, beta globulin, gamma globulin, beta 2-microglob
+      - serum protein electrophoresis M spike
+      - Venereal Disease Research Laboratory Test
+      - Lyme immunoglobulin G/M (IgG/IgM)
+      - coccidiosis IgG
+      - cryptococcus Ag
+      - herpes DNA
+      - toxoplasma IgM/IgG
+      - varicella-zoster virus DNA
+
+- **Positive results**
+	- CSF
+		- elevated CSF IgG
+		- increased IgG synthesis rate
+		- elevated total protein
+	- TFT
+		- TSH 1.340 uIU/mL (N)
+		- FT4 1.04 ng/dl (L)
+		- Anti-TPO 39.4 (H)
+	- Serology
+		- elevated Epstein-Barr virus (EBV) capsid Ag IgG and EBV nuclear antigen antibodies
+		- CRP 0.40 (increased)
+		- ESR 14 (increased)
+
+# Case - Progress
+- on the basis of the presentation and elevated thyroid peroxidase antibodies, the patient was diagnosed as having Hashimoto’s encephalopathy
+- methylprednisolone sodium succinate (1,000 mg intravenous infusion, over 24 hours for 5 days)
+- Treatment with steroids led to resolution of the patient’s delusions and paranoia. His mental status and cognitive function returned to his baseline, and the patient was discharged home
+
+# Discussion
+- Psychiatrists must maintain a broad differential diagnosis for non-psychiatricS causes of acute psychosis that do not fit the normal clinical picture.
+- Hashimoto's
+	- most patients with Hashimoto’s encephalopathy present euthyroid at the time of diagnosis
+	- Often under recognized
+	- Presentations vary
+		- Psychiatric [psychosis, depression, dementia] to Neurological [stroke, seizure, tremor, myoclonus]
+	- Treatment of choice includes high-dose prednisone (1–2 mg/kg) for up to 4–6 weeks, followed by a slow taper to avoid recurrence
+
+# Reference
+1. [Rumano et al](https://psychiatryonline.org/doi/10.1176/appi.ajp-rj.2019.150204)
+
+
+<img src="../../../_resources/reb-tail.jpg" border=0>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

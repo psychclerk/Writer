@@ -1,884 +1,190 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      /*! ADAPTED
-    Typeplate : Starter Kit
-    URL ........... http://typeplate.com
-    Version ....... 3.0.2
-    Github ........ https://github.com/typeplate/starter-kit
-    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-    License ....... Creative Commmons Attribution 3.0
-    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
-    */
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        text-rendering: optimizeLegibility;
-        line-height: 1;
-        margin-top: 0;
-        color: #222;
-      }
-
-      blockquote + figcaption cite {
-        display: block;
-        font-size: inherit;
-        text-align: right;
-      }
-
-      body {
-        word-wrap: break-word;
-      }
-
-      pre code {
-        word-wrap: normal;
-      }
-
-      body {
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        color: #444;
-      }
-
-      h1 {
-        font-size: 2em;
-        /* 2*16 = 32 */
-      }
-
-      h2 {
-        font-size: 1.5em;
-        /* 1.5*16 = 24 */
-      }
-
-      h3 {
-        font-size: 1.17em;
-        /* 1.17*16 = 18.72 */
-      }
-
-      h4 {
-        font-size: 1em;
-        /* 1*16 = 16 */
-      }
-
-      h5 {
-        font-size: 0.83em;
-        /* 0.83*16 = 13.28 */
-      }
-
-      h6 {
-        font-size: 0.75em;
-        /* 0.75*16 = 12 */
-      }
-
-      h1 {
-        margin: 2.42424rem 0 1.454544rem;
-      }
-
-      h2 {
-        margin: 2.0202rem 0 1.21212rem;
-      }
-
-      h3 {
-        margin: 1.61616rem 0 1rem;
-      }
-
-      h4 {
-        margin: 1.21212rem 0 1;
-      }
-
-      h5 {
-        margin: 0.80808rem 0;
-      }
-
-      h6 {
-        margin: 0.70707rem 0;
-      }
-
-      p {
-        margin: auto auto 1.5rem;
-      }
-
-      small {
-        font-size: 65%;
-      }
-
-      input,
-      abbr,
-      acronym,
-      blockquote,
-      code,
-      kbd,
-      q,
-      samp,
-      var {
-        -webkit-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-      }
-
-      pre {
-        white-space: pre;
-      }
-
-      pre code {
-        white-space: -moz-pre-wrap;
-        white-space: pre-wrap;
-      }
-
-      code {
-        white-space: pre;
-        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
-      }
-
-      abbr {
-        -webkit-font-variant: small-caps;
-        -moz-font-variant: small-caps;
-        -ms-font-variant: small-caps;
-        font-variant: small-caps;
-        font-weight: 600;
-        text-transform: lowercase;
-        color: gray;
-      }
-
-      abbr[title]:hover {
-        cursor: help;
-      }
-
-      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
-        color: #444;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-      }
-
-      code,
-      pre {
-        background-color: #f5f5f5;
-        color: #444;
-        border-radius: 2px;
-        text-shadow: 0px 1px 0px white;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-      }
-
-      pre code {
-        border: none;
-        box-shadow: none;
-      }
-
-      pre {
-        padding: 0.5em;
-      }
-
-      code {
-        display: inline-block;
-        padding: 0 0.5em;
-        line-height: 1.4;
-        font-size: 0.9em;
-      }
-
-      table {
-        border-spacing: 0;
-        margin-bottom: 1.5rem;
-      }
-
-      table th,
-      table td {
-        padding: 0.3em 0.7em;
-      }
-
-      table th {
-        background-color: #f4f4f4;
-        border-bottom: 2px solid #444;
-      }
-
-      table td {
-        border: 1px solid #f5f5f5;
-      }
-
-      /* Add transition to containers so they can push in and out. */
-
-      #layout,
-      #menu,
-      .menu-link {
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-      }
-
-      /* This is the parent `<div>` that contains the menu and the content area. */
-
-      #layout {
-        position: relative;
-        padding-left: 0;
-      }
-
-      #layout.active #menu {
-        left: 250px;
-        width: 250px;
-      }
-
-      #layout.active .menu-link {
-        left: 250px;
-      }
-
-      /* The content `<div>` is where all your content goes. */
-
-      .content {
-        margin: 50px auto;
-        padding: 0 2em;
-        max-width: 80ex;
-        line-height: 1.6em;
-      }
-
-      /*
-      The `#menu` `<div>` is the parent `<div>` that contains the menu that
-      appears on the left side of the page.
-      */
-
-      #menu {
-        margin-left: -250px;
-        /* "#menu" width */
-        width: 250px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        /* so the menu or its navicon stays above all content */
-        background: #f4f4f4;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        font-size: 0.9em;
-      }
-
-      @media print {
-        #menu,
-        .menu-link {
-          display: none !important;
-        }
-      }
-
-      a,
-      a * {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      a:visited {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      /* All anchors inside the menu should be styled like this. */
-
-      #menu a {
-        display: block;
-        padding: 0.5em 0.5em;
-      }
-
-      #menu a:first-letter {
-        text-transform: capitalize;
-      }
-
-      #menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 1em 0.5em;
-      }
-
-      #menu ul ul {
-        margin-top: 0.5em;
-        margin-left: 0.5em;
-        border-left: 4px solid rgba(255, 255, 255, 0.5);
-      }
-
-      /* Change color of the anchor links on hover/focus. */
-
-      #menu li a:hover,
-      #menu li a:focus {
-        background: rgba(255, 255, 255, 0.4);
-      }
-
-      /* This styles the selected menu item `<li>`. */
-
-      #menu li a.active {
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      /* This styles a link within a selected menu item `<li>`. */
-
-      #menu li a.active {
-        color: #222;
-      }
-
-      /* This styles the menu heading. */
-
-      #menu li.heading {
-        font-size: 0.9em;
-        text-transform: uppercase;
-        color: #000;
-      }
-
-      #menu li.heading > * {
-        padding: 0.5em;
-        display: block;
-      }
-
-      #menu li.heading a {
-        color: #0c68af;
-      }
-
-      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
-
-      /*
-      `.menu-link` represents the responsive menu toggle that shows/hides on
-      small screens.
-      */
-
-      .menu-link {
-        position: fixed;
-        display: block;
-        /* show this only on small screens */
-        top: 0;
-        left: 0;
-        /* "#menu width" */
-        font-size: 10px;
-        /* change this value to increase/decrease button size */
-        z-index: 10;
-        width: 2em;
-        height: auto;
-        padding: 1.6em 1.2em;
-        border-radius: 0 2px 2px 0;
-      }
-
-      .menu-link:hover {
-        background: #f4f4f4;
-      }
-
-      .menu-link span {
-        position: relative;
-        display: block;
-      }
-
-      .menu-link span,
-      .menu-link span:before,
-      .menu-link span:after {
-        background-color: #555;
-        width: 100%;
-        height: 0.2em;
-        border-radius: 1em;
-      }
-
-      .menu-link span:before,
-      .menu-link span:after {
-        position: absolute;
-        margin-top: -0.6em;
-        content: " ";
-      }
-
-      .menu-link span:after {
-        margin-top: 0.6em;
-      }
-
-      /* Hides the menu at `48em`, but modify this based on your app's needs. */
-
-      @media (min-width: 48em) {
-        .header,
-        .content {
-          padding-left: 2em;
-          padding-right: 2em;
-        }
-
-        #layout {
-          padding-left: 250px;
-          /* left col width "#menu" */
-          left: 0;
-        }
-        #menu {
-          left: 250px;
-        }
-
-        .menu-link {
-          position: fixed;
-          left: 250px;
-          display: none;
-        }
-
-        #layout.active .menu-link {
-          left: 250px;
-        }
-      }
-
-      @media (max-width: 48em) {
-        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
-         * Make the window small.
-         * Tap the menu to trigger the active state.
-         * Make the window large again.
-         */
-        #layout.active {
-          position: relative;
-          left: 250px;
-        }
-      }
-
-      /* Heading anchors and permalinks */
-      h1[id],
-      h2[id],
-      h3[id],
-      h4[id],
-      h5[id],
-      h6[id] {
-        position: relative;
-      }
-      .heading-anchor-permalink {
-        /* Position the permalink to the left of the title */
-        position: absolute;
-        right: 100%;
-        /* Add some spacing as padding to not lose the hover */
-        padding-right: 0.6rem;
-        /* Make it only visible on heading hover, see below */
-        opacity: 0;
-      }
-      h1[id]:hover .heading-anchor-permalink,
-      h2[id]:hover .heading-anchor-permalink,
-      h3[id]:hover .heading-anchor-permalink,
-      h4[id]:hover .heading-anchor-permalink,
-      h5[id]:hover .heading-anchor-permalink,
-      h6[id]:hover .heading-anchor-permalink {
-        opacity: 0.5;
-      }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-  </head>
-
-  <body>
-    <div id="layout">
-      <!-- Menu toggle -->
-      <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-      </a>
-      <nav id="menu">
-        <ul>
-<li class="heading"><a class="" href="..\..\index.html">notes</a></li>
-<ul>
-<li class="heading"><span>Approaches</span></li>
-<ul>
-<li><a class="" href="..\..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
-<li><a class="" href="..\..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
-<li><a class="" href="..\..\Approaches\Bradycardia.html">Bradycardia</a></li>
-<li><a class="" href="..\..\Approaches\Tachycardia.html">Tachycardia</a></li>
-<li><a class="" href="..\..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
-</ul>
-<li class="heading"><span>Casc</span></li>
-<ul>
-<li><a class="" href="..\..\Casc\Alcohol history.html">Alcohol history</a></li>
-<li><a class="" href="..\..\Casc\Grief reaction.html">Grief reaction</a></li>
-<li><a class="" href="..\..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
-</ul>
-<li class="heading"><span>Psychiatry</span></li>
-<ul>
-<li class="heading"><span>Core psychiatry</span></li>
-<ul>
-<li><a class="" href="..\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
-<li><a class="" href="..\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
-<li><a class="" href="..\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
-<li><a class="" href="..\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
-<li><a class="" href="..\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
-<li><a class="" href="..\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
-<li><a class="" href="..\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
-<li><a class="" href="..\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
-<li><a class="" href="..\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
-<li><a class="" href="..\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
-<li><a class="" href="..\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
-<li><a class="" href="..\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
-</ul>
-<li class="heading"><span>bookreading</span></li>
-<ul>
-<li><a class="" href="..\bookreading\bookreading17062021.html">bookreading17062021</a></li>
-</ul>
-<li class="heading"><span>community psych</span></li>
-<ul>
-<li><a class="" href="..\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
-</ul>
-<li class="heading"><span>consultation liaison</span></li>
-<ul>
-<li><a class="" href="..\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
-</ul>
-<li class="heading"><span>covid</span></li>
-<ul>
-<li><a class="" href="..\covid\COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
-<li><a class="" href="..\covid\COVID update number 9.html">COVID update number 9</a></li>
-<li><a class="" href="..\covid\Drbasucomments.html">Drbasucomments</a></li>
-<li><a class="" href="..\covid\Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
-<li><a class="" href="..\covid\SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
-<li><a class="" href="..\covid\nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
-</ul>
-<li class="heading"><span>neuropsychiatry</span></li>
-<ul>
-<li><a class="" href="DD of psychosis detailed.html">DD of psychosis detailed</a></li>
-<li><a class="" href="DD of psychosis simple.html">DD of psychosis simple</a></li>
-<li><a class="" href="Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
-<li><a class="" href="Fahr Syndrome.html">Fahr Syndrome</a></li>
-<li><a class="" href="Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
-<li><a class="" href="Manganism.html">Manganism</a></li>
-<li><a class="" href="NBIA.html">NBIA</a></li>
-<li><a class="" href="Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
-<li><a class="active" href="Parkinsonism.html">Parkinsonism</a></li>
-<li><a class="" href="catatonia.html">catatonia</a></li>
-</ul>
-</ul>
-<li class="heading"><span>Research</span></li>
-<ul>
-<li class="heading"><span>Abhishek</span></li>
-<ul>
-<li><a class="" href="..\..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
-</ul>
-<li class="heading"><span>PostCOVID</span></li>
-<ul>
-<li><a class="" href="..\..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
-</ul>
-</ul>
-<li class="heading"><span>UG</span></li>
-<ul>
-<li><a class="" href="..\..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
-<li><a class="" href="..\..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
-<li><a class="" href="..\..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
-<li><a class="" href="..\..\UG\viva mood disorders.html">viva mood disorders</a></li>
-<li><a class="" href="..\..\UG\viva psychosis.html">viva psychosis</a></li>
-</ul>
-
-</ul>
-</ul>
-      </nav>
-      <article id="main" class="content">
-        <p>Parkinsonism</p>
-<h1 id="parkinsonism">Parkinsonism <a class="heading-anchor-permalink" href="#parkinsonism">#</a></h1>
-<p>Edit date: 26/06/2021 07:41</p>
-<p><strong>CONTENTS</strong></p>
-<hr>
-<ul>
-<li><a href="#parkinsonism">Parkinsonism</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#clinical-features">Clinical features</a>
-<ul>
-<li><a href="#motor-symptoms-of-parkinsonism">Motor symptoms of Parkinsonism</a></li>
-<li><a href="#motor-symptoms-of-pd-other-than-trap">Motor symptoms of <strong>PD</strong> other than TRAP</a></li>
-<li><a href="#non-motor-autonomic-symptoms-of-pd">Non-motor autonomic symptoms of <strong>PD</strong></a></li>
-<li><a href="#non-motor-neuropsychiatric-symptoms-of-pd">Non-motor neuropsychiatric symptoms of <strong>PD</strong></a></li>
-<li><a href="#non-motor-sensory-symptoms">Non-motor sensory symptoms</a></li>
-<li><a href="#course--stages-of-pd">Course / Stages of PD</a></li>
-</ul>
-</li>
-<li><a href="#pathophysiolgy">Pathophysiolgy</a></li>
-<li><a href="#dd-of-parkinsonism">DD of Parkinsonism</a>
-<ul>
-<li><a href="#first-way-of-classifying-the-causes">First way of classifying the causes</a>
-<ul>
-<li><a href="#primary">Primary</a></li>
-<li><a href="#secondary">Secondary</a></li>
-<li><a href="#pd-plus">PD Plus</a></li>
-<li><a href="#heredodegenerative">Heredodegenerative</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#diagnosis-of-pd">Diagnosis of PD</a>
-<ul>
-<li><a href="#history-taking-in-akinetic-rigid-patient">History taking in akinetic-rigid patient</a></li>
-<li><a href="#examination-of-akinetic-rigid-patient">Examination of akinetic-rigid patient</a></li>
-<li><a href="#rule-out-pd-mimics">Rule out PD mimics</a></li>
-<li><a href="#clinically-probable-pd-criteria">Clinically probable PD criteria</a></li>
-</ul>
-</li>
-<li><a href="#rx">Rx</a>
-<ul>
-<li><a href="#drug-classes-for-pd-rx">Drug classes for PD rx</a></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="introduction">Introduction <a class="heading-anchor-permalink" href="#introduction">#</a></h1>
-<ul>
-<li>second mcc of tremors</li>
-<li>first mcc of tremors is ET</li>
-<li>a syndrome of multiple different etiologies</li>
-<li>mcc PD</li>
-</ul>
-<h1 id="clinical-features">Clinical features <a class="heading-anchor-permalink" href="#clinical-features">#</a></h1>
-<h2 id="motor-symptoms-of-parkinsonism">Motor symptoms of Parkinsonism <a class="heading-anchor-permalink" href="#motor-symptoms-of-parkinsonism">#</a></h2>
-<ul>
-<li>TRAP (Tremor, Rigidity, Akinesia, Postural Instability)</li>
-<li>T - Tremors - slow 6 Hz
-<ul>
-<li>prominent at rest</li>
-<li>decreased by action</li>
-<li>increased by walking</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://o.quizlet.com/Pxe3NCYgupgjYGb4FlU2dA.jpg" alt="PD tremor"></p>
-<ul>
-<li>R - Rigidity
-<ul>
-<li>Tone increased leading to rigidity and cog-wheeling</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://o.quizlet.com/QXf0i-0FmCj9g0lQZuA.GQ.jpg" alt="Tone in PD"></p>
-<ul>
-<li>A - Akinesia
-<ul>
-<li>slowness of movement and reduced amplitude</li>
-</ul>
-</li>
-<li>P - Postural instability
-<ul>
-<li>Stance - narrow base, Stooped posture</li>
-<li>Festinating gait - short steps, decreased arm swing, en bloc turning</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://o.quizlet.com/pgtZ4VG2koJRmjP6FN8-eA.jpg" alt="Gait in PD"></p>
-<h2 id="motor-symptoms-of-pd-other-than-trap">Motor symptoms of <strong>PD</strong> other than TRAP <a class="heading-anchor-permalink" href="#motor-symptoms-of-pd-other-than-trap">#</a></h2>
-<ul>
-<li>Micrographia</li>
-<li>Masked facies</li>
-<li>Hypophonic speech</li>
-</ul>
-<h2 id="non-motor-autonomic-symptoms-of-pd">Non-motor autonomic symptoms of <strong>PD</strong> <a class="heading-anchor-permalink" href="#non-motor-autonomic-symptoms-of-pd">#</a></h2>
-<ul>
-<li>Swallowing difficulty</li>
-<li>Urinary symptoms</li>
-<li>Sexual dysfunction</li>
-<li>Constipation</li>
-<li>Orthostatic hypotension</li>
-<li>Supine hypertension</li>
-</ul>
-<h2 id="non-motor-neuropsychiatric-symptoms-of-pd">Non-motor neuropsychiatric symptoms of <strong>PD</strong> <a class="heading-anchor-permalink" href="#non-motor-neuropsychiatric-symptoms-of-pd">#</a></h2>
-<ul>
-<li>Depression</li>
-<li>Anxiety</li>
-<li>Apathy</li>
-<li>Psychosis</li>
-<li>Hallucinations</li>
-<li>Impulsive Compulsive behaviors</li>
-<li>Dementia</li>
-<li>Vivid dreams</li>
-<li>REM Sleep behaviors</li>
-<li>Insomnia</li>
-<li>RLS</li>
-</ul>
-<h2 id="non-motor-sensory-symptoms">Non-motor sensory symptoms <a class="heading-anchor-permalink" href="#non-motor-sensory-symptoms">#</a></h2>
-<ul>
-<li>Sensory dysfunctions</li>
-<li>Pain</li>
-<li>Fatigue</li>
-</ul>
-<h2 id="course-%2F-stages-of-pd">Course / Stages of PD <a class="heading-anchor-permalink" href="#course-%2F-stages-of-pd">#</a></h2>
-<p><img src="https://o.quizlet.com/dMWJgLw7fVSSIOnC655WWw.jpg" alt="Stages of PD"></p>
-<h1 id="pathophysiolgy">Pathophysiolgy <a class="heading-anchor-permalink" href="#pathophysiolgy">#</a></h1>
-<ul>
-<li>Degeneration of neurons from substantia niagra to basal ganglia</li>
-<li>unknown trigger of degeneration</li>
-</ul>
-<p><img src="https://o.quizlet.com/UXt5IHyWW6JwI.AWJGPwqw.jpg" alt="PD"></p>
-<h1 id="dd-of-parkinsonism">DD of Parkinsonism <a class="heading-anchor-permalink" href="#dd-of-parkinsonism">#</a></h1>
-<h2 id="first-way-of-classifying-the-causes">First way of classifying the causes <a class="heading-anchor-permalink" href="#first-way-of-classifying-the-causes">#</a></h2>
-<h3 id="primary">Primary <a class="heading-anchor-permalink" href="#primary">#</a></h3>
-<ul>
-<li>Sporadic</li>
-<li>Familial</li>
-<li>Genetic etiologies of PD
-<ul>
-<li>Onset age &lt; 21 - atypical sx : cognitive impairment, pyramidal signs - ATP13A2, FBX07, PLA2G6</li>
-<li>Onset age &gt; 21 - slow disease progression, dopa-responsive, early motor fluctuation - PARK2, PINK1, DJ1</li>
-<li>Onset age &gt; 21 - cognitive impairment, rapid progression - SNCA</li>
-<li>Onset age &gt; 40 - typical PD - LRRK2</li>
-</ul>
-</li>
-</ul>
-<h3 id="secondary">Secondary <a class="heading-anchor-permalink" href="#secondary">#</a></h3>
-<ul>
-<li>Drugs - Antipsychotics, Metoclopramide, Procholorperazine, Valproate, Lithium, Alpha-methyldopa, SSRIs, Phenelizine, CCBs (cinnarizine, flunarizine, amlodipine), Amiodarone, Disulfiram,</li>
-<li>Infective - post enceph, neurosyphilis</li>
-<li>Vascular - Stroke</li>
-<li>Inflammatory - MS, SLE, Sjogren</li>
-<li>Nutritional, Endocrine, Metabolic - Post anoxic, Pellagra, Central pontine mylinolysis,</li>
-<li>Degenerative - as below</li>
-<li>Trauma - post head injury</li>
-<li>Tumor</li>
-<li>Structural - NPH</li>
-<li>Toxic - Alcohol withdrawal, Manganese, CO, MPTP, Cyanide, Methanol, OP, Inhalant abuse,</li>
-</ul>
-<h3 id="pd-plus">PD Plus <a class="heading-anchor-permalink" href="#pd-plus">#</a></h3>
-<ul>
-<li>PSP, MSA, CBD, DLB, Alz, FTD with PD</li>
-<li>PSP
-<ul>
-<li>Stiff upper body</li>
-<li>Supranuclear gaze palsy</li>
-</ul>
-</li>
-<li>MSA
-<ul>
-<li>P - Parkinsonism with</li>
-<li>O - orthostatic hypotension [autonomic signs]</li>
-<li>C - cerebellar signs</li>
-<li>C - corticospinal signs</li>
-</ul>
-</li>
-<li>DLB
-<ul>
-<li>dementia with PD within 1 year of onset</li>
-<li>psychosis is common</li>
-<li>neuroleptic sensitivity - quetiapine may help</li>
-<li>valproate may help</li>
-</ul>
-</li>
-</ul>
-<h3 id="heredodegenerative">Heredodegenerative <a class="heading-anchor-permalink" href="#heredodegenerative">#</a></h3>
-<ul>
-<li>Wilson, NBIA, Basal Ganglia Calcification, Mitochondrial</li>
-<li>Huntington, SCA, FXTAS, DRPLA, Dystonia-parkinsonism, neuroacanthocytosis, CJD</li>
-</ul>
-<h1 id="diagnosis-of-pd">Diagnosis of PD <a class="heading-anchor-permalink" href="#diagnosis-of-pd">#</a></h1>
-<h2 id="history-taking-in-akinetic-rigid-patient">History taking in akinetic-rigid patient <a class="heading-anchor-permalink" href="#history-taking-in-akinetic-rigid-patient">#</a></h2>
-<ol>
-<li>
-<p>Motor symptoms - TRAP
-a. Age at onset of symptoms
-b. Symmetrical / Asymmetrical</p>
-</li>
-<li>
-<p>Etiological h/o
-a. Any exposure to neuroleptics, other drug causes?
-b. Any h/o s/o stroke, trauma, tumor, seizure?
-c. Any h/o s/o enceph?
-d. Any exposure to CO, Manganese or Heavy metals?
-e. Any falls or postural instability early in illness?
-f. Any autonomic symptoms like orthostatic hypotension?
-g. Any cognitive symptoms (aphasia, apraxia, dementia)?
-h. Any diplopia?</p>
-</li>
-<li>
-<p>Non-motor symptoms
-a. Swallowing difficulty
-b. Constipation
-c. Urinary / Sexual dysfunction
-d. Depression, Anxiety, Psychosis, OC, Impulsive
-e. Insomnia, RLS, REM SBD</p>
-</li>
-</ol>
-<h2 id="examination-of-akinetic-rigid-patient">Examination of akinetic-rigid patient <a class="heading-anchor-permalink" href="#examination-of-akinetic-rigid-patient">#</a></h2>
-<ol>
-<li>Appearance - Masking, speech with diminished amplitude and inflection</li>
-<li>Vitals - esp. orthostatic hypotension</li>
-<li>EOM - Supranuclear gaze palsy</li>
-<li>Tremor - Resting, 4-5 Hz, reduce with action, worse with walking</li>
-<li>Rigidity - cog-wheeling</li>
-<li>Akinesia - Finger tapping on table</li>
-<li>Postural instability - Stance and Gait - narrow base, shuffling, festinating, freezing, loss of arm swing, retropulsion</li>
-<li>Any muscle weakness or atrophy</li>
-<li>Muscle reflexes, Plantar, Gabellar tap, Reflex myoclonus, Cerebellar signs</li>
-<li>stereognosis, graphesthesia</li>
-<li>MSE - MMSE + CDT, digit span, category fluency, apraxia [comb hair, blow a match stick]</li>
-</ol>
-<h2 id="rule-out-pd-mimics">Rule out PD mimics <a class="heading-anchor-permalink" href="#rule-out-pd-mimics">#</a></h2>
-<ul>
-<li>Hypothyroidism</li>
-<li>Depression</li>
-<li>Catatonia</li>
-<li>Stiff person syndrome [neuromuscular condition] - elevated CPK</li>
-<li>Rheumatological condition</li>
-</ul>
-<h2 id="clinically-probable-pd-criteria">Clinically probable PD criteria <a class="heading-anchor-permalink" href="#clinically-probable-pd-criteria">#</a></h2>
-<ul>
-<li>Parkinsonism</li>
-<li>Absence of exclusion criteria
-<ol>
-<li>Identifiable cause - various : stroke, trauma, tumor, h/o enceph, anoxia, NPH</li>
-<li>Gaze palsy - PSP</li>
-<li>Cerebellar, Autonomic signs - MSA</li>
-<li>Medicine resistance</li>
-<li>Sustained remission</li>
-<li>Oculogyric crises</li>
-<li>Dementia - DLB, Alz, FTD</li>
-<li>Babinski sign</li>
-</ol>
-</li>
-<li>Balanced numbers of supportive criteria and red flags</li>
-</ul>
-<h1 id="rx">Rx <a class="heading-anchor-permalink" href="#rx">#</a></h1>
-<h2 id="drug-classes-for-pd-rx">Drug classes for PD rx <a class="heading-anchor-permalink" href="#drug-classes-for-pd-rx">#</a></h2>
-<ul>
-<li>Anticholinergics - Trihexyphenidyl, Benztropine</li>
-<li>DA agonists - ropinrole, pramipexole, pergolide</li>
-<li>Levodopa - with carbidopa</li>
-<li>COMT inhibitors - entacapone / tolcapone</li>
-<li>MOA inhibitors - selegiline</li>
-<li>Dopamine releasing agents - Amantidine</li>
-</ul>
-
-      </article>
-    </div>
-    <script>
-      // Load contents.json if you need it
-    </script>
-    <script>
-      // FROM http://purecss.io/js/ui.js
-      (function(window, document) {
-        var layout = document.getElementById("layout"),
-          menu = document.getElementById("menu"),
-          menuLink = document.getElementById("menuLink");
-
-        function toggleClass(element, className) {
-          var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
-
-          for (; i < length; i++) {
-            if (classes[i] === className) {
-              classes.splice(i, 1);
-              break;
-            }
-          }
-          // The className is not found
-          if (length === classes.length) {
-            classes.push(className);
-          }
-
-          element.className = classes.join(" ");
-        }
-
-        menuLink.onclick = function(e) {
-          var active = "active";
-
-          e.preventDefault();
-          toggleClass(layout, active);
-          toggleClass(menu, active);
-          toggleClass(menuLink, active);
-        };
-      })(this, this.document);
-    </script>
-  </body>
-</html>
+<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
+					**Parkinsonism**
+					Edit date: 26/06/2021 07:41
+
+<img src="../../../_resources/reb-tail.jpg" border=0>
+
+# Introduction
+- second mcc of tremors
+- first mcc of tremors is ET
+- a syndrome of multiple different etiologies
+- mcc PD
+
+# Clinical features
+## Motor symptoms of Parkinsonism
+- TRAP (Tremor, Rigidity, Akinesia, Postural Instability)
+- T - Tremors - slow 6 Hz
+  - prominent at rest
+  - decreased by action
+  - increased by walking
+
+![PD tremor](https://o.quizlet.com/Pxe3NCYgupgjYGb4FlU2dA.jpg)
+
+- R - Rigidity
+  - Tone increased leading to rigidity and cog-wheeling
+
+![Tone in PD](https://o.quizlet.com/QXf0i-0FmCj9g0lQZuA.GQ.jpg)
+
+- A - Akinesia
+  - slowness of movement and reduced amplitude
+- P - Postural instability
+  - Stance - narrow base, Stooped posture
+  - Festinating gait - short steps, decreased arm swing, en bloc turning
+
+![Gait in PD](https://o.quizlet.com/pgtZ4VG2koJRmjP6FN8-eA.jpg)
+
+## Motor symptoms of **PD** other than TRAP
+- Micrographia
+- Masked facies
+- Hypophonic speech
+
+## Non-motor autonomic symptoms of **PD**
+- Swallowing difficulty
+- Urinary symptoms
+- Sexual dysfunction
+- Constipation
+- Orthostatic hypotension
+- Supine hypertension
+
+## Non-motor neuropsychiatric symptoms of **PD**
+- Depression
+- Anxiety
+- Apathy
+- Psychosis
+- Hallucinations
+- Impulsive Compulsive behaviors
+- Dementia
+- Vivid dreams
+- REM Sleep behaviors
+- Insomnia
+- RLS
+
+## Non-motor sensory symptoms
+- Sensory dysfunctions
+- Pain
+- Fatigue
+
+## Course / Stages of PD
+
+![Stages of PD](https://o.quizlet.com/dMWJgLw7fVSSIOnC655WWw.jpg)
+
+# Pathophysiolgy
+- Degeneration of neurons from substantia niagra to basal ganglia
+- unknown trigger of degeneration
+
+![PD](https://o.quizlet.com/UXt5IHyWW6JwI.AWJGPwqw.jpg)
+
+# DD of Parkinsonism
+## First way of classifying the causes
+### Primary
+- Sporadic
+- Familial
+- Genetic etiologies of PD
+  - Onset age < 21 - atypical sx : cognitive impairment, pyramidal signs - ATP13A2, FBX07, PLA2G6
+  - Onset age > 21 - slow disease progression, dopa-responsive, early motor fluctuation - PARK2, PINK1, DJ1
+  - Onset age > 21 - cognitive impairment, rapid progression - SNCA
+  - Onset age > 40 - typical PD - LRRK2
+
+### Secondary
+- Drugs - Antipsychotics, Metoclopramide, Procholorperazine, Valproate, Lithium, Alpha-methyldopa, SSRIs, Phenelizine, CCBs (cinnarizine, flunarizine, amlodipine), Amiodarone, Disulfiram,
+- Infective - post enceph, neurosyphilis
+- Vascular - Stroke
+- Inflammatory - MS, SLE, Sjogren
+- Nutritional, Endocrine, Metabolic - Post anoxic, Pellagra, Central pontine mylinolysis,
+- Degenerative - as below
+- Trauma - post head injury
+- Tumor
+- Structural - NPH
+- Toxic - Alcohol withdrawal, Manganese, CO, MPTP, Cyanide, Methanol, OP, Inhalant abuse,
+
+### PD Plus
+- PSP, MSA, CBD, DLB, Alz, FTD with PD
+- PSP
+  - Stiff upper body
+  - Supranuclear gaze palsy
+- MSA
+  - P - Parkinsonism with
+  - O - orthostatic hypotension [autonomic signs]
+  - C - cerebellar signs
+  - C - corticospinal signs
+- DLB
+  - dementia with PD within 1 year of onset
+  - psychosis is common
+  - neuroleptic sensitivity - quetiapine may help
+  - valproate may help
+
+### Heredodegenerative
+- Wilson, NBIA, Basal Ganglia Calcification, Mitochondrial
+- Huntington, SCA, FXTAS, DRPLA, Dystonia-parkinsonism, neuroacanthocytosis, CJD
+
+# Diagnosis of PD
+
+## History taking in akinetic-rigid patient
+1. Motor symptoms - TRAP
+  a. Age at onset of symptoms
+  b. Symmetrical / Asymmetrical
+
+2. Etiological h/o
+  a. Any exposure to neuroleptics, other drug causes?
+  b. Any h/o s/o stroke, trauma, tumor, seizure?
+  c. Any h/o s/o enceph?
+  d. Any exposure to CO, Manganese or Heavy metals?
+  e. Any falls or postural instability early in illness?
+  f. Any autonomic symptoms like orthostatic hypotension?
+  g. Any cognitive symptoms (aphasia, apraxia, dementia)?
+  h. Any diplopia?
+
+3. Non-motor symptoms
+  a. Swallowing difficulty
+  b. Constipation
+  c. Urinary / Sexual dysfunction
+  d. Depression, Anxiety, Psychosis, OC, Impulsive
+  e. Insomnia, RLS, REM SBD
+
+## Examination of akinetic-rigid patient
+1. Appearance - Masking, speech with diminished amplitude and inflection
+2. Vitals - esp. orthostatic hypotension
+3. EOM - Supranuclear gaze palsy
+4. Tremor - Resting, 4-5 Hz, reduce with action, worse with walking
+5. Rigidity - cog-wheeling
+6. Akinesia - Finger tapping on table
+7. Postural instability - Stance and Gait - narrow base, shuffling, festinating, freezing, loss of arm swing, retropulsion
+8. Any muscle weakness or atrophy
+9. Muscle reflexes, Plantar, Gabellar tap, Reflex myoclonus, Cerebellar signs
+10. stereognosis, graphesthesia
+11. MSE - MMSE + CDT, digit span, category fluency, apraxia [comb hair, blow a match stick]
+
+## Rule out PD mimics
+-  Hypothyroidism
+- Depression
+- Catatonia
+- Stiff person syndrome [neuromuscular condition] - elevated CPK
+- Rheumatological condition
+
+## Clinically probable PD criteria
+- Parkinsonism
+- Absence of exclusion criteria
+  1. Identifiable cause - various : stroke, trauma, tumor, h/o enceph, anoxia, NPH
+  2. Gaze palsy - PSP
+  3. Cerebellar, Autonomic signs - MSA
+  4. Medicine resistance
+  5. Sustained remission
+  6. Oculogyric crises
+  7. Dementia - DLB, Alz, FTD
+  8. Babinski sign
+- Balanced numbers of supportive criteria and red flags
+
+# Rx
+
+## Drug classes for PD rx
+- Anticholinergics - Trihexyphenidyl, Benztropine
+- DA agonists - ropinrole, pramipexole, pergolide
+- Levodopa - with carbidopa
+- COMT inhibitors - entacapone / tolcapone
+- MOA inhibitors - selegiline
+- Dopamine releasing agents - Amantidine
+
+
+<img src="../../../_resources/reb-tail.jpg" border=0>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

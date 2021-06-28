@@ -1,1628 +1,681 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      /*! ADAPTED
-    Typeplate : Starter Kit
-    URL ........... http://typeplate.com
-    Version ....... 3.0.2
-    Github ........ https://github.com/typeplate/starter-kit
-    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-    License ....... Creative Commmons Attribution 3.0
-    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
-    */
+<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
+					**Psychosocial impact of COVID-19 and suggested interventions**
+					Edit date: 26/06/2021 11:09
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        text-rendering: optimizeLegibility;
-        line-height: 1;
-        margin-top: 0;
-        color: #222;
-      }
+<img src="../../../_resources/reb-tail.jpg" border=0>
 
-      blockquote + figcaption cite {
-        display: block;
-        font-size: inherit;
-        text-align: right;
-      }
+# Introduction
+- First case reported in China in December 2019
+- COVID-19 declared public health emergency on 30th January 2020
+- Ensuing lockdowns and home confinement
+- First and foremost response has been fear and sense of clear and imminent danger
 
-      body {
-        word-wrap: break-word;
-      }
-
-      pre code {
-        word-wrap: normal;
-      }
-
-      body {
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        color: #444;
-      }
-
-      h1 {
-        font-size: 2em;
-        /* 2*16 = 32 */
-      }
-
-      h2 {
-        font-size: 1.5em;
-        /* 1.5*16 = 24 */
-      }
-
-      h3 {
-        font-size: 1.17em;
-        /* 1.17*16 = 18.72 */
-      }
-
-      h4 {
-        font-size: 1em;
-        /* 1*16 = 16 */
-      }
-
-      h5 {
-        font-size: 0.83em;
-        /* 0.83*16 = 13.28 */
-      }
-
-      h6 {
-        font-size: 0.75em;
-        /* 0.75*16 = 12 */
-      }
-
-      h1 {
-        margin: 2.42424rem 0 1.454544rem;
-      }
-
-      h2 {
-        margin: 2.0202rem 0 1.21212rem;
-      }
-
-      h3 {
-        margin: 1.61616rem 0 1rem;
-      }
-
-      h4 {
-        margin: 1.21212rem 0 1;
-      }
-
-      h5 {
-        margin: 0.80808rem 0;
-      }
-
-      h6 {
-        margin: 0.70707rem 0;
-      }
-
-      p {
-        margin: auto auto 1.5rem;
-      }
-
-      small {
-        font-size: 65%;
-      }
-
-      input,
-      abbr,
-      acronym,
-      blockquote,
-      code,
-      kbd,
-      q,
-      samp,
-      var {
-        -webkit-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-      }
-
-      pre {
-        white-space: pre;
-      }
-
-      pre code {
-        white-space: -moz-pre-wrap;
-        white-space: pre-wrap;
-      }
-
-      code {
-        white-space: pre;
-        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
-      }
-
-      abbr {
-        -webkit-font-variant: small-caps;
-        -moz-font-variant: small-caps;
-        -ms-font-variant: small-caps;
-        font-variant: small-caps;
-        font-weight: 600;
-        text-transform: lowercase;
-        color: gray;
-      }
-
-      abbr[title]:hover {
-        cursor: help;
-      }
-
-      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
-        color: #444;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-      }
-
-      code,
-      pre {
-        background-color: #f5f5f5;
-        color: #444;
-        border-radius: 2px;
-        text-shadow: 0px 1px 0px white;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-      }
-
-      pre code {
-        border: none;
-        box-shadow: none;
-      }
-
-      pre {
-        padding: 0.5em;
-      }
-
-      code {
-        display: inline-block;
-        padding: 0 0.5em;
-        line-height: 1.4;
-        font-size: 0.9em;
-      }
-
-      table {
-        border-spacing: 0;
-        margin-bottom: 1.5rem;
-      }
-
-      table th,
-      table td {
-        padding: 0.3em 0.7em;
-      }
-
-      table th {
-        background-color: #f4f4f4;
-        border-bottom: 2px solid #444;
-      }
-
-      table td {
-        border: 1px solid #f5f5f5;
-      }
-
-      /* Add transition to containers so they can push in and out. */
-
-      #layout,
-      #menu,
-      .menu-link {
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-      }
-
-      /* This is the parent `<div>` that contains the menu and the content area. */
-
-      #layout {
-        position: relative;
-        padding-left: 0;
-      }
-
-      #layout.active #menu {
-        left: 250px;
-        width: 250px;
-      }
-
-      #layout.active .menu-link {
-        left: 250px;
-      }
-
-      /* The content `<div>` is where all your content goes. */
-
-      .content {
-        margin: 50px auto;
-        padding: 0 2em;
-        max-width: 80ex;
-        line-height: 1.6em;
-      }
-
-      /*
-      The `#menu` `<div>` is the parent `<div>` that contains the menu that
-      appears on the left side of the page.
-      */
-
-      #menu {
-        margin-left: -250px;
-        /* "#menu" width */
-        width: 250px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        /* so the menu or its navicon stays above all content */
-        background: #f4f4f4;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        font-size: 0.9em;
-      }
-
-      @media print {
-        #menu,
-        .menu-link {
-          display: none !important;
-        }
-      }
-
-      a,
-      a * {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      a:visited {
-        text-decoration: none;
-        color: #2483cc;
-      }
-
-      /* All anchors inside the menu should be styled like this. */
-
-      #menu a {
-        display: block;
-        padding: 0.5em 0.5em;
-      }
-
-      #menu a:first-letter {
-        text-transform: capitalize;
-      }
-
-      #menu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 1em 0.5em;
-      }
-
-      #menu ul ul {
-        margin-top: 0.5em;
-        margin-left: 0.5em;
-        border-left: 4px solid rgba(255, 255, 255, 0.5);
-      }
-
-      /* Change color of the anchor links on hover/focus. */
-
-      #menu li a:hover,
-      #menu li a:focus {
-        background: rgba(255, 255, 255, 0.4);
-      }
-
-      /* This styles the selected menu item `<li>`. */
-
-      #menu li a.active {
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      /* This styles a link within a selected menu item `<li>`. */
-
-      #menu li a.active {
-        color: #222;
-      }
-
-      /* This styles the menu heading. */
-
-      #menu li.heading {
-        font-size: 0.9em;
-        text-transform: uppercase;
-        color: #000;
-      }
-
-      #menu li.heading > * {
-        padding: 0.5em;
-        display: block;
-      }
-
-      #menu li.heading a {
-        color: #0c68af;
-      }
-
-      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
-
-      /*
-      `.menu-link` represents the responsive menu toggle that shows/hides on
-      small screens.
-      */
-
-      .menu-link {
-        position: fixed;
-        display: block;
-        /* show this only on small screens */
-        top: 0;
-        left: 0;
-        /* "#menu width" */
-        font-size: 10px;
-        /* change this value to increase/decrease button size */
-        z-index: 10;
-        width: 2em;
-        height: auto;
-        padding: 1.6em 1.2em;
-        border-radius: 0 2px 2px 0;
-      }
-
-      .menu-link:hover {
-        background: #f4f4f4;
-      }
-
-      .menu-link span {
-        position: relative;
-        display: block;
-      }
-
-      .menu-link span,
-      .menu-link span:before,
-      .menu-link span:after {
-        background-color: #555;
-        width: 100%;
-        height: 0.2em;
-        border-radius: 1em;
-      }
-
-      .menu-link span:before,
-      .menu-link span:after {
-        position: absolute;
-        margin-top: -0.6em;
-        content: " ";
-      }
-
-      .menu-link span:after {
-        margin-top: 0.6em;
-      }
-
-      /* Hides the menu at `48em`, but modify this based on your app's needs. */
-
-      @media (min-width: 48em) {
-        .header,
-        .content {
-          padding-left: 2em;
-          padding-right: 2em;
-        }
-
-        #layout {
-          padding-left: 250px;
-          /* left col width "#menu" */
-          left: 0;
-        }
-        #menu {
-          left: 250px;
-        }
-
-        .menu-link {
-          position: fixed;
-          left: 250px;
-          display: none;
-        }
-
-        #layout.active .menu-link {
-          left: 250px;
-        }
-      }
-
-      @media (max-width: 48em) {
-        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
-         * Make the window small.
-         * Tap the menu to trigger the active state.
-         * Make the window large again.
-         */
-        #layout.active {
-          position: relative;
-          left: 250px;
-        }
-      }
-
-      /* Heading anchors and permalinks */
-      h1[id],
-      h2[id],
-      h3[id],
-      h4[id],
-      h5[id],
-      h6[id] {
-        position: relative;
-      }
-      .heading-anchor-permalink {
-        /* Position the permalink to the left of the title */
-        position: absolute;
-        right: 100%;
-        /* Add some spacing as padding to not lose the hover */
-        padding-right: 0.6rem;
-        /* Make it only visible on heading hover, see below */
-        opacity: 0;
-      }
-      h1[id]:hover .heading-anchor-permalink,
-      h2[id]:hover .heading-anchor-permalink,
-      h3[id]:hover .heading-anchor-permalink,
-      h4[id]:hover .heading-anchor-permalink,
-      h5[id]:hover .heading-anchor-permalink,
-      h6[id]:hover .heading-anchor-permalink {
-        opacity: 0.5;
-      }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-  </head>
-
-  <body>
-    <div id="layout">
-      <!-- Menu toggle -->
-      <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-      </a>
-      <nav id="menu">
-        <ul>
-<li class="heading"><a class="" href="..\..\index.html">notes</a></li>
-<ul>
-<li class="heading"><span>Approaches</span></li>
-<ul>
-<li><a class="" href="..\..\Approaches\Approach to Pedal Edema.html">Approach to Pedal Edema</a></li>
-<li><a class="" href="..\..\Approaches\Approach to QTc prolongation.html">Approach to QTc prolongation</a></li>
-<li><a class="" href="..\..\Approaches\Bradycardia.html">Bradycardia</a></li>
-<li><a class="" href="..\..\Approaches\Tachycardia.html">Tachycardia</a></li>
-<li><a class="" href="..\..\Approaches\Workup of First episode psychosis.html">Workup of First episode psychosis</a></li>
-</ul>
-<li class="heading"><span>Casc</span></li>
-<ul>
-<li><a class="" href="..\..\Casc\Alcohol history.html">Alcohol history</a></li>
-<li><a class="" href="..\..\Casc\Grief reaction.html">Grief reaction</a></li>
-<li><a class="" href="..\..\Casc\approach to psychooncology.html">approach to psychooncology</a></li>
-</ul>
-<li class="heading"><span>Psychiatry</span></li>
-<ul>
-<li class="heading"><span>Core psychiatry</span></li>
-<ul>
-<li><a class="" href="..\Core psychiatry\Antipsychotic monitoring.html">Antipsychotic monitoring</a></li>
-<li><a class="" href="..\Core psychiatry\Antipsychotic prophylaxis.html">Antipsychotic prophylaxis</a></li>
-<li><a class="" href="..\Core psychiatry\Dosage of antipsychotics.html">Dosage of antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\High dose Antipsychotics.html">High dose Antipsychotics</a></li>
-<li><a class="" href="..\Core psychiatry\How Exercise changes the Brain_.html">How Exercise changes the Brain </a></li>
-<li><a class="" href="..\Core psychiatry\How I handled an EMR prescription error today.html">How I handled an EMR prescription error today</a></li>
-<li><a class="" href="..\Core psychiatry\How to choose an antipsychotic_.html">How to choose an antipsychotic </a></li>
-<li><a class="" href="..\Core psychiatry\Importance of Mental Health in Human Life.html">Importance of Mental Health in Human Life</a></li>
-<li><a class="" href="..\Core psychiatry\Negative Symptoms Schizophrenia.html">Negative Symptoms Schizophrenia</a></li>
-<li><a class="" href="..\Core psychiatry\PreschoolADHDDrugDrugChoice.html">PreschoolADHDDrugDrugChoice</a></li>
-<li><a class="" href="..\Core psychiatry\Should we combing antipsychotics_.html">Should we combing antipsychotics </a></li>
-<li><a class="" href="..\Core psychiatry\Treating a Friend.html">Treating a Friend</a></li>
-<li><a class="" href="..\Core psychiatry\What predicts outcome in Schizophreniaʔ.html">What predicts outcome in Schizophreniaʔ</a></li>
-<li><a class="" href="..\Core psychiatry\bipolar in child bearing age group.html">bipolar in child bearing age group</a></li>
-</ul>
-<li class="heading"><span>bookreading</span></li>
-<ul>
-<li><a class="" href="..\bookreading\bookreading17062021.html">bookreading17062021</a></li>
-</ul>
-<li class="heading"><span>community psych</span></li>
-<ul>
-<li><a class="" href="..\community psych\Challenges faced by community-level workers in del.html">Challenges faced by community level workers in del</a></li>
-</ul>
-<li class="heading"><span>consultation liaison</span></li>
-<ul>
-<li><a class="" href="..\consultation-liaison\renal_case_psychiatry.html">renal case psychiatry</a></li>
-</ul>
-<li class="heading"><span>covid</span></li>
-<ul>
-<li><a class="" href="COVID platelets and serotonin.html">COVID platelets and serotonin</a></li>
-<li><a class="" href="COVID update number 9.html">COVID update number 9</a></li>
-<li><a class="" href="Drbasucomments.html">Drbasucomments</a></li>
-<li><a class="active" href="Psychosocial impact of COVID-19.html">Psychosocial impact of COVID 19</a></li>
-<li><a class="" href="SSRI IN COVID-19.html">SSRI IN COVID 19</a></li>
-<li><a class="" href="nationalWebinarStressHCW.html">nationalWebinarStressHCW</a></li>
-</ul>
-<li class="heading"><span>neuropsychiatry</span></li>
-<ul>
-<li><a class="" href="..\neuropsychiatry\DD of psychosis detailed.html">DD of psychosis detailed</a></li>
-<li><a class="" href="..\neuropsychiatry\DD of psychosis simple.html">DD of psychosis simple</a></li>
-<li><a class="" href="..\neuropsychiatry\Differentiating Encephalopathy from psychosis.html">Differentiating Encephalopathy from psychosis</a></li>
-<li><a class="" href="..\neuropsychiatry\Fahr Syndrome.html">Fahr Syndrome</a></li>
-<li><a class="" href="..\neuropsychiatry\Gut Microbiome in Depression.html">Gut Microbiome in Depression</a></li>
-<li><a class="" href="..\neuropsychiatry\Manganism.html">Manganism</a></li>
-<li><a class="" href="..\neuropsychiatry\NBIA.html">NBIA</a></li>
-<li><a class="" href="..\neuropsychiatry\Neurocircuit taxonomy.html">Neurocircuit taxonomy</a></li>
-<li><a class="" href="..\neuropsychiatry\Parkinsonism.html">Parkinsonism</a></li>
-<li><a class="" href="..\neuropsychiatry\catatonia.html">catatonia</a></li>
-</ul>
-</ul>
-<li class="heading"><span>Research</span></li>
-<ul>
-<li class="heading"><span>Abhishek</span></li>
-<ul>
-<li><a class="" href="..\..\Research\Abhishek\Suffering_interview.html">Suffering interview</a></li>
-</ul>
-<li class="heading"><span>PostCOVID</span></li>
-<ul>
-<li><a class="" href="..\..\Research\PostCOVID\PostCOVID_screening.html">PostCOVID screening</a></li>
-</ul>
-</ul>
-<li class="heading"><span>UG</span></li>
-<ul>
-<li><a class="" href="..\..\UG\PG education subcommittee discussion forum.html">PG education subcommittee discussion forum</a></li>
-<li><a class="" href="..\..\UG\Psychiatry_as_major_subject_UG.html">Psychiatry as major subject UG</a></li>
-<li><a class="" href="..\..\UG\Viva- Chapter History and MSE.html">Viva  Chapter History and MSE</a></li>
-<li><a class="" href="..\..\UG\viva mood disorders.html">viva mood disorders</a></li>
-<li><a class="" href="..\..\UG\viva psychosis.html">viva psychosis</a></li>
-</ul>
-
-</ul>
-</ul>
-      </nav>
-      <article id="main" class="content">
-        <p>Psychosocial impact of COVID-19</p>
-<h1 id="psychosocial-impact-of-covid-19-and-suggested-interventions">Psychosocial impact of COVID-19 and suggested interventions <a class="heading-anchor-permalink" href="#psychosocial-impact-of-covid-19-and-suggested-interventions">#</a></h1>
-<p>Edit date: 26/06/2021 11:09</p>
-<p><strong>CONTENTS</strong></p>
-<hr>
-<ul>
-<li><a href="#psychosocial-impact-of-covid-19-and-suggested-interventions">Psychosocial impact of COVID-19 and suggested interventions</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#how-stress-gets-under-our-skin">How stress gets under our skin?</a>
-<ul>
-<li><a href="#stress">Stress</a></li>
-<li><a href="#stressor">Stressor</a></li>
-<li><a href="#working-definition">Working definition</a></li>
-<li><a href="#physiological-substrate-for-stress-response">Physiological substrate for stress response</a></li>
-<li><a href="#systems-model-of-stress-response">Systems model of stress response</a>
-<ul>
-<li><a href="#cognitive-appraisal-and-affective-integration">Cognitive appraisal and affective integration</a></li>
-<li><a href="#neurological-triggering-mechanisms">Neurological triggering mechanisms</a></li>
-<li><a href="#stress-response-per-se">Stress response per se</a>
-<ul>
-<li><a href="#neural-response-quick-and-short-lived">Neural response (quick and short lived)</a></li>
-<li><a href="#neuroendocrine-response-intermediate">Neuroendocrine response (intermediate)</a></li>
-<li><a href="#endocrine-response-chronic-and-prolonged">Endocrine response (chronic and prolonged)</a></li>
-<li><a href="#general-adaptation-syndrome">General adaptation syndrome</a></li>
-</ul>
-</li>
-<li><a href="#target-organ-activation">Target organ activation</a></li>
-<li><a href="#coping">Coping</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#impact-on-hcw">✨Impact on HCW</a>
-<ul>
-<li><a href="#indian-data">Indian Data</a></li>
-</ul>
-</li>
-<li><a href="#impact-on-covid-19-positive-patients-and-quarantined-individuals">Impact on COVID-19 positive patients and quarantined individuals</a>
-<ul>
-<li><a href="#stigma">Stigma</a>
-<ul>
-<li><a href="#immediate-effects">Immediate effects</a></li>
-<li><a href="#delayed-effects">Delayed effects</a></li>
-</ul>
-</li>
-<li><a href="#home-quarantined-patient">Home quarantined patient</a></li>
-<li><a href="#hospital-quarantined-patient">Hospital quarantined patient</a>
-<ul>
-<li><a href="#psychosocial-factors-predicting-hospitalization">Psychosocial factors predicting hospitalization</a></li>
-<li><a href="#isolation-in-a-hospital-leads-to">Isolation in a hospital leads to</a></li>
-<li><a href="#new-onset-mental-health-problems">New onset mental health problems</a>
-<ul>
-<li><a href="#expected-emotions">Expected emotions</a></li>
-<li><a href="#anxiety-and-depression">Anxiety and Depression</a></li>
-<li><a href="#insomnia">Insomnia</a></li>
-<li><a href="#substance-withdrawal">Substance withdrawal</a></li>
-<li><a href="#delirium">Delirium</a></li>
-<li><a href="#psychosis">Psychosis</a></li>
-<li><a href="#drugs-which-can-have-neuropsychiatric-effects">Drugs which can have neuropsychiatric effects</a></li>
-<li><a href="#qualitative-data">Qualitative data</a></li>
-<li><a href="#data-from-our-center-2020">Data from our center (2020)</a></li>
-</ul>
-</li>
-<li><a href="#exacerbation-of-pre-existing-mental-health-problems">Exacerbation of pre-existing mental health problems</a></li>
-</ul>
-</li>
-<li><a href="#post-covid-19-neuropsychiatric-symptoms">Post COVID-19 neuropsychiatric symptoms</a>
-<ul>
-<li><a href="#anxiety-and-depression">✨Anxiety and Depression</a></li>
-<li><a href="#other">Other</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#suggested-interventions">Suggested Interventions</a>
-<ul>
-<li><a href="#psychosocial-support-for-covid-inpatients">Psychosocial Support for COVID inpatients</a></li>
-<li><a href="#psychopharmacology">Psychopharmacology</a>
-<ul>
-<li><a href="#treatment">Treatment</a>
-<ul>
-<li><a href="#challenges">Challenges</a></li>
-<li><a href="#continuing-psychotropic-medications-of-a-patients-with-pre-existing-psychiatric-illness">Continuing psychotropic medications of a patients with pre-existing psychiatric illness</a>
-<ul>
-<li><a href="#antipsychotics">Antipsychotics</a></li>
-<li><a href="#-clozapine-concencus-statement-in-covid19">✨ Clozapine concencus statement in COVID19</a></li>
-<li><a href="#antidepressants">Antidepressants</a></li>
-<li><a href="#mood-stabilizers">Mood stabilizers</a></li>
-<li><a href="#sedative--hypnotics">Sedative / Hypnotics</a></li>
-</ul>
-</li>
-<li><a href="#acute-onset-behavioral-symptoms-in-those-receiving-treatmentprophylaxis-for-covid-19">Acute onset behavioral symptoms in those receiving treatment/prophylaxis for COVID-19</a>
-<ul>
-<li><a href="#delirium-1">Delirium</a></li>
-<li><a href="#psychosis--mania">Psychosis / Mania</a></li>
-<li><a href="#depression-anxiety-and-insomnia">Depression, Anxiety and Insomnia</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#-grief-management-in-covid-19">✨ Grief management in COVID-19</a></li>
-<li><a href="#does-psychiatry-have-anything-to-offer-in-terms-of-covid-19-management-per-se">Does psychiatry have anything to offer in terms of COVID-19 management per se?</a>
-<ul>
-<li>[Hamed et al <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7382922/">Medical Hypothesis 2020</a>, Pashaei <a href="https://www.sciencedirect.com/science/article/pii/S096758682100120X">J Clin Neuroscience 2021</a>.](#hamed-et-al-medical-hypothesis-2020httpswwwncbinlmnihgovpmcarticlespmc7382922-pashaei-j-clin-neuroscience-2021httpswwwsciencedirectcomsciencearticlepiis096758682100120x)</li>
-</ul>
-</li>
-<li>[Lenze et al <a href="https://jamanetwork.com/journals/jama/fullarticle/2773108">JAMA 2020</a>](#lenze-et-al-jama-2020httpsjamanetworkcomjournalsjamafullarticle2773108)</li>
-<li>[Hortel el al <a href="https://www.nature.com/articles/s41380-021-01021-4">Molecular Psychiatry 2021</a>](#hortel-el-al-molecular-psychiatry-2021httpswwwnaturecomarticless41380-021-01021-4)</li>
-<li><a href="#bottom-line">Bottom-line</a></li>
-<li><a href="#-psychological-interventions-during-covid-19-challenges-for-low-and-middle-income-countries">✨ Psychological interventions during COVID-19: Challenges for low and middle income countries</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#references">References</a></li>
-</ul>
-<hr>
-<h1 id="introduction">Introduction <a class="heading-anchor-permalink" href="#introduction">#</a></h1>
-<ul>
-<li>First case reported in China in December 2019</li>
-<li>COVID-19 declared public health emergency on 30th January 2020</li>
-<li>Ensuing lockdowns and home confinement</li>
-<li>First and foremost response has been fear and sense of clear and imminent danger</li>
-</ul>
 <p align="center">
   <img width="420" height="300" style="padding:1px;border:thin solid black;" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/bin/gr1_lrg.jpg"></br>
   <b>Figure 1:</b> Intricate psychosocial relationship between the disease, health care providers, government and population.
 </p>
-<h1 id="how-stress-gets-under-our-skin%3F">How stress gets under our skin? <a class="heading-anchor-permalink" href="#how-stress-gets-under-our-skin%3F">#</a></h1>
-<h2 id="stress">Stress <a class="heading-anchor-permalink" href="#stress">#</a></h2>
-<ul>
-<li>Whether of not it feels “stressful”</li>
-<li>Non-specific response of the body to any demand</li>
-</ul>
-<h2 id="stressor">Stressor <a class="heading-anchor-permalink" href="#stressor">#</a></h2>
-<ul>
-<li>Any stimulus that gives rise to stress response</li>
-<li>Psychosocial – by virtue of cognitive interpretation; (real or imagined)</li>
-<li>Biogenic – inherent stimulus</li>
-</ul>
-<h2 id="working-definition">Working definition <a class="heading-anchor-permalink" href="#working-definition">#</a></h2>
-<ul>
-<li>Stressor -&gt; Stress = physiological response which act as a mediating link -&gt; target organ damage</li>
-<li>Stress is not all negative</li>
-</ul>
-<h2 id="physiological-substrate-for-stress-response">Physiological substrate for stress response <a class="heading-anchor-permalink" href="#physiological-substrate-for-stress-response">#</a></h2>
-<ul>
-<li>Neuron</li>
-<li>Neurotransmitters</li>
-<li>Neural impulse</li>
-<li>CNS
-<ul>
-<li>Brain</li>
-<li>Spinal cord</li>
-</ul>
-</li>
-<li>PNS
-<ul>
-<li>Somatic – Muscles</li>
-</ul>
-</li>
-<li>ANS
-<ul>
-<li>SNS – Arousal</li>
-<li>PNS – Relaxation</li>
-</ul>
-</li>
-<li>Endocrine
-<ul>
-<li>HPA Axis</li>
-</ul>
-</li>
-</ul>
-<h2 id="systems-model-of-stress-response">Systems model of stress response <a class="heading-anchor-permalink" href="#systems-model-of-stress-response">#</a></h2>
-<ul>
-<li>Current evidence suggests existence of highly specific neuroendocrine and endocrine efferent mechanisms</li>
-</ul>
+
+# How stress gets under our skin?
+
+## Stress
+- Whether of not it feels “stressful”
+- Non-specific response of the body to any demand
+
+## Stressor
+- Any stimulus that gives rise to stress response
+- Psychosocial – by virtue of cognitive interpretation; (real or imagined)
+- Biogenic – inherent stimulus
+
+## Working definition
+- Stressor -> Stress = physiological response which act as a mediating link -> target organ damage
+- Stress is not all negative
+
+## Physiological substrate for stress response
+- Neuron
+- Neurotransmitters
+- Neural impulse
+- CNS
+	- Brain
+	- Spinal cord
+- PNS
+	- Somatic – Muscles
+- ANS
+	- SNS – Arousal
+	- PNS – Relaxation
+- Endocrine
+	- HPA Axis
+
+## Systems model of stress response
+- Current evidence suggests existence of highly specific neuroendocrine and endocrine efferent mechanisms
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-1-4939-9098-6_2/MediaObjects/215187_4_En_2_Fig7_HTML.png"></br>
   Figure 2: Systems model of stress response
 </p>
-<h3 id="cognitive-appraisal-and-affective-integration">Cognitive appraisal and affective integration <a class="heading-anchor-permalink" href="#cognitive-appraisal-and-affective-integration">#</a></h3>
-<ul>
-<li>Epictetus – “Men are disturbed not by things, but by the views which they take of them.”</li>
-<li>Likewise, “Stressors, like beauty lies in the eye of the beholder.”</li>
-<li>Cognitive appraisal refers to the process of cognitive interpretation, that is, the meanings that we assign to the world as it unfolds before us. (forebrain)</li>
-<li>Affective integration refers to the blending and coloring of felt emotion into the cognitive interpretation. (limbic)</li>
-<li>The resultant cognitive–affective complex represents how the stressors are ultimately perceived.</li>
-<li>In effect, this critical integrated perception represents the determination of whether psychosocial stimuli become psychosocial stressors or not.</li>
-<li>Vulnerable to
-<ul>
-<li>Biological predispositions
-<ul>
-<li>Personality patterns</li>
-<li>Learned behaviors</li>
-<li>Coping resources</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="neurological-triggering-mechanisms">Neurological triggering mechanisms <a class="heading-anchor-permalink" href="#neurological-triggering-mechanisms">#</a></h3>
-<ul>
-<li>Locus ceruleus</li>
-<li>Limbic nuclei</li>
-<li>Hypothalamus</li>
-</ul>
-<h3 id="stress-response-per-se">Stress response per se <a class="heading-anchor-permalink" href="#stress-response-per-se">#</a></h3>
-<h4 id="neural-response-(quick-and-short-lived)">Neural response (quick and short lived) <a class="heading-anchor-permalink" href="#neural-response-(quick-and-short-lived)">#</a></h4>
-<ul>
-<li>SNS -&gt; arousal via norepinephrine</li>
-<li>PNS -&gt; relaxation via acetylcholine</li>
-<li>Somatic</li>
-</ul>
-<h4 id="neuroendocrine-response-(intermediate)">Neuroendocrine response (intermediate) <a class="heading-anchor-permalink" href="#neuroendocrine-response-(intermediate)">#</a></h4>
-<ul>
-<li>Fight or flight = Mobilization of muscle to respond</li>
-<li>Via release of catecholamines in blood from adrenal medulla (similar to neural response but with 20-30 second delay)</li>
-</ul>
-<h4 id="endocrine-response-(chronic-and-prolonged)">Endocrine response (chronic and prolonged) <a class="heading-anchor-permalink" href="#endocrine-response-(chronic-and-prolonged)">#</a></h4>
-<ul>
-<li>Activated when active coping not possible</li>
-<li>Passive coping</li>
-<li>Mainly HPA axis -&gt; corticosteroids from adrenal cortex -&gt; GAS</li>
-</ul>
+
+### Cognitive appraisal and affective integration
+- Epictetus – “Men are disturbed not by things, but by the views which they take of them.”
+- Likewise, “Stressors, like beauty lies in the eye of the beholder.”
+- Cognitive appraisal refers to the process of cognitive interpretation, that is, the meanings that we assign to the world as it unfolds before us. (forebrain)
+- Affective integration refers to the blending and coloring of felt emotion into the cognitive interpretation. (limbic)
+- The resultant cognitive–affective complex represents how the stressors are ultimately perceived.
+- In effect, this critical integrated perception represents the determination of whether psychosocial stimuli become psychosocial stressors or not.
+- Vulnerable to
+  - Biological predispositions
+	- Personality patterns
+	- Learned behaviors
+	- Coping resources
+
+### Neurological triggering mechanisms
+- Locus ceruleus
+- Limbic nuclei
+- Hypothalamus
+
+### Stress response per se
+
+#### Neural response (quick and short lived)
+- SNS -> arousal via norepinephrine
+- PNS -> relaxation via acetylcholine
+- Somatic
+
+#### Neuroendocrine response (intermediate)
+- Fight or flight = Mobilization of muscle to respond
+- Via release of catecholamines in blood from adrenal medulla (similar to neural response but with 20-30 second delay)
+
+#### Endocrine response (chronic and prolonged)
+- Activated when active coping not possible
+- Passive coping
+- Mainly HPA axis -> corticosteroids from adrenal cortex -> GAS
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.child-encyclopedia.com/sites/default/files/images/contenu/Figure-2-Hypothalamic-Pituitary-Adrenocortical-Axis-or-Stress-Hormone-Axis.jpg"></br>
   Figure 3: HPA Axis
 </p>
-<h4 id="general-adaptation-syndrome">General adaptation syndrome <a class="heading-anchor-permalink" href="#general-adaptation-syndrome">#</a></h4>
+
+#### General adaptation syndrome
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="http://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/_cliffsnotes/assets/25289.jpg"></br>
   Figure 4: Phases of the General Adapdation Syndrome
 </p>
-<ul>
-<li>Alarm phase : Body resources are mobilized -&gt; acute target organ damage may occur</li>
-<li>Resistance stage : Body fights to reestablish and maintain homeostasis. -&gt; target organ adaptation may bring about changes in the organ. Stages 1 and 2 can be repeated throughout one’s life in response to stressful situations.</li>
-<li>Exhaustion stage : Resources are depleted -&gt; target organ damage likely to occur</li>
-</ul>
-<h3 id="target-organ-activation">Target organ activation <a class="heading-anchor-permalink" href="#target-organ-activation">#</a></h3>
+
+- Alarm phase : Body resources are mobilized -> acute target organ damage may occur
+- Resistance stage : Body fights to reestablish and maintain homeostasis. -> target organ adaptation may bring about changes in the organ. Stages 1 and 2 can be repeated throughout one’s life in response to stressful situations.
+- Exhaustion stage : Resources are depleted -> target organ damage likely to occur
+
+### Target organ activation
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.researchgate.net/profile/Bruce-Mcewen-2/publication/6223301/figure/fig1/AS:667176419733521@1536078662833/Central-role-of-the-brain-in-allostasis-and-the-behavioral-and-physiological-response-to.jpg"></br>
   Figure 5: Brain as the target organ of stress
 </p>
-<ul>
-<li><strong>Allostasis</strong> is the active process that anticipates, predicts and promotes adaptation</li>
-<li><strong>Allostatic load</strong> : The same mediators that allow use to adapt also cause damage when overuse or out of balance.</li>
-</ul>
+
+- **Allostasis** is the active process that anticipates, predicts and promotes adaptation
+- **Allostatic load** : The same mediators that allow use to adapt also cause damage when overuse or out of balance.
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://qphs.fs.quoracdn.net/main-qimg-304effc91c3bd0c1bc68e1db0d86e724"></br>
   Figure 6: Concept of allostatic load
 </p>
-<ul>
-<li>Acute release of cortisol is helpful - stage 1</li>
-<li>Chronic release of cortical is unhelpful - stage 3</li>
-<li>More than cortisol / non-linear processes</li>
-<li>Re-modelling of architecture</li>
-</ul>
+
+- Acute release of cortisol is helpful - stage 1
+- Chronic release of cortical is unhelpful - stage 3
+- More than cortisol / non-linear processes
+- Re-modelling of architecture
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.child-encyclopedia.com/sites/default/files/images/contenu/Figure-1-Non-linear-network-of-mediators-in-the-stress-response.png"></br>
   Figure 7: Non-linear nature of downstream stress effects
 </p>
-<h3 id="coping">Coping <a class="heading-anchor-permalink" href="#coping">#</a></h3>
-<ul>
-<li>Coping may be thought of as environmental or cognitive tactics designed to attenuate the stress response.</li>
-<li>Adaptive coping strategies reduce stress while at the same time promoting long-term health (e.g., exercise, relaxation, proper nutrition, seeking support).</li>
-<li>Maladaptive coping strategies, on the other hand, do indeed reduce stress in the short term but serve to erode health in the long term (alcohol/drug abuse, cigarette smoking, interpersonal withdrawal).</li>
-<li>When coping is successful, extraordinary target organ activation is reduced or eliminated and homeostasis is reestablished.</li>
-</ul>
-<h1 id="%E2%9C%A8impact-on-hcw">✨Impact on HCW <a class="heading-anchor-permalink" href="#%E2%9C%A8impact-on-hcw">#</a></h1>
-<h2 id="indian-data">Indian Data <a class="heading-anchor-permalink" href="#indian-data">#</a></h2>
-<p><a href="https://www.indianjpsychiatry.org/text.asp?2021/63/3/222/318709"> Indian J Psychiatry 2021;63:222-7</a> Access date 18/06/21</p>
-<p><strong>CAVEAT</strong>: Data from this survey is limited due to being Open ended survey and therefore lack of being able to calculate response rate. A sample size of only 303, considering that the survey was shared with various hospitals across India. Generalizability of the findings to general HCW population may be limited.</p>
-<ul>
-<li>online survey using Survey Monkey® platform</li>
-<li>PHQ-9, GAD-7 and a self designed questionnaire</li>
-<li>303 participants with a mean age of 41.2</li>
-<li>69% male</li>
-<li>79.9% married</li>
-<li>46.2% of the participants had either anxiety disorder or depression</li>
-<li>Higher level of anxiety and depression scores were associated with being
-<ul>
-<li>female</li>
-<li>having undergone quarantine</li>
-<li>directly involved in the care of COVID-19 patients</li>
-<li>younger age (&lt;30 years)</li>
-</ul>
-</li>
-</ul>
-<h1 id="impact-on-covid-19-positive-patients-and-quarantined-individuals">Impact on COVID-19 positive patients and quarantined individuals <a class="heading-anchor-permalink" href="#impact-on-covid-19-positive-patients-and-quarantined-individuals">#</a></h1>
-<h2 id="stigma">Stigma <a class="heading-anchor-permalink" href="#stigma">#</a></h2>
-<h3 id="immediate-effects">Immediate effects <a class="heading-anchor-permalink" href="#immediate-effects">#</a></h3>
-<ul>
-<li>Delay in seeking care</li>
-<li>Hiding of important information like travel history</li>
-<li>Increased risk of community transmission</li>
-<li>Attacks on informers
-<ul>
-<li>Bihar man beaten to death for informing arrival of 2 people from Maharashtra [TOI 31 March 2020]</li>
-</ul>
-</li>
-</ul>
-<h3 id="delayed-effects">Delayed effects <a class="heading-anchor-permalink" href="#delayed-effects">#</a></h3>
-<ul>
-<li>May continue even years after exposure</li>
-<li>Making it difficult for many to restart</li>
-<li>Stoke fears of discrimination and marginalization</li>
-</ul>
-<h2 id="home-quarantined-patient">Home quarantined patient <a class="heading-anchor-permalink" href="#home-quarantined-patient">#</a></h2>
-<ul>
-<li>Inadequate of confusing information can lead to confusion and anxiety</li>
-<li>Fear of infection or infecting others</li>
-<li>Minor physical symptoms may be mis-interpreted as symptoms of illness</li>
-<li>Frustration and Boredom</li>
-<li>Financial Loss</li>
-<li>Unavailability of supplies</li>
-</ul>
-<h2 id="hospital-quarantined-patient">Hospital quarantined patient <a class="heading-anchor-permalink" href="#hospital-quarantined-patient">#</a></h2>
-<h3 id="psychosocial-factors-predicting-hospitalization">Psychosocial factors predicting hospitalization <a class="heading-anchor-permalink" href="#psychosocial-factors-predicting-hospitalization">#</a></h3>
-<ul>
-<li><strong>Batty et al. <a href="https://www.sciencedirect.com/science/article/pii/S088915912031309X">Brain, Behavior, and Immunity 2020</a></strong>
-<ul>
-<li>Sample taken from UK Biobank [ a large-scale community-based cohort]</li>
-<li>908 hospitalizations for COVID-19 out of 431,051 study members</li>
-<li>several factors found to be associated with risk of admission
-<ul>
-<li>low education</li>
-<li>low income</li>
-<li>occupation</li>
-<li><strong>psychological distress</strong></li>
-<li><strong>past psychiatric history</strong></li>
-<li><strong>neurotic personality traits</strong></li>
-<li><strong>low cognitive performance</strong> [<strong>Most Robust association</strong>]</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="isolation-in-a-hospital-leads-to">Isolation in a hospital leads to <a class="heading-anchor-permalink" href="#isolation-in-a-hospital-leads-to">#</a></h3>
-<ul>
-<li>Loss of personal freedom</li>
-<li>Loss of control</li>
-<li>Loss of social contact / alienation</li>
-<li>Exposure to unfamiliar environment</li>
-<li>Loss of daily routine</li>
-<li>Dependence on others</li>
-<li>Exposure to an uncertain situation</li>
-</ul>
+
+### Coping
+- Coping may be thought of as environmental or cognitive tactics designed to attenuate the stress response.
+- Adaptive coping strategies reduce stress while at the same time promoting long-term health (e.g., exercise, relaxation, proper nutrition, seeking support).
+- Maladaptive coping strategies, on the other hand, do indeed reduce stress in the short term but serve to erode health in the long term (alcohol/drug abuse, cigarette smoking, interpersonal withdrawal).
+- When coping is successful, extraordinary target organ activation is reduced or eliminated and homeostasis is reestablished.
+
+# ✨Impact on HCW
+
+## Indian Data
+[ Indian J Psychiatry 2021;63:222-7](https://www.indianjpsychiatry.org/text.asp?2021/63/3/222/318709) Access date 18/06/21
+
+**CAVEAT**: Data from this survey is limited due to being Open ended survey and therefore lack of being able to calculate response rate. A sample size of only 303, considering that the survey was shared with various hospitals across India. Generalizability of the findings to general HCW population may be limited.
+
+- online survey using Survey Monkey® platform
+- PHQ-9, GAD-7 and a self designed questionnaire
+- 303 participants with a mean age of 41.2
+- 69% male
+- 79.9% married
+- 46.2% of the participants had either anxiety disorder or depression
+- Higher level of anxiety and depression scores were associated with being
+    - female
+    - having undergone quarantine
+    - directly involved in the care of COVID-19 patients
+    - younger age (<30 years)
+
+# Impact on COVID-19 positive patients and quarantined individuals
+
+## Stigma
+
+### Immediate effects
+- Delay in seeking care
+- Hiding of important information like travel history
+- Increased risk of community transmission
+- Attacks on informers
+	- Bihar man beaten to death for informing arrival of 2 people from Maharashtra [TOI 31 March 2020]
+
+### Delayed effects
+- May continue even years after exposure
+- Making it difficult for many to restart
+- Stoke fears of discrimination and marginalization
+
+## Home quarantined patient
+- Inadequate of confusing information can lead to confusion and anxiety
+- Fear of infection or infecting others
+- Minor physical symptoms may be mis-interpreted as symptoms of illness
+- Frustration and Boredom
+- Financial Loss
+- Unavailability of supplies
+
+## Hospital quarantined patient
+
+### Psychosocial factors predicting hospitalization
+
+- **Batty et al. [Brain, Behavior, and Immunity 2020](https://www.sciencedirect.com/science/article/pii/S088915912031309X)**
+	- Sample taken from UK Biobank [ a large-scale community-based cohort]
+	- 908 hospitalizations for COVID-19 out of 431,051 study members
+	- several factors found to be associated with risk of admission
+		- low education
+		- low income
+		- occupation
+		- **psychological distress**
+		- **past psychiatric history**
+		- **neurotic personality traits**
+		- **low cognitive performance** [**Most Robust association**]
+
+### Isolation in a hospital leads to
+
+- Loss of personal freedom
+- Loss of control
+- Loss of social contact / alienation
+- Exposure to unfamiliar environment
+- Loss of daily routine
+- Dependence on others
+- Exposure to an uncertain situation
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://ars.els-cdn.com/content/image/1-s2.0-S0304394020307618-gr1.jpg"></br>
   Figure 8: Various mechanisms by which COVID can cause neuropsychiatric effects
 </p>
-<h3 id="new-onset-mental-health-problems">New onset mental health problems <a class="heading-anchor-permalink" href="#new-onset-mental-health-problems">#</a></h3>
-<h4 id="expected-emotions">Expected emotions <a class="heading-anchor-permalink" href="#expected-emotions">#</a></h4>
-<ul>
-<li><strong>Hao et al. <a href="https://www.nature.com/articles/s41398-020-01039-2">Translational Psychiatry 2020</a></strong>
-<ul>
-<li>emotions experienced by patients after hospitalization for COVID-19</li>
-<li>shock, fear, despair, and Boredom</li>
-<li>external factors that affected patients’ mood
-<ul>
-<li>discrimination</li>
-<li>medical expenses</li>
-<li><strong>care by healthcare workers</strong></li>
-</ul>
-</li>
-<li>can also have anger and frustration</li>
-<li>not a diagnosable mental disorder, but need to be identified and managed</li>
-</ul>
-</li>
-</ul>
-<h4 id="anxiety-and-depression">Anxiety and Depression <a class="heading-anchor-permalink" href="#anxiety-and-depression">#</a></h4>
-<ul>
-<li>Health related anxiety - especially initially due to uncertainty of outcome and stigma.</li>
-<li>Panic attacks</li>
-<li>Acute stress disorder</li>
-<li>Depression</li>
-<li>End-of-Life crises
-<ul>
-<li>fear of death</li>
-<li>“Have I done my duties well”</li>
-<li>guilt</li>
-</ul>
-</li>
-<li><strong>Kong et al. Preprint <a href="https://www.medrxiv.org/content/medrxiv/early/2020/04/05/2020.03.24.20043075.full.pdf">medRxiv 2020</a></strong>
-<ul>
-<li>144 patients with COVID-19, China</li>
-<li>HADS - anx / dep
-<ul>
-<li>PSSS - perceived social support</li>
-<li>34.7% - anxiety</li>
-<li>28.5% - depression</li>
-<li>MLR
-<ul>
-<li>gender, age, low O2Sat, <em>poor social support</em> -&gt; anxiety</li>
-<li>age, infection of family member and <em>poor social support</em> -&gt; depression</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="insomnia">Insomnia <a class="heading-anchor-permalink" href="#insomnia">#</a></h4>
-<ul>
-<li><strong>Deng et al. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7675607/">Ann N Y Acad Sci. 2020</a></strong>
-<ul>
-<li>meta-analysis of prevalence of depression, anxiety and sleep disturbances in COVID-19 patients</li>
-<li>31 studied / n=5153</li>
-<li>pooled prev. depression 45%</li>
-<li>pooled prev. anxiety 47%</li>
-<li>pooled prev. sleep disturbance 34%</li>
-</ul>
-</li>
-</ul>
-<h4 id="substance-withdrawal">Substance withdrawal <a class="heading-anchor-permalink" href="#substance-withdrawal">#</a></h4>
-<ul>
-<li>mainly alcohol withdrawal</li>
-</ul>
-<h4 id="delirium">Delirium <a class="heading-anchor-permalink" href="#delirium">#</a></h4>
-<ul>
-<li><strong>Woolley <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle">Geriatric Nursing 2021</a>, Hawkins et al. <a href="https://www.sciencedirect.com/science/article/pii/S0022399920309120">Journal of Psychosomatic Research 2021</a></strong></li>
-<li>Specific rfs for covid delirium
-<ul>
-<li>age &gt; 75 years</li>
-<li>nursing home resident</li>
-<li>prior psychoactive medication</li>
-<li>vision impaired</li>
-<li>hearing impaired</li>
-<li>stroke</li>
-<li>parkinsonism</li>
-</ul>
-</li>
-<li>Causes - intrinsic
-<ul>
-<li>virus - neuroinflammation</li>
-</ul>
-</li>
-<li>Causes - extrinsic
-<ul>
-<li>isolation (physical and psychological)</li>
-<li>medications
-<ul>
-<li>steroids</li>
-<li>sedation for ventilation</li>
-<li>hypothetical association with prone positioning</li>
-</ul>
-</li>
-<li>Length of stay</li>
-</ul>
-</li>
-<li>Incidence
-<ul>
-<li>more then 70% patients with severe disease</li>
-</ul>
-</li>
-</ul>
-<h4 id="psychosis">Psychosis <a class="heading-anchor-permalink" href="#psychosis">#</a></h4>
-<ul>
-<li><strong>Lee et al. <a href="https://academic.oup.com/cid/article/39/8/1247/297366?login=true">Clinical Infectious Diseases 2004.</a></strong>
-<ul>
-<li>15/1744 patients developed Psychosis (0.9%) during SARS outbreak</li>
-<li>Diagnoses
-<ul>
-<li>Steroid-Induced Manic Episode (n = 10)</li>
-<li>Steroid-Induced Psychotic Disorder (n = 3)</li>
-<li>Major Depressive Episode with Psychotic Features (n = 1)</li>
-<li>Psychotic Disorder Not Otherwise Specified (n = 1)</li>
-</ul>
-</li>
-<li>Associated factors
-<ul>
-<li>received higher total doses of steroids</li>
-<li>had family h/o psych illness</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="drugs-which-can-have-neuropsychiatric-effects">Drugs which can have neuropsychiatric effects <a class="heading-anchor-permalink" href="#drugs-which-can-have-neuropsychiatric-effects">#</a></h4>
-<ul>
-<li>Quinolones</li>
-<li>Polymyxin</li>
-<li>Ceftriaxone</li>
-<li>Azithromycin</li>
-<li>Linezolid</li>
-<li>Vancomycin</li>
-<li>Piperacillin/Tazobactam</li>
-<li>Carbapenems</li>
-<li>Anti-viral</li>
-<li>Fluconazole</li>
-<li>Steroids</li>
-</ul>
-<h4 id="qualitative-data">Qualitative data <a class="heading-anchor-permalink" href="#qualitative-data">#</a></h4>
-<ul>
-<li><strong>Sun et al. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/">J Affect Disord. 2021</a></strong>
-<ul>
-<li>China</li>
-<li>psychological experience of 15 COVID-19 patients during hospitalization could be summarized into five themes
-<ul>
-<li>fear, denial, and stigma during the early stages, which gradually developed into acceptance in the later stages</li>
-<li>major source of stress included the viral nature of the disease, quarantine measures, and concerns regarding the health of family members</li>
-<li>reactions of body and mind included disease stage-dependent emotional responses, excessive attention to symptoms, rumination, and changes in diet, sleep, and behavior</li>
-<li>supportive factors included psychological adjustments, medical care, and family and social support</li>
-<li>disease resulted in psychological growth and patients viewed problems with gratitude through the cherishing of life, family, bravery, and tenacity.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="data-from-our-center-(2020)">Data from our center (2020) <a class="heading-anchor-permalink" href="#data-from-our-center-(2020)">#</a></h4>
-<ul>
-<li>New onset MH problems 17/42 (40.4%)
-<ul>
-<li>35% males, 50% females</li>
-<li>50% of confirmed patients</li>
-<li>Common diagnoses
-<ul>
-<li>Health related Anxiety</li>
-<li>Anxiety Disorder</li>
-<li>Boredom</li>
-<li>Adjustment disorder</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="exacerbation-of-pre-existing-mental-health-problems">Exacerbation of pre-existing mental health problems <a class="heading-anchor-permalink" href="#exacerbation-of-pre-existing-mental-health-problems">#</a></h3>
-<ul>
-<li>Illness exacerbation</li>
-<li>Stopping of ongoing medications</li>
-<li>Drug interactions</li>
-</ul>
-<h2 id="post-covid-19-neuropsychiatric-symptoms">Post COVID-19 neuropsychiatric symptoms <a class="heading-anchor-permalink" href="#post-covid-19-neuropsychiatric-symptoms">#</a></h2>
-<h3 id="%E2%9C%A8anxiety-and-depression">✨Anxiety and Depression <a class="heading-anchor-permalink" href="#%E2%9C%A8anxiety-and-depression">#</a></h3>
-<ul>
-<li>
-<p><strong>Mazza et al 2020. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7390748/?fbclid=IwAR2R5IqjcDMTChB7N5x5pjoiuHIMCdiDr8OgsDOiJ11Hm2IOxBsafeBqye8">Brain Behav Immun. 2020</a></strong></p>
-<ul>
-<li>Psychiatric screening 1 month after discharge</li>
-<li>402 adult COVID survivors [265 males / mean age 58y], Milan</li>
-<li>Demography</li>
-<li>Baseline inflammatory markers and follow-up oxygen saturation levels</li>
-<li>Clinical interview and a battery of self-report questionnaires for
-<ul>
-<li>Depression - 31%</li>
-<li>Anxiety - 42%</li>
-<li>Insomnia - 40%</li>
-<li>OCsymptoms - 20%</li>
-<li>PTSD - 28%</li>
-</ul>
-</li>
-<li>Overall 56% had at-least once psychopathology</li>
-<li>Female &gt; males despite lower baseline inflammatory markers</li>
-<li>Past psych h/o &gt; without past psych h/o with similar baseline markers</li>
-<li>Baseline systemic inflammation index (SII) positively  correlated with scores on depression and anxiety at follow-up</li>
-<li>WORSE INFLAMMATION LEADS TO WORSE DEPRESSION</li>
-</ul>
-</li>
-<li>
-<p>✨ <strong>Imran et al.</strong> <a href="https://www.indianjpsychiatry.org/text.asp?2021/63/3/285/318707">Indian J Psychiatry 2021;63:285-9</a></p>
-<ul>
-<li>patients discharged from the hospital after moderate-to-critical COVID-19 (UAE)</li>
-<li>interviewed using e-mail at 30 and 60 days</li>
-<li>PHQ-9, GAD-7, PCL-5</li>
-<li>103 patients</li>
-<li>96% were immigrant workers</li>
-<li>30 days
-<ul>
-<li>Anxiety 21.4%</li>
-<li>Depression 12.7%</li>
-<li>PTSD 8.7%</li>
-</ul>
-</li>
-<li>60 days
-<ul>
-<li>Anxiety 9.5%</li>
-<li>Depression 7.1%</li>
-<li>PTSD 4.7%</li>
-</ul>
-</li>
-<li>Higher anxiety in patients of Indian nationality</li>
-<li>Higher depression in patients with chronic illness</li>
-</ul>
-</li>
-<li>
-<p>✨ <strong>Perlis et al.</strong> <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2777421">JAMA Netw Open 2021;4:e213223.</a> Access date 20/06/21</p>
-<ul>
-<li>US data</li>
-<li>3904 nonoverlapping individuals reported prior COVID-19 illness and completed the survey questions used in this analysis</li>
-<li>At 4 months post-infection, 52% of COVID-19 patients met criteria for major depression</li>
-</ul>
-</li>
-<li>
-<p><strong>Taquet et al. <a href="https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1">Preprint medRxiv 2021</a></strong></p>
-<ul>
-<li>Six month neurological and psychological outcome in 236,379 of COVID-19</li>
-<li>retrospective chart review</li>
-<li>Mood/Anxiety/Psychosis - 28%</li>
-</ul>
-</li>
-</ul>
-<h3 id="other">Other <a class="heading-anchor-permalink" href="#other">#</a></h3>
-<ul>
-<li><strong>Dinakaran et al <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7261092/">Asian J Psychiatry 2020</a></strong>
-<ul>
-<li>Encephalopathy</li>
-<li>Delirium</li>
-<li>MCI</li>
-<li>Insomnia</li>
-<li>Suicide</li>
-<li>Psychosis</li>
-</ul>
-</li>
-</ul>
-<h1 id="suggested-interventions">Suggested Interventions <a class="heading-anchor-permalink" href="#suggested-interventions">#</a></h1>
-<h2 id="psychosocial-support-for-covid-inpatients">Psychosocial Support for COVID inpatients <a class="heading-anchor-permalink" href="#psychosocial-support-for-covid-inpatients">#</a></h2>
-<ol>
-<li>Validation of experiences</li>
-<li>Provide information about the infection as required and rationale for quarantine.</li>
-<li>Normalization of experience</li>
-<li>Reassurance</li>
-<li>Coping strategies
-<ul>
-<li>Empowering statements – creating hope, providing meaning</li>
-<li>Distraction</li>
-<li>Staying connected – family and faith</li>
-<li>Avoiding speculation</li>
-<li>PMR / Calming techniques</li>
-<li>Maintain routine</li>
-<li>Sleep hygiene</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>Do’s
-<ul>
-<li>Be honest</li>
-<li>Respect people’s right to make their own decisions</li>
-<li>Set aside your own biases and prejudices</li>
-<li>Make it clear to affected people that even if they refuse help now, they can still access help in the future</li>
-<li>Ensure confidentiality</li>
-<li>Provide information about COVID-19. Be honest of what you don’t know</li>
-</ul>
-</li>
-<li>Dont’s
-<ul>
-<li>Don’t make false promises or give false information</li>
-<li>Don’t force help</li>
-<li>Don’t pressure people to tell you their story</li>
-<li>Don’t judge the person for their actions or feelings</li>
-<li>Don’t talk about yourself or personal issues or troubles.</li>
-<li>Don’t philosophize, moralize, preach or impose your own religion</li>
-</ul>
-</li>
-</ul>
-<h2 id="psychopharmacology">Psychopharmacology <a class="heading-anchor-permalink" href="#psychopharmacology">#</a></h2>
-<h3 id="treatment">Treatment <a class="heading-anchor-permalink" href="#treatment">#</a></h3>
-<h4 id="challenges">Challenges <a class="heading-anchor-permalink" href="#challenges">#</a></h4>
-<ul>
-<li>Interactions with COVID-19 medications
-<ul>
-<li>Antivirals (Remdesivir, lopinavir/ritonavir)</li>
-<li>Antibiotics (Azithromycin)</li>
-<li>Immunomodulators (Steroids, interferon-B)</li>
-<li>Bronchodilators</li>
-<li>Anti-inflammatory and anti-pyretics</li>
-</ul>
-</li>
-<li>Adverse effects</li>
-<li>Co-morbid medical conditions</li>
-</ul>
-<h4 id="continuing-psychotropic-medications-of-a-patients-with-pre-existing-psychiatric-illness">Continuing psychotropic medications of a patients with pre-existing psychiatric illness <a class="heading-anchor-permalink" href="#continuing-psychotropic-medications-of-a-patients-with-pre-existing-psychiatric-illness">#</a></h4>
-<ul>
-<li>
-<p>Dhillon et al. <strong><a href="https://www.anip.co.in/text.asp?2020/4/2/226/301441">Ann Indian Psychiatry 2020.</a></strong> and Mental Health Challenges During
-COVID-19 Pandemic Guidance for Psychiatrists [NIMHANS, 2020]</p>
-</li>
-<li>
-<p>Most psychiatric illness require long-term prophylaxis of psychotropics, which may have to be continued even after remission of symptoms to prevent relapse. Precautions for commonly used psychotropic agents in the context of COVID-19 are discussed below:</p>
-</li>
-</ul>
-<h5 id="antipsychotics">Antipsychotics <a class="heading-anchor-permalink" href="#antipsychotics">#</a></h5>
-<ul>
-<li>Increase QTc [Along with other medications that can increase QTc such as Azithromycin, HCQ, antivirals]
-<ul>
-<li>Haloperidol</li>
-<li>Quetiapine</li>
-<li>Use with ECG monitoring</li>
-</ul>
-</li>
-<li>Safer alternatives are
-<ul>
-<li>Aripiprazole</li>
-<li>Olanzapine</li>
-<li>Risperidone</li>
-</ul>
-</li>
-<li>Antivirals are CYP inhibitors and hence increase the levels of haloperidol, risperidone, aripiprazole and quetiapine
-<ul>
-<li>Reduce the dosage</li>
-<li>CAUTION when using clozapine, Bupropion</li>
-</ul>
-</li>
-</ul>
-<h5 id="%E2%9C%A8-clozapine-concencus-statement-in-covid19">✨ Clozapine concencus statement in COVID19 <a class="heading-anchor-permalink" href="#%E2%9C%A8-clozapine-concencus-statement-in-covid19">#</a></h5>
-<ul>
-<li>Siskind et al <a href="http://jpn.ca/wp-content/uploads/2020/04/45-4-200061.pdf">J Psychiatr Neurosci 2020;45:222-3</a> Access date 19/06/21</li>
-<li><strong>Recommendation 1</strong>: Patients who are well maintained on Clozapine more than 1 and never had ANC less than 2000; freqency of TC, DC monitoring can be reduced to 3 months. Decisions about ANC monitoring for patients on continuous clozapine treat-ment for 6–12 months may be made on a  case-by-case  basis.</li>
-<li><strong>Recommendation 2</strong>: patients on clozapine with any symptoms of infection (including  SARS-CoV-2], such as cough, fever and chills, sore throat or other flu-like symptoms),  an  urgent  physician  assessment  including  a  complete  blood  count (with ANC) should be obtained.</li>
-<li><strong>Recommendation 3</strong>: Clozapine  levels  can  in-crease  with  acute  systemic  infection. Thus, if patients on clozapine become symptomatic with fever and  flu-like symptoms, the emergence of signs and symptoms of clozapine toxicity may require clinicians to reduce the dose of clozapine by as much as half. Continue the lower dose  until 3 days after the fever has subsided, then increase clozapine in a stepwise manner  to the pre-fever dose.</li>
-<li>Any decisions about changes to clozapine dose and monitoring should be made as part of  a well-documented, informed consultation with patients and family/caregivers.</li>
-</ul>
-<h5 id="antidepressants">Antidepressants <a class="heading-anchor-permalink" href="#antidepressants">#</a></h5>
-<ul>
-<li>Increase Qtc
-<ul>
-<li>Citalopram</li>
-<li>TCAs</li>
-<li>Mirtazapine</li>
-</ul>
-</li>
-<li>Two way interactions b/w some SSRI and Antivirals
-<ul>
-<li>Fluoxetine, fluvoxamine, paroxetine, and bupropion are CYP enzyme inhibitors -&gt; alter antiviral levels</li>
-<li>Antivirals -&gt; CYP interactions -&gt; increase SSRI levels -&gt; serotonin syndrome</li>
-<li>reduce dosage of these psychotropics</li>
-</ul>
-</li>
-<li>Safer alternatives
-<ul>
-<li>Escitalopram</li>
-<li>Sertraline</li>
-</ul>
-</li>
-</ul>
-<h5 id="mood-stabilizers">Mood stabilizers <a class="heading-anchor-permalink" href="#mood-stabilizers">#</a></h5>
-<ul>
-<li>Lithium
-<ul>
-<li>renally excreted -&gt; least interactions with antivirals</li>
-<li>but low therapeutic index - toxicity can be ppt with</li>
-<li>NSAIDs</li>
-<li>Dehydration</li>
-<li>Renal failure</li>
-<li>Hyponatremia</li>
-<li>use with caution</li>
-</ul>
-</li>
-<li>Valproate is generally safe with antivirals
-<ul>
-<li>dose adjustment may be required</li>
-</ul>
-</li>
-</ul>
-<h5 id="sedative-%2F-hypnotics">Sedative / Hypnotics <a class="heading-anchor-permalink" href="#sedative-%2F-hypnotics">#</a></h5>
-<ul>
-<li>Risk of respiratory depression</li>
-<li>longer acting benzodiazepines like diazepam or clonazepam may be avoided.</li>
-<li>Lorazepam is preferred as it has the least interaction with antiviral drugs and shorter acting.</li>
-</ul>
-<h4 id="acute-onset-behavioral-symptoms-in-those-receiving-treatment%2Fprophylaxis-for-covid-19">Acute onset behavioral symptoms in those receiving treatment/prophylaxis for COVID-19 <a class="heading-anchor-permalink" href="#acute-onset-behavioral-symptoms-in-those-receiving-treatment%2Fprophylaxis-for-covid-19">#</a></h4>
-<h5 id="delirium-2">Delirium <a class="heading-anchor-permalink" href="#delirium-2">#</a></h5>
-<ul>
-<li>
-<p>Woolley <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle">Geriatric Nursing 2021</a>, Dhillon et al. <strong><a href="https://www.anip.co.in/text.asp?2020/4/2/226/301441">Ann Indian Psychiatry 2020</a></strong></p>
-</li>
-<li>
-<p>Sleep cycle</p>
-<ol>
-<li>Melatonin</li>
-</ol>
-<ul>
-<li>melatonin 3mg PO (per oral) QHS (at hour of sleep)</li>
-<li>useful in prevention of delirium</li>
-<li>also has immunomodulatory property</li>
-</ul>
-<ol start="2">
-<li>Trazodone can also be used for sleep regulation as monotherapy</li>
-<li>Benzodiazepines</li>
-</ol>
-<ul>
-<li>Should be avoided except in cases of delirium tremens</li>
-<li>Risk of respiratory depression</li>
-</ul>
-</li>
-<li>
-<p>Agitation/Disruptive behaviors</p>
-<p>A. Verbal de-escalation</p>
-<ol>
-<li>How to approach?
-<ul>
-<li>ensure privacy</li>
-<li>ensure personal safety</li>
-<li>approach as a team</li>
-</ul>
-</li>
-<li>What to say?
-<ul>
-<li>stay calm and listen</li>
-<li>talk in soft and firm tone</li>
-<li>do not provocate</li>
-<li>do not judge</li>
-<li>try to understand the concern</li>
-<li>offer valid solutions</li>
-</ul>
-</li>
-</ol>
-<p>B. Chemical restraint</p>
-<ol>
-<li>Haloperidol
-<ul>
-<li>a dose of 2.5–5 mg can be used orally or intramuscularly.</li>
-<li>Monitor QTc when used along with other QTc prolonging meds or when given IV</li>
-<li>IV dose of haloperidol is <strong>2-4 times less</strong> that oral or IM because first pass metabolism is being by-passed</li>
-<li>maximum daily dose of IM/oral haloperidol to less than or equal to 15 mg/day. [lesser in elderly]</li>
-<li>wait for at least 45 minutes before repeat dose</li>
-</ul>
-</li>
-<li>Olanzapine, 2.5-5mg QHS or Risperidone, can also be given orally</li>
-<li>Quetiapine (25–50 mg) can be given orally, especially in pt with FTD, DLB or movement disorder, due to lower risk of EPSE.</li>
-<li>In the ICU setting - Dexmedetomidine is an alpha-2 agonist and reduces the release of noradrenaline and helps curtailing restlessness.</li>
-<li>In the ward setting, Clonidine can also be used for the same reason. Clonidine 0.1mg BD or TID. It can also be used as a skin patch.</li>
-<li>Valproic acid can be considered as an adjunctive agent for hyperactive or mixed-type delirium, particularly for those with prolonged QT, those with severe movement disorder concerns, or those who experience side effects of anti-psychotics such as akathisia.</li>
-<li>In extreme cases not responding to the above measures, only short-acting low-dose oral benzodiazepines (e.g., lorazepam 1 to 2 mg) may be considered with close monitoring for respiratory distress and respiratory failure.</li>
-</ol>
-<p>C. Mechanical restraint
-Mechanical restraint should be used for minimum possible time, till chemical restraints start working.</p>
-</li>
-</ul>
-<h5 id="psychosis-%2F-mania">Psychosis / Mania <a class="heading-anchor-permalink" href="#psychosis-%2F-mania">#</a></h5>
-<ul>
-<li>Standard antimanic/antipsychotic treatment like risperidone or olanzapine can be given, mindful of the drug interactions.</li>
-<li>Mood stabilizers can also prescribed in patients with bipolar disorder based on clinical need, with the precautions.</li>
-<li>Catatonic symptoms can be treated with intravenous/oral lorazepam. But, use with caution due to risk of respiratory suppression.</li>
-<li>Parenteral haloperidol 5-10mg can be used alone or in combination with promethazine (only through intramuscular route) in severe states of agitation as a chemical restraint.</li>
-</ul>
-<h5 id="depression%2C-anxiety-and-insomnia">Depression, Anxiety and Insomnia <a class="heading-anchor-permalink" href="#depression%2C-anxiety-and-insomnia">#</a></h5>
-<ul>
-<li>Escitalopram</li>
-<li>Sertraline</li>
-<li>Caution for Hyponatremia in the elderly</li>
-<li>Low dose benzodiazepine preferably a short acting drug like lorazepam orally or parenterally can be helpful in acute management.</li>
-<li>Zolpidem (2.5-5mg) is relatively safer in terms of respiratory functioning.</li>
-</ul>
-<h3 id="%E2%9C%A8-grief-management-in-covid-19">✨ Grief management in COVID-19 <a class="heading-anchor-permalink" href="#%E2%9C%A8-grief-management-in-covid-19">#</a></h3>
-<p><a href="https://www.indianjpsychiatry.org/text.asp?2021/63/3/211/318728">Indian J Psychiatry 2021;63:211</a> Access date 18/06/21</p>
-<ul>
-<li><strong>Grief</strong>: The perception of death followed by the gradual “sinking in” of its consequences leads to psychobiological reaction.</li>
-<li>Unmanaged grief can have serious consequences.</li>
-<li><strong>Death rituals</strong> have a therapeutic function wherein they allow a family and a group to mourn in a ritualistic way. This allows people to share grief and keep the deceased as focus of attention for a fixed time and then to move on with life.</li>
-<li>Sometimes, this process is hampered by what Kenneth Doka called <strong>“disenfranchised grief”</strong>.</li>
-<li>COVID-19 has unexpectedly disturbed the process of death rituals as it leads to:
-<ol>
-<li>Unexpected or sudden loss</li>
-<li>Depletion of emotional and coping resources</li>
-<li>Limitation in visiting and end of care support</li>
-<li>Not able to perform last rituals</li>
-<li>Lack of social support due to COVID restrictions</li>
-</ol>
-</li>
-<li>The mechanical and impersonal process has led to severe psychological trauma in the survivors. <strong>So, what should be the model of care for these people?</strong>
-<ol>
-<li>We should try to increase the sharing of grief and the handling of the person should be allowed to take place</li>
-<li>The physical support and the economical support have to be arranged, particularly where both parents have died</li>
-<li>There are some common modes like “condolence meetings” or “smaran sabha” (may be in online mode) which should be attended by both family members and colleagues.</li>
-</ol>
-</li>
-</ul>
-<h3 id="does-psychiatry-have-anything-to-offer-in-terms-of-covid-19-management-per-se%3F">Does psychiatry have anything to offer in terms of COVID-19 management per se? <a class="heading-anchor-permalink" href="#does-psychiatry-have-anything-to-offer-in-terms-of-covid-19-management-per-se%3F">#</a></h3>
-<h4 id="hamed-et-al-medical-hypothesis-2020%2C-pashaei-j-clin-neuroscience-2021.">Hamed et al <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7382922/">Medical Hypothesis 2020</a>, Pashaei <a href="https://www.sciencedirect.com/science/article/pii/S096758682100120X">J Clin Neuroscience 2021</a>. <a class="heading-anchor-permalink" href="#hamed-et-al-medical-hypothesis-2020%2C-pashaei-j-clin-neuroscience-2021.">#</a></h4>
-<ul>
-<li>Inflammatory cytokines -&gt; organ damage</li>
-<li>5-HT has been found to regulate innate and adaptive immune responses</li>
-<li>Increase cytokine levels -&gt; reduce serotonin -&gt; by increasing metabolism of tryptophan through IDO activation</li>
-</ul>
+
+### New onset mental health problems
+#### Expected emotions
+
+- **Hao et al. [Translational Psychiatry 2020](https://www.nature.com/articles/s41398-020-01039-2)**
+  - emotions experienced by patients after hospitalization for COVID-19
+  - shock, fear, despair, and Boredom
+  - external factors that affected patients’ mood
+    - discrimination
+    - medical expenses
+    - **care by healthcare workers**
+  - can also have anger and frustration
+  - not a diagnosable mental disorder, but need to be identified and managed
+
+#### Anxiety and Depression
+
+- Health related anxiety - especially initially due to uncertainty of outcome and stigma.
+- Panic attacks
+- Acute stress disorder
+- Depression
+- End-of-Life crises
+	- fear of death
+	- "Have I done my duties well"
+	- guilt
+- **Kong et al. Preprint [medRxiv 2020](https://www.medrxiv.org/content/medrxiv/early/2020/04/05/2020.03.24.20043075.full.pdf)**
+  - 144 patients with COVID-19, China
+  - HADS - anx / dep
+	- PSSS - perceived social support
+	- 34.7% - anxiety
+	- 28.5% - depression
+	- MLR
+		- gender, age, low O2Sat, *poor social support* -> anxiety
+		- age, infection of family member and *poor social support* -> depression
+
+#### Insomnia
+
+  - **Deng et al. [Ann N Y Acad Sci. 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7675607/)**
+	- meta-analysis of prevalence of depression, anxiety and sleep disturbances in COVID-19 patients
+	- 31 studied / n=5153
+	- pooled prev. depression 45%
+	- pooled prev. anxiety 47%
+	- pooled prev. sleep disturbance 34%
+
+#### Substance withdrawal
+
+- mainly alcohol withdrawal
+
+#### Delirium
+
+- **Woolley [Geriatric Nursing 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle), Hawkins et al. [Journal of Psychosomatic Research 2021](https://www.sciencedirect.com/science/article/pii/S0022399920309120)**
+- Specific rfs for covid delirium
+	- age > 75 years
+  - nursing home resident
+  - prior psychoactive medication
+  - vision impaired
+  - hearing impaired
+  - stroke
+  - parkinsonism
+- Causes - intrinsic
+	- virus - neuroinflammation
+- Causes - extrinsic
+	-  isolation (physical and psychological)
+  -  medications
+  		- steroids
+    	- sedation for ventilation
+    	- hypothetical association with prone positioning
+	- Length of stay
+- Incidence
+	- more then 70% patients with severe disease
+
+#### Psychosis
+
+- **Lee et al. [Clinical Infectious Diseases 2004.](https://academic.oup.com/cid/article/39/8/1247/297366?login=true)**
+	- 15/1744 patients developed Psychosis (0.9%) during SARS outbreak
+	- Diagnoses
+		- Steroid-Induced Manic Episode (n = 10)
+		- Steroid-Induced Psychotic Disorder (n = 3)
+		- Major Depressive Episode with Psychotic Features (n = 1)
+		- Psychotic Disorder Not Otherwise Specified (n = 1)
+	- Associated factors
+		- received higher total doses of steroids
+		- had family h/o psych illness
+
+#### Drugs which can have neuropsychiatric effects
+
+- Quinolones
+- Polymyxin
+- Ceftriaxone
+- Azithromycin
+- Linezolid
+- Vancomycin
+- Piperacillin/Tazobactam
+- Carbapenems
+- Anti-viral
+- Fluconazole
+- Steroids
+
+#### Qualitative data
+
+- **Sun et al. [J Affect Disord. 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/)**
+  - China
+  - psychological experience of 15 COVID-19 patients during hospitalization could be summarized into five themes
+    * fear, denial, and stigma during the early stages, which gradually developed into acceptance in the later stages
+    * major source of stress included the viral nature of the disease, quarantine measures, and concerns regarding the health of family members
+    * reactions of body and mind included disease stage-dependent emotional responses, excessive attention to symptoms, rumination, and changes in diet, sleep, and behavior
+    * supportive factors included psychological adjustments, medical care, and family and social support
+    * disease resulted in psychological growth and patients viewed problems with gratitude through the cherishing of life, family, bravery, and tenacity.
+
+#### Data from our center (2020)
+
+- New onset MH problems 17/42 (40.4%)
+	- 35% males, 50% females
+	- 50% of confirmed patients
+	- Common diagnoses
+		- Health related Anxiety
+		- Anxiety Disorder
+		- Boredom
+		- Adjustment disorder
+
+### Exacerbation of pre-existing mental health problems
+
+- Illness exacerbation
+- Stopping of ongoing medications
+- Drug interactions
+
+## Post COVID-19 neuropsychiatric symptoms
+
+### ✨Anxiety and Depression
+
+- **Mazza et al 2020. [Brain Behav Immun. 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7390748/?fbclid=IwAR2R5IqjcDMTChB7N5x5pjoiuHIMCdiDr8OgsDOiJ11Hm2IOxBsafeBqye8)**
+
+	- Psychiatric screening 1 month after discharge
+	- 402 adult COVID survivors [265 males / mean age 58y], Milan
+	- Demography
+	- Baseline inflammatory markers and follow-up oxygen saturation levels
+	- Clinical interview and a battery of self-report questionnaires for
+		- Depression - 31%
+		- Anxiety - 42%
+		- Insomnia - 40%
+		- OCsymptoms - 20%
+		- PTSD - 28%
+	- Overall 56% had at-least once psychopathology
+	- Female > males despite lower baseline inflammatory markers
+	- Past psych h/o > without past psych h/o with similar baseline markers
+	- Baseline systemic inflammation index (SII) positively  correlated with scores on depression and anxiety at follow-up
+	- WORSE INFLAMMATION LEADS TO WORSE DEPRESSION
+
+- ✨ **Imran et al.** [Indian J Psychiatry 2021;63:285-9](https://www.indianjpsychiatry.org/text.asp?2021/63/3/285/318707)
+  - patients discharged from the hospital after moderate-to-critical COVID-19 (UAE)
+  - interviewed using e-mail at 30 and 60 days
+  - PHQ-9, GAD-7, PCL-5
+  - 103 patients
+  - 96% were immigrant workers
+  - 30 days
+    - Anxiety 21.4%
+    - Depression 12.7%
+    - PTSD 8.7%
+  - 60 days
+    - Anxiety 9.5%
+    - Depression 7.1%
+    - PTSD 4.7%
+  - Higher anxiety in patients of Indian nationality
+  - Higher depression in patients with chronic illness
+
+- ✨ **Perlis et al.** [JAMA Netw Open 2021;4:e213223.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2777421) Access date 20/06/21
+  - US data
+  - 3904 nonoverlapping individuals reported prior COVID-19 illness and completed the survey questions used in this analysis
+  - At 4 months post-infection, 52% of COVID-19 patients met criteria for major depression
+
+- **Taquet et al. [Preprint medRxiv 2021](https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1)**
+	- Six month neurological and psychological outcome in 236,379 of COVID-19
+	- retrospective chart review
+	- Mood/Anxiety/Psychosis - 28%
+
+
+
+### Other
+- **Dinakaran et al [Asian J Psychiatry 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7261092/)**
+  - Encephalopathy
+  - Delirium
+  - MCI
+  - Insomnia
+  - Suicide
+  - Psychosis
+
+# Suggested Interventions
+
+## Psychosocial Support for COVID inpatients
+1. Validation of experiences
+2. Provide information about the infection as required and rationale for quarantine.
+3. Normalization of experience
+4. Reassurance
+5. Coping strategies
+	- Empowering statements – creating hope, providing meaning
+	- Distraction
+	- Staying connected – family and faith
+	- Avoiding speculation
+	- PMR / Calming techniques
+	- Maintain routine
+	- Sleep hygiene
+- Do's
+  - Be honest
+  - Respect people’s right to make their own decisions
+  - Set aside your own biases and prejudices
+  - Make it clear to affected people that even if they refuse help now, they can still access help in the future
+  - Ensure confidentiality
+  - Provide information about COVID-19. Be honest of what you don’t know
+- Dont's
+  - Don’t make false promises or give false information
+  - Don’t force help
+  - Don’t pressure people to tell you their story
+  - Don’t judge the person for their actions or feelings
+  - Don’t talk about yourself or personal issues or troubles.
+  - Don't philosophize, moralize, preach or impose your own religion
+
+## Psychopharmacology
+
+### Treatment
+
+#### Challenges
+- Interactions with COVID-19 medications
+  - Antivirals (Remdesivir, lopinavir/ritonavir)
+  - Antibiotics (Azithromycin)
+  - Immunomodulators (Steroids, interferon-B)
+  - Bronchodilators
+  - Anti-inflammatory and anti-pyretics
+- Adverse effects
+- Co-morbid medical conditions
+
+#### Continuing psychotropic medications of a patients with pre-existing psychiatric illness
+
+- Dhillon et al. **[Ann Indian Psychiatry 2020.](https://www.anip.co.in/text.asp?2020/4/2/226/301441)** and Mental Health Challenges During
+COVID-19 Pandemic Guidance for Psychiatrists [NIMHANS, 2020]
+
+- Most psychiatric illness require long-term prophylaxis of psychotropics, which may have to be continued even after remission of symptoms to prevent relapse. Precautions for commonly used psychotropic agents in the context of COVID-19 are discussed below:
+
+##### Antipsychotics
+
+- Increase QTc [Along with other medications that can increase QTc such as Azithromycin, HCQ, antivirals]
+  - Haloperidol
+  - Quetiapine
+  - Use with ECG monitoring
+- Safer alternatives are
+  - Aripiprazole
+  - Olanzapine
+  - Risperidone
+- Antivirals are CYP inhibitors and hence increase the levels of haloperidol, risperidone, aripiprazole and quetiapine
+  - Reduce the dosage
+  - CAUTION when using clozapine, Bupropion
+
+##### ✨ Clozapine concencus statement in COVID19
+
+- Siskind et al [J Psychiatr Neurosci 2020;45:222-3](http://jpn.ca/wp-content/uploads/2020/04/45-4-200061.pdf) Access date 19/06/21
+- **Recommendation 1**: Patients who are well maintained on Clozapine more than 1 and never had ANC less than 2000; freqency of TC, DC monitoring can be reduced to 3 months. Decisions about ANC monitoring for patients on continuous clozapine treat-ment for 6–12 months may be made on a  case-by-case  basis.
+- **Recommendation 2**: patients on clozapine with any symptoms of infection (including  SARS-CoV-2], such as cough, fever and chills, sore throat or other flu-like symptoms),  an  urgent  physician  assessment  including  a  complete  blood  count (with ANC) should be obtained.
+- **Recommendation 3**: Clozapine  levels  can  in-crease  with  acute  systemic  infection. Thus, if patients on clozapine become symptomatic with fever and  flu-like symptoms, the emergence of signs and symptoms of clozapine toxicity may require clinicians to reduce the dose of clozapine by as much as half. Continue the lower dose  until 3 days after the fever has subsided, then increase clozapine in a stepwise manner  to the pre-fever dose.
+- Any decisions about changes to clozapine dose and monitoring should be made as part of  a well-documented, informed consultation with patients and family/caregivers.
+
+##### Antidepressants
+
+- Increase Qtc
+  - Citalopram
+  -  TCAs
+  - Mirtazapine
+- Two way interactions b/w some SSRI and Antivirals
+	- Fluoxetine, fluvoxamine, paroxetine, and bupropion are CYP enzyme inhibitors -> alter antiviral levels
+	- Antivirals -> CYP interactions -> increase SSRI levels -> serotonin syndrome
+	- reduce dosage of these psychotropics
+- Safer alternatives
+	- Escitalopram
+	- Sertraline
+
+##### Mood stabilizers
+
+- Lithium
+	- renally excreted -> least interactions with antivirals
+	- but low therapeutic index - toxicity can be ppt with
+  	- NSAIDs
+  	- Dehydration
+  	- Renal failure
+  	- Hyponatremia
+  	- use with caution
+- Valproate is generally safe with antivirals
+  - dose adjustment may be required
+
+##### Sedative / Hypnotics
+
+- Risk of respiratory depression
+- longer acting benzodiazepines like diazepam or clonazepam may be avoided.
+- Lorazepam is preferred as it has the least interaction with antiviral drugs and shorter acting.
+
+#### Acute onset behavioral symptoms in those receiving treatment/prophylaxis for COVID-19
+
+##### Delirium
+- Woolley [Geriatric Nursing 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8079024/#__ffn_sectitle), Dhillon et al. **[Ann Indian Psychiatry 2020](https://www.anip.co.in/text.asp?2020/4/2/226/301441)**
+
+- Sleep cycle
+  1. Melatonin
+   - melatonin 3mg PO (per oral) QHS (at hour of sleep)
+   - useful in prevention of delirium
+   - also has immunomodulatory property
+  2. Trazodone can also be used for sleep regulation as monotherapy
+  3. Benzodiazepines
+   - Should be avoided except in cases of delirium tremens
+   - Risk of respiratory depression
+
+- Agitation/Disruptive behaviors
+
+  A. Verbal de-escalation
+    1. How to approach?
+        - ensure privacy
+        - ensure personal safety
+        - approach as a team
+    2. What to say?
+        - stay calm and listen
+        - talk in soft and firm tone
+        - do not provocate
+        - do not judge
+        - try to understand the concern
+        - offer valid solutions
+
+  B. Chemical restraint
+    1. Haloperidol
+       - a dose of 2.5–5 mg can be used orally or intramuscularly.
+       - Monitor QTc when used along with other QTc prolonging meds or when given IV
+       - IV dose of haloperidol is **2-4 times less** that oral or IM because first pass metabolism is being by-passed
+       - maximum daily dose of IM/oral haloperidol to less than or equal to 15 mg/day. [lesser in elderly]
+       - wait for at least 45 minutes before repeat dose
+    2. Olanzapine, 2.5-5mg QHS or Risperidone, can also be given orally
+    3. Quetiapine (25–50 mg) can be given orally, especially in pt with FTD, DLB or movement disorder, due to lower risk of EPSE.
+    4. In the ICU setting - Dexmedetomidine is an alpha-2 agonist and reduces the release of noradrenaline and helps curtailing restlessness.
+    5. In the ward setting, Clonidine can also be used for the same reason. Clonidine 0.1mg BD or TID. It can also be used as a skin patch.
+    6. Valproic acid can be considered as an adjunctive agent for hyperactive or mixed-type delirium, particularly for those with prolonged QT, those with severe movement disorder concerns, or those who experience side effects of anti-psychotics such as akathisia.
+    7. In extreme cases not responding to the above measures, only short-acting low-dose oral benzodiazepines (e.g., lorazepam 1 to 2 mg) may be considered with close monitoring for respiratory distress and respiratory failure.
+
+  C. Mechanical restraint
+     Mechanical restraint should be used for minimum possible time, till chemical restraints start working.
+
+##### Psychosis / Mania
+- Standard antimanic/antipsychotic treatment like risperidone or olanzapine can be given, mindful of the drug interactions.
+- Mood stabilizers can also prescribed in patients with bipolar disorder based on clinical need, with the precautions.
+- Catatonic symptoms can be treated with intravenous/oral lorazepam. But, use with caution due to risk of respiratory suppression.
+- Parenteral haloperidol 5-10mg can be used alone or in combination with promethazine (only through intramuscular route) in severe states of agitation as a chemical restraint.
+
+##### Depression, Anxiety and Insomnia
+- Escitalopram
+- Sertraline
+- Caution for Hyponatremia in the elderly
+- Low dose benzodiazepine preferably a short acting drug like lorazepam orally or parenterally can be helpful in acute management.
+- Zolpidem (2.5-5mg) is relatively safer in terms of respiratory functioning.
+
+### ✨ Grief management in COVID-19
+[Indian J Psychiatry 2021;63:211](https://www.indianjpsychiatry.org/text.asp?2021/63/3/211/318728) Access date 18/06/21
+
+- **Grief**: The perception of death followed by the gradual “sinking in” of its consequences leads to psychobiological reaction.
+- Unmanaged grief can have serious consequences.
+- **Death rituals** have a therapeutic function wherein they allow a family and a group to mourn in a ritualistic way. This allows people to share grief and keep the deceased as focus of attention for a fixed time and then to move on with life.
+- Sometimes, this process is hampered by what Kenneth Doka called **“disenfranchised grief”**.
+- COVID-19 has unexpectedly disturbed the process of death rituals as it leads to:
+  1. Unexpected or sudden loss
+  2. Depletion of emotional and coping resources
+  3. Limitation in visiting and end of care support
+  4. Not able to perform last rituals
+  5. Lack of social support due to COVID restrictions
+- The mechanical and impersonal process has led to severe psychological trauma in the survivors. **So, what should be the model of care for these people?**
+  1. We should try to increase the sharing of grief and the handling of the person should be allowed to take place
+  2. The physical support and the economical support have to be arranged, particularly where both parents have died
+  3. There are some common modes like “condolence meetings” or “smaran sabha” (may be in online mode) which should be attended by both family members and colleagues.
+
+### Does psychiatry have anything to offer in terms of COVID-19 management per se?
+
+#### Hamed et al [Medical Hypothesis 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7382922/), Pashaei [J Clin Neuroscience 2021](https://www.sciencedirect.com/science/article/pii/S096758682100120X).
+
+- Inflammatory cytokines -> organ damage
+- 5-HT has been found to regulate innate and adaptive immune responses
+- Increase cytokine levels -> reduce serotonin -> by increasing metabolism of tryptophan through IDO activation
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://www.frontiersin.org/files/Articles/435368/fendo-10-00158-HTML-r1/image_m/fendo-10-00158-g003.jpg"></br>
   Figure 9: Tryptophan pathway
 </p>
-<p><strong>Hypothesis</strong></p>
+
+**Hypothesis**
+
 <p align="center">
   <img width="460" height="300" style="padding:1px;border:thin solid black;" src="https://ars.els-cdn.com/content/image/1-s2.0-S096758682100120X-ga1_lrg.jpg"></br>
   Figure 10: Drug repurposing of SSRIs. In COVID-19 patients, SSRIs may help in hindering cytokine release syndrome that is responsible for aggravating sickness progression and the subsequent increase in TNFα.
 </p>
-<h3 id="lenze-et-al-jama-2020">Lenze et al <a href="https://jamanetwork.com/journals/jama/fullarticle/2773108">JAMA 2020</a> <a class="heading-anchor-permalink" href="#lenze-et-al-jama-2020">#</a></h3>
-<ul>
-<li>Fluvoxamine - SSRI and sigma receptor agonist</li>
-<li>RCT 152 adult outpatients with confirmed COVID-19 and symptom onset within 7 days</li>
-<li>Clinical deterioration occurred in 0 patients treated with fluvoxamine vs 6 (8.3%) patients treated with placebo over 15 days, a difference that was statistically significant</li>
-<li>adult outpatients with symptomatic COVID-19 treated with fluvoxamine, compared with placebo, had a lower likelihood of clinical deterioration over 15 days</li>
-</ul>
-<h3 id="hortel-el-al-molecular-psychiatry-2021">Hortel el al <a href="https://www.nature.com/articles/s41380-021-01021-4">Molecular Psychiatry 2021</a> <a class="heading-anchor-permalink" href="#hortel-el-al-molecular-psychiatry-2021">#</a></h3>
-<ul>
-<li>Observational multicenter retrospective cohort study [PARIS]</li>
-<li>Primary endpoint was a composite of intubation or death</li>
-<li>Of 7230 adults hospitalized for COVID-19, 345 patients (4.8%) received an antidepressant within 48h of hospital admission.</li>
-<li>Compared endpoint between patients who received antidepressants and those who did not in time-to-event analyses adjusted for patient characteristics, clinical and biological markers of disease severity, and other psychotropic medications</li>
-<li>Significant association between antidepressant use and reduced risk of intubation or death (HR, 0.56; 95% CI, 0.43–0.73, p &lt; 0.001).</li>
-<li>Association was also significant for SSRI and non-SSRI antidepressants, and for fluoxetine, paroxetine, escitalopram, venlafaxine, and mirtazapine (all p &lt; 0.05).</li>
-</ul>
-<h3 id="bottom-line">Bottom-line <a class="heading-anchor-permalink" href="#bottom-line">#</a></h3>
-<ul>
-<li>Sertraline has both σ-1 agonism and an SSRI, also cardiac safe and low risk of drug-drug interactions</li>
-<li>Further double blind RCTs are required</li>
-</ul>
-<h3 id="%E2%9C%A8-psychological-interventions-during-covid-19%3A-challenges-for-low-and-middle-income-countries">✨ Psychological interventions during COVID-19: Challenges for low and middle income countries <a class="heading-anchor-permalink" href="#%E2%9C%A8-psychological-interventions-during-covid-19%3A-challenges-for-low-and-middle-income-countries">#</a></h3>
-<ul>
-<li>De Souza et al <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7195042/">Asian J Psychiatr 2020;51:102128</a> Access date 19/06/21</li>
-</ul>
-<ol>
-<li>Paucity of resources and manpower</li>
-<li>Accurate diagnosis of psychiatric disorders</li>
-<li>Access to proper mental health care</li>
-<li>Availability of psychopharmacological and other treatments</li>
-<li>Public private partnerships and role of non-government organizations</li>
-<li>Catering to the needs of special populations</li>
-<li>Consideration of various psychosocial factors</li>
-<li>Combating the stigma of psychiatric illness</li>
-<li>Faith healing and cultural considerations</li>
-<li>Rural and urban divide in mental health</li>
-<li>Consultation liaison psychiatry</li>
-<li>Telepsychiatry in the current situation</li>
-<li>Sensitive handling of the media of psychological issues</li>
-<li>Ethical concerns and research</li>
-<li>Mental health of frontline healthcare personnel</li>
-<li>Pandemic preparedness</li>
-</ol>
-<h1 id="references">References <a class="heading-anchor-permalink" href="#references">#</a></h1>
-<ul>
-<li>Dubey et al. Diabetes Metab Syndr 2020. Psychosocial impact of COVID-19
-<ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/</a></li>
-<li>exhaustive ROL of impact on various starta of the society</li>
-</ul>
-</li>
-<li>Pfefferbaum et al. N Engl J Med 2020. Mental Health and the Covid-19
-Pandemic
-<ul>
-<li><a href="https://www.nejm.org/doi/full/10.1056/NEJMp2008017">https://www.nejm.org/doi/full/10.1056/NEJMp2008017</a></li>
-<li>commentary on the possible causes of psychosocial impact</li>
-</ul>
-</li>
-<li>Use of stress adaptation model for coping, see discussion in following link
-<ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154178/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154178/</a></li>
-</ul>
-</li>
-<li>Psychosocial factors that have been found associated with an elevated risk
-of hospitalization for COVID-19
-<ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S088915912031309X">https://www.sciencedirect.com/science/article/pii/S088915912031309X</a></li>
-</ul>
-</li>
-<li>Psychosocial impact of COVID on children
-<ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/apa.15536">https://onlinelibrary.wiley.com/doi/full/10.1111/apa.15536</a></li>
-</ul>
-</li>
-<li>Evidence base for digital interventions for mitigating negative impact of
-COVID19
-<ul>
-<li><a href="https://www.jmir.org/2021/3/e23365">https://www.jmir.org/2021/3/e23365</a></li>
-</ul>
-</li>
-<li>Qualitative study of the psychological experience of COVID-19 patients
-during hospitalization
-<ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/</a></li>
-</ul>
-</li>
-<li>Immediate psychological distress in quarantined patients with COVID-19 and
-its association with peripheral inflammation: A mixed-method study
-<ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7235603/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7235603/</a></li>
-</ul>
-</li>
-<li>Neuropsychiatric complications at 6 months post covid
-<ul>
-<li><a href="https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1">https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1</a></li>
-</ul>
-</li>
-<li>Psychosocial counseling manual ICMR
-<ul>
-<li><a href="https://www.icmr.gov.in/pdf/covid/techdoc/PSC_COVID_patients_v1_30042021.pdf">https://www.icmr.gov.in/pdf/covid/techdoc/PSC_COVID_patients_v1_30042021.pdf</a></li>
-</ul>
-</li>
-<li>NIMHANS Manual
-<ul>
-<li><a href="http://nimhans.ac.in/wp-content/uploads/2020/04/MentalHealthIssuesCOVID-19NIMHANS.pdf">http://nimhans.ac.in/wp-content/uploads/2020/04/MentalHealthIssuesCOVID-19NIMHANS.pdf</a></li>
-</ul>
-</li>
-<li>Psychopharmacology of COVID-19
-<ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7232075/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7232075/</a></li>
-<li><a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-020-01685-9">https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-020-01685-9</a></li>
-<li><a href="https://www.anip.co.in/article.asp?issn=2588-8358;year=2020;volume=4;issue=2;spage=226;epage=229;aulast=Dhillon">https://www.anip.co.in/article.asp?issn=2588-8358;year=2020;volume=4;issue=2;spage=226;epage=229;aulast=Dhillon</a></li>
-<li><a href="https://psychopharmacologyinstitute.com/publication/the-clinicians-algorithm-to-managing-covid-19-related-delirium-2607">https://psychopharmacologyinstitute.com/publication/the-clinicians-algorithm-to-managing-covid-19-related-delirium-2607</a></li>
-</ul>
-</li>
-<li>Covid 19 and psychosis
-<ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0304394020307618">https://www.sciencedirect.com/science/article/pii/S0304394020307618</a></li>
-</ul>
-</li>
-<li>Neuropsychiatric sequelae of covid 19
-<ul>
-<li><a href="https://www.nature.com/articles/s41398-020-00949-5">https://www.nature.com/articles/s41398-020-00949-5</a></li>
-</ul>
-</li>
-</ul>
 
-      </article>
-    </div>
-    <script>
-      // Load contents.json if you need it
-    </script>
-    <script>
-      // FROM http://purecss.io/js/ui.js
-      (function(window, document) {
-        var layout = document.getElementById("layout"),
-          menu = document.getElementById("menu"),
-          menuLink = document.getElementById("menuLink");
+### Lenze et al [JAMA 2020](https://jamanetwork.com/journals/jama/fullarticle/2773108)
 
-        function toggleClass(element, className) {
-          var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
+- Fluvoxamine - SSRI and sigma receptor agonist
+- RCT 152 adult outpatients with confirmed COVID-19 and symptom onset within 7 days
+- Clinical deterioration occurred in 0 patients treated with fluvoxamine vs 6 (8.3%) patients treated with placebo over 15 days, a difference that was statistically significant
+- adult outpatients with symptomatic COVID-19 treated with fluvoxamine, compared with placebo, had a lower likelihood of clinical deterioration over 15 days
 
-          for (; i < length; i++) {
-            if (classes[i] === className) {
-              classes.splice(i, 1);
-              break;
-            }
-          }
-          // The className is not found
-          if (length === classes.length) {
-            classes.push(className);
-          }
+### Hortel el al [Molecular Psychiatry 2021](https://www.nature.com/articles/s41380-021-01021-4)
+- Observational multicenter retrospective cohort study [PARIS]
+- Primary endpoint was a composite of intubation or death
+- Of 7230 adults hospitalized for COVID-19, 345 patients (4.8%) received an antidepressant within 48h of hospital admission.
+- Compared endpoint between patients who received antidepressants and those who did not in time-to-event analyses adjusted for patient characteristics, clinical and biological markers of disease severity, and other psychotropic medications
+- Significant association between antidepressant use and reduced risk of intubation or death (HR, 0.56; 95% CI, 0.43–0.73, p < 0.001).
+- Association was also significant for SSRI and non-SSRI antidepressants, and for fluoxetine, paroxetine, escitalopram, venlafaxine, and mirtazapine (all p < 0.05).
 
-          element.className = classes.join(" ");
-        }
+### Bottom-line
+- Sertraline has both σ-1 agonism and an SSRI, also cardiac safe and low risk of drug-drug interactions
+- Further double blind RCTs are required
 
-        menuLink.onclick = function(e) {
-          var active = "active";
+### ✨ Psychological interventions during COVID-19: Challenges for low and middle income countries
+- De Souza et al [Asian J Psychiatr 2020;51:102128](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7195042/) Access date 19/06/21
 
-          e.preventDefault();
-          toggleClass(layout, active);
-          toggleClass(menu, active);
-          toggleClass(menuLink, active);
-        };
-      })(this, this.document);
-    </script>
-  </body>
-</html>
+1. Paucity of resources and manpower
+2. Accurate diagnosis of psychiatric disorders
+3. Access to proper mental health care
+4. Availability of psychopharmacological and other treatments
+5. Public private partnerships and role of non-government organizations
+6. Catering to the needs of special populations
+7. Consideration of various psychosocial factors
+8. Combating the stigma of psychiatric illness
+9. Faith healing and cultural considerations
+10. Rural and urban divide in mental health
+11. Consultation liaison psychiatry
+12. Telepsychiatry in the current situation
+13. Sensitive handling of the media of psychological issues
+14. Ethical concerns and research
+15. Mental health of frontline healthcare personnel
+16. Pandemic preparedness
+
+# References
+- Dubey et al. Diabetes Metab Syndr 2020. Psychosocial impact of COVID-19
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7255207/
+  - exhaustive ROL of impact on various starta of the society
+- Pfefferbaum et al. N Engl J Med 2020. Mental Health and the Covid-19
+  Pandemic
+  - https://www.nejm.org/doi/full/10.1056/NEJMp2008017
+  - commentary on the possible causes of psychosocial impact
+- Use of stress adaptation model for coping, see discussion in following link
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154178/
+- Psychosocial factors that have been found associated with an elevated risk
+  of hospitalization for COVID-19
+  - https://www.sciencedirect.com/science/article/pii/S088915912031309X
+- Psychosocial impact of COVID on children
+  - https://onlinelibrary.wiley.com/doi/full/10.1111/apa.15536
+- Evidence base for digital interventions for mitigating negative impact of
+  COVID19
+  - https://www.jmir.org/2021/3/e23365
+- Qualitative study of the psychological experience of COVID-19 patients
+  during hospitalization
+  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444461/
+- Immediate psychological distress in quarantined patients with COVID-19 and
+  its association with peripheral inflammation: A mixed-method study
+    -   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7235603/
+- Neuropsychiatric complications at 6 months post covid
+    - https://www.medrxiv.org/content/10.1101/2021.01.16.21249950v1
+- Psychosocial counseling manual ICMR
+	- https://www.icmr.gov.in/pdf/covid/techdoc/PSC_COVID_patients_v1_30042021.pdf
+- NIMHANS Manual
+	- http://nimhans.ac.in/wp-content/uploads/2020/04/MentalHealthIssuesCOVID-19NIMHANS.pdf
+- Psychopharmacology of COVID-19
+	- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7232075/
+	- https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-020-01685-9
+	- https://www.anip.co.in/article.asp?issn=2588-8358;year=2020;volume=4;issue=2;spage=226;epage=229;aulast=Dhillon
+	- https://psychopharmacologyinstitute.com/publication/the-clinicians-algorithm-to-managing-covid-19-related-delirium-2607
+- Covid 19 and psychosis
+  - https://www.sciencedirect.com/science/article/pii/S0304394020307618
+- Neuropsychiatric sequelae of covid 19
+  - https://www.nature.com/articles/s41398-020-00949-5
+
+
+<img src="../../../_resources/reb-tail.jpg" border=0>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
