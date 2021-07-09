@@ -60,6 +60,8 @@
 
 ### UG education
 - [Psychiatry as a major subject in UG curriculum: Growing consensus](https://psychclerk.github.io/Writer/notes/UG/Psychiatry_as_major_subject_UG.html)
+- [Viva History and MSE](https://psychclerk.github.io/Writer/notes/UG/Viva-%20Chapter%20History%20and%20MSE.html)
+- [Viva Mood disorders](https://psychclerk.github.io/Writer/notes/UG/viva%20mood%20disorders.html)
 
 ### Community Psychiatry
 - [Challenges faced by community-level workers in delivering mental health services for a rural community in South India](https://psychclerk.github.io/Writer/notes/Psychiatry/community%20psych/Challenges%20faced%20by%20community-level%20workers%20in%20del.html)
