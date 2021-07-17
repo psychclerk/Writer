@@ -1,7 +1,4 @@
-<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
-					**Antipsychotic monitoring **
-						
-<img src="../../../_resources/reb-tail.jpg" border=0>
+Antipsychotic monitoring
 
 # Antipsychotic monitoring
 
@@ -23,7 +20,3 @@
 # Reference
 
 Adapted from Maudsley 13th ed
-
-<img src="../../../_resources/reb-tail.jpg" border=0>
-
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
