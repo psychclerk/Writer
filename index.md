@@ -19,6 +19,7 @@
 - [Should we combine antipsychotics](https://psychclerk.github.io/Writer/notes/Psychiatry/bookreading/bookreading17062021.html)
 
 ### Core Psychiatry
+- [Suicide in India current status and future](https://psychclerk.github.io/Writer/notes/Psychiatry/Core%20psychiatry/Suicide%20in%20India%20current%20status%20and%20future.html)
 - [Should we combine antipsychotics](https://psychclerk.github.io/Writer/notes/Psychiatry/Core%20psychiatry/Should%20we%20combing%20antipsychotics_.html)
 - [What predicts outcome in Schizophrenia?](https://psychclerk.github.io/Writer/notes/Psychiatry/Core%20psychiatry/What%20predicts%20outcome%20in%20Schizophrenia%CA%94.html)
 - [How to choose an antipsychotic?](https://psychclerk.github.io/Writer/notes/Psychiatry/Core%20psychiatry/How%20to%20choose%20an%20antipsychotic_.html)
