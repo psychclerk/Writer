@@ -5,6 +5,7 @@
 - [Apporach to QtC](https://psychclerk.github.io/Writer/notes/Approaches/Approach%20to%20QTc%20prolongation.html)
 - [Bradycardia](https://psychclerk.github.io/Writer/notes/Approaches/Bradycardia.html)
 - [Tachycardia](https://psychclerk.github.io/Writer/notes/Approaches/Tachycardia.html)
+- [Approach to First Episode Psychosis - Oct 2021](https://psychclerk.github.io/Writer/notes/Approaches/First%20Episode%20Psychosis.html) 
 - [Workup of First Episode of Psychosis](https://psychclerk.github.io/Writer/notes/Approaches/Workup%20of%20First%20episode%20psychosis.html)
 - [Approach to RLS](https://psychclerk.github.io/Writer/notes/Approaches/Approach%20to%20RLS_.html)
 
