@@ -5,7 +5,7 @@
 - [Apporach to QtC](https://psychclerk.github.io/Writer/notes/Approaches/Approach%20to%20QTc%20prolongation.html)
 - [Bradycardia](https://psychclerk.github.io/Writer/notes/Approaches/Bradycardia.html)
 - [Tachycardia](https://psychclerk.github.io/Writer/notes/Approaches/Tachycardia.html)
-- [Approach to First Episode Psychosis - Oct 2021](https://psychclerk.github.io/Writer/notes/Approaches/First%20Episode%20Psychosis.html) 
+- [Approach to First Episode Psychosis - Oct 2021](https://psychclerk.github.io/Writer/notes/Approaches/First%20Episode%20Psychosis.html)
 - [Workup of First Episode of Psychosis](https://psychclerk.github.io/Writer/notes/Approaches/Workup%20of%20First%20episode%20psychosis.html)
 - [Approach to RLS](https://psychclerk.github.io/Writer/notes/Approaches/Approach%20to%20RLS_.html)
 
@@ -42,6 +42,7 @@
 - [Renal case and Psychiatry](https://psychclerk.github.io/Writer/notes/Psychiatry/consultation-liaison/renal_case_psychiatry.html)
 
 ### Neuropsychiatry
+- [Comprehensive cognitive testing](https://psychclerk.github.io/Writer/notes/Psychiatry/neuropsychiatry/Comprehensive%20cognitive%20testing.html)
 - [Catatonia](https://psychclerk.github.io/Writer/notes/Psychiatry/neuropsychiatry/catatonia.html)
 - [DD of Psychosis - detailed](https://psychclerk.github.io/Writer/notes/Psychiatry/neuropsychiatry/DD%20of%20psychosis%20detailed.html)
 - [DD of Psychosis - simple](https://psychclerk.github.io/Writer/notes/Psychiatry/neuropsychiatry/DD%20of%20psychosis%20simple.html)
