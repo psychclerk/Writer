@@ -1,34 +1,21 @@
-<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
-					**Approach to First Episode Psychosis**
-					
-<img src="../../_resources/reb-tail.jpg" border=0>
+First Episode Psychosis 
 
 # Differential diagnosis of FEP
 
-**Primary Psychosis and Other Psychiatric Disorders**
-
-- Schizophrenia
-- Other Psychotic spectrum disorders: attenuated psychotic disorder, brief psychotic disorder, schizophreniform disorder
-- Delusional disorder
-- Schizoaffective disorder
-- Mood disorders: Bipolar, MDD with psychotic features
-- PTSD
-- Dissociative identity disorder
-- Personality disorders: paranoid, schizotypal, schizoid, borderline
-- Eating disorder: anorexia nervosa |
-
-**Secondary Psychosis**
-
-- Substance induced
-- Associated with another medical condition
-- Delirium
+| Primary Psychosis and Other Psychiatric Disorders |
+| --- |
+| \- Schizophrenia<br>\- Other Psychotic spectrum disorders: attenuated psychotic disorder, brief psychotic disorder, schizophreniform disorder <br>\- Delusional disorder <br>\- Schizoaffective disorder <br>\- Mood disorders: Bipolar, MDD with psychotic features <br>\- PTSD<br>\- Dissociative identity disorder <br>\- Personality disorders: paranoid, schizotypal, schizoid, borderline<br>\- Eating disorder: anorexia nervosa |
+| Secondary Psychosis |
+| \- Substance induced <br>\- Associated with another medical condition<br>- Delirium |
 
 # Plethora of causes associated with secondary psychosis
-![](../../_resources/ca0eeb843bf34c29bbd9e517ec8c7412.png)
+
+![8b6e0608b0f8097685ef1d4232d1f80b.png](../../_resources/ca0eeb843bf34c29bbd9e517ec8c7412.png)
 
 # Possible diagnostic test to rule out medical illnesses
 
-![How to select appropriate tests in a given case?](../../_resources/a5ec01d61f7c40be8a01c81ce967dcfc.png)
+![01fec366ff5ada017c4d09406d75a2c4.png](../../_resources/a5ec01d61f7c40be8a01c81ce967dcfc.png)
+How to select appropriate tests in a given case?
 
 # First tier testing - MIST causes
 
@@ -226,7 +213,3 @@
 # Reference:
 
 1.  [https://books.google.co.in/books?id=8n7ADwAAQBAJ&newbks=1&newbks\_redir=0&printsec=frontcover&dq=psychosis+in+children+and+adolescents&hl=en&redir\_esc=y#v=onepage&q=psychosis in children and adolescents&f=false](https://books.google.co.in/books?id=8n7ADwAAQBAJ&newbks=1&newbks_redir=0&printsec=frontcover&dq=psychosis+in+children+and+adolescents&hl=en&redir_esc=y#v=onepage&q=psychosis%20in%20children%20and%20adolescents&f=false)
-
-<img src="../../_resources/reb-tail.jpg" border=0>
-
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
