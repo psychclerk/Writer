@@ -1,8 +1,34 @@
-<meta charset="utf-8" emacsmode="-*- markdown -*"><link rel="stylesheet" href="dark.css">
-					**Parkinsonism**
-					Edit date: 26/06/2021 07:41
+# Parkinsonism
+Edit date: 26/06/2021 07:41
 
-<img src="../../../_resources/reb-tail.jpg" border=0>
+**CONTENTS**
+* * *
+
+- [Parkinsonism](#parkinsonism)
+- [Introduction](#introduction)
+- [Clinical features](#clinical-features)
+  - [Motor symptoms of Parkinsonism](#motor-symptoms-of-parkinsonism)
+  - [Motor symptoms of **PD** other than TRAP](#motor-symptoms-of-pd-other-than-trap)
+  - [Non-motor autonomic symptoms of **PD**](#non-motor-autonomic-symptoms-of-pd)
+  - [Non-motor neuropsychiatric symptoms of **PD**](#non-motor-neuropsychiatric-symptoms-of-pd)
+  - [Non-motor sensory symptoms](#non-motor-sensory-symptoms)
+  - [Course / Stages of PD](#course--stages-of-pd)
+- [Pathophysiolgy](#pathophysiolgy)
+- [DD of Parkinsonism](#dd-of-parkinsonism)
+  - [First way of classifying the causes](#first-way-of-classifying-the-causes)
+    - [Primary](#primary)
+    - [Secondary](#secondary)
+    - [PD Plus](#pd-plus)
+    - [Heredodegenerative](#heredodegenerative)
+- [Diagnosis of PD](#diagnosis-of-pd)
+  - [History taking in akinetic-rigid patient](#history-taking-in-akinetic-rigid-patient)
+  - [Examination of akinetic-rigid patient](#examination-of-akinetic-rigid-patient)
+  - [Rule out PD mimics](#rule-out-pd-mimics)
+  - [Clinically probable PD criteria](#clinically-probable-pd-criteria)
+- [Rx](#rx)
+  - [Drug classes for PD rx](#drug-classes-for-pd-rx)
+
+* * *
 
 # Introduction
 - second mcc of tremors
@@ -217,7 +243,3 @@
 
 ## Non-motor symptoms and overall management
 ![39011c26b3a3dc6e7d93e4a2ecfe51ed.png](../../../_resources/39011c26b3a3dc6e7d93e4a2ecfe51ed.png)
-
-<img src="../../../_resources/reb-tail.jpg" border=0>
-
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
